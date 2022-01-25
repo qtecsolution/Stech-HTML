@@ -1,0 +1,30 @@
+.stackbanner {
+    background: url(../images/stech-banner.png) no-repeat center center/cover;
+    height: 100vh;
+    position: relative;
+
+    canvas {
+        position: absolute;
+        top: 0;
+        left: 0;
+        @include wh100;
+        z-index: 1;
+    }
+
+    &-content {
+        @include flex-center-column;
+        text-align: center;
+        position: relative;
+        z-index: 2;
+
+        .banner-3d {
+            img {}
+        }
+
+        .banner-details {
+            .banner-title {
+                color: $white;
+            }
+        }
+    }
+}

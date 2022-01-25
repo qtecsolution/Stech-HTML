@@ -1,0 +1,36 @@
+// UPLOAD MEDALLION MODAL START
+
+.modal {
+    &-content {
+        @include radius(20);
+        overflow: hidden;
+    }
+
+    &-header {
+        border-bottom: length(0);
+        padding: length(32);
+
+        @include breakpoint(phone575) {
+            padding: length(16);
+        }
+
+        .btn-close {
+            @include transparent-button;
+            @include square(length(28));
+            @include circle;
+            @include flex-center;
+            opacity: 1;
+            margin: length(0);
+            padding: length(0);
+
+            &:focus {
+                outline: none;
+                box-shadow: none;
+            }
+        }
+    }
+
+    &-body {}
+}
+
+// UPLOAD MEDALLION MODAL END
