@@ -7,6 +7,9 @@
     <title>Stech</title>
     <!-- FAVICON -->
     <link rel="shortcut icon" href="favicon.svg" type="image/svg">
+    <!-- SPLITTING CSS -->
+    <link rel="stylesheet" href="assets/css/splitting.css">
+    <link rel="stylesheet" href="assets/css/splitting-cells.css">
     <!-- BOOTSTRAP CSS -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <!-- STECH STYLE -->
@@ -14,19 +17,93 @@
 </head>
 <body>
 
+    <!-- HEADER SECTION START -->
+    <header class="header">
+        <div class="container">
+            <!-- HEADER CONTENT START -->
+            <div class="header-content">
+                <!-- BRAND-LOGO START -->
+                <div class="brandlogo">
+                    <a href="index.html" class="link">
+                        <img src="assets/images/logo/logo.svg" alt="brand-logo">
+                    </a>
+                </div>
+                <!-- BRAND-LOGO END -->
+
+                <!-- MAIN MENU START -->
+                <nav class="mainmenu">
+                    <!-- MAIN-LIST START -->
+                    <ul class="mainlist">
+                        <li class="mainlist-item">
+                            <a href="#" class="mainlist-link active" data-splitting>
+                                Home
+                            </a>
+                        </li>
+                        <li class="mainlist-item">
+                            <a href="#" class="mainlist-link" data-splitting>
+                                About Us
+                            </a>
+                        </li>
+                        <li class="mainlist-item">
+                            <a href="#" class="mainlist-link" data-splitting>
+                                Our Concern
+                            </a>
+                        </li>
+                        <li class="mainlist-item">
+                            <a href="#" class="mainlist-link" data-splitting>
+                                Services
+                            </a>
+                        </li>
+                        <li class="mainlist-item">
+                            <a href="#" class="mainlist-link" data-splitting>
+                                Gallary
+                            </a>
+                        </li>
+                        <li class="mainlist-item">
+                            <a href="#" class="mainlist-link" data-splitting>
+                                News & Event
+                            </a>
+                        </li>
+                        <li class="mainlist-item">
+                            <a href="#" class="mainlist-link" data-splitting>
+                                Our Clients
+                            </a>
+                        </li>
+                        <li class="mainlist-item">
+                            <a href="#" class="mainlist-link" data-splitting>
+                                Contact Us
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- MAIN-LIST END -->
+
+                    <!-- CHANGE-LANGUAGE DROPDOWN START -->
+                    <select class="changelanguage">
+                        <option value="EN">EN</option>
+                        <option value="BN">BN</option>
+                        <option value="HI">HI</option>
+                    </select>
+                    <!-- CHANGE-LANGUAGE DROPDOWN END -->
+                </nav>
+                <!-- MAIN MENU END -->
+            </div>
+            <!-- HEADER CONTENT END -->
+        </div>
+    </header>
+    <!-- HEADER SECTION END -->
+
     <!-- STECH BANNER SECTION START -->
     <section class="stackbanner">
-        <canvas></canvas>
         <div class="container">
             <div class="row">
                 <div class="col-12">
                     <div class="stackbanner-content">
-                        <div class="banner-3d">
-                            <img src="assets/images/logo/hero-logo.svg" alt="banner-logo">
+                        <div class="banner-3d" id="scene-1" data-relative-input="true">
+                            <img src="assets/images/logo/hero-logo.svg" alt="banner-logo" data-depth='0.1'>
                         </div>
 
-                        <div class="banner-details">
-                            <h1 class="banner-title">
+                        <div class="banner-details" id="scene-2" data-relative-input="true">
+                            <h1 class="banner-title" data-depth='0.05'>
                                 Stech Digital Design <br>
                                 Boutique with Focus on Aesthetics
                             </h1>
@@ -35,14 +112,26 @@
                 </div>
             </div>
         </div>
+        <canvas></canvas>
     </section>
     <!-- STECH BANNER SECTION END -->
+
+    <section class="abc">
+        <h1 class="title text-white">fdsfsdfsfsfsadfsadf
+        fdsfdsfs f
+        dsfsdaf</h1>
+    </section>
     
     <!-- BOOTSTRAP JS -->
     <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/splitting.min.js"></script>
+    <script src="assets/js/split-text.js"></script>
     <!-- SIMULATION JS -->
     <script src="assets/js/dat.gui.min.js"></script>
     <!-- SIMULATION JS -->
     <script src="assets/js/simulation.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+    <script src="assets/js/moving.js"></script>
 </body>
 </html>

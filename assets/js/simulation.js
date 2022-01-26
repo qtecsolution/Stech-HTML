@@ -46,7 +46,7 @@ function getWebGLContext( canvas ) {
         support_linear_float = gl.getExtension( 'OES_texture_float_linear' );
     }
 
-    gl.clearColor( 0.0, 0.0, 0.0, 1.0 );
+    gl.clearColor( 0.0, 0.0, 0.0, 0.5 );
 
     var internalFormat   = isWebGL2 ? gl.RGBA16F : gl.RGBA;
     var internalFormatRG = isWebGL2 ? gl.RG16F : gl.RGBA;
@@ -290,11 +290,11 @@ function update() {
 
     curlProgram.bind();
     gl.uniform2f( curlProgram.uniforms.texelSize, 1.0 / textureWidth, 1.0 / textureHeight );
-    gl.uniform1i( curlProgram.uniforms.uVelocity, velocity.first[ 2 ] );
+    gl.uniform1i( curlProgram.uniforms.uVelocity, velocity.first[ 1 ] );
     blit( curl[ 1 ] );
 
     vorticityProgram.bind();
-    gl.uniform2f( vorticityProgram.uniforms.texelSize, 1.0 / textureWidth, 1.0 / textureHeight );
+    gl.uniform2f( vorticityProgram.uniforms.texelSize, 5 / textureWidth, 5 / textureHeight );
     gl.uniform1i( vorticityProgram.uniforms.uVelocity, velocity.first[ 2 ] );
     gl.uniform1i( vorticityProgram.uniforms.uCurl, curl[ 2 ] );
     gl.uniform1f( vorticityProgram.uniforms.curl, config.CURL );
@@ -359,7 +359,7 @@ function splat( x, y, dx, dy, color ) {
     velocity.swap();
 
     gl.uniform1i( splatProgram.uniforms.uTarget, density.first[ 2 ] );
-    gl.uniform3f( splatProgram.uniforms.color, color[ 0 ] * 0.3, color[ 1 ] * 0.3, color[ 2 ] * 0.3 );
+    gl.uniform3f( splatProgram.uniforms.color, color[ 0 ] * 0.1, color[ 1 ] * 0.1, color[ 2 ] * 0.1 );
     blit( density.second[ 1 ] );
     density.swap();
 
@@ -372,13 +372,13 @@ function resizeCanvas() {
 }
 
 var count    = 0;
-var colorArr = [ Math.random() + 0.2, Math.random() + 0.2, Math.random() + 0.2 ];
+var colorArr = [ Math.random() + 0.1, Math.random() + 0.1, Math.random() + 0.1 ];
 
 canvas.addEventListener( 'mousemove', function ( e ) {
 
     count++;
 
-    ( count > 25 ) && (colorArr = [ Math.random() + 0.2, Math.random() + 0.2, Math.random() + 0.2 ], count = 0);
+    ( count > 25 ) && (colorArr = [ Math.random() + 0.1, Math.random() + 0.1, Math.random() + 0.1 ], count = 0);
 
     pointers[ 0 ].down  = true;
     pointers[ 0 ].color = colorArr;
@@ -398,7 +398,7 @@ canvas.addEventListener( 'touchmove', function ( e ) {
 
     count++;
 
-    ( count > 25 ) && (colorArr = [ Math.random() + 0.2, Math.random() + 0.2, Math.random() + 0.2 ], count = 0);
+    ( count > 25 ) && (colorArr = [ Math.random() + 0.1, Math.random() + 0.1, Math.random() + 0.1 ], count = 0);
 
     for ( var i = 0, len = touches.length; i < len; i++ ) {
 
@@ -420,4 +420,4 @@ canvas.addEventListener( 'touchmove', function ( e ) {
 
     }
 
-}, false );
+}, true );

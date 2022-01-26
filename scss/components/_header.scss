@@ -1,0 +1,112 @@
+/**=======================================================**
+                        HEADER SECTION START
+**=======================================================**/
+
+.header {
+    background: transparent;
+    position: fixed;
+    top: 0;
+    left: 0;
+    @include w100;
+    height: length(100);
+    z-index: 100;
+    @include flex-center-vert;
+
+    &-content {
+        @include flex-center-between;
+
+        .brandlogo {
+            .link {
+                width: length(170);
+                height: length(48);
+                @include flex-center;
+                overflow: hidden;
+
+                img {
+                    @include wh100;
+                    object-fit: cover;
+
+                }
+            }
+        }
+
+        .mainmenu {
+            @include flex-center-between;
+            width: calc(100% - 10.625rem);
+
+            .mainlist {
+                @include list-horizontal;
+                gap: length(36);
+                width: calc(100% - 4rem);
+                justify-content: center;
+
+                &-link {
+                    color: rgba($white, 0.6);
+                    overflow: hidden;
+
+                    .word {
+                        position: relative;
+
+                        .char {
+                            display: inline-block;
+                            transform: translateY(-100%);
+                            transition: all 500ms cubic-bezier(0, 0.97, 0.43, 1);
+                        }
+
+                        .full-text {
+                            position: absolute;
+                            left: 0;
+                            transform: translateY(0);
+                            transition: all 500ms cubic-bezier(0, 0.97, 0.43, 1);
+                        }
+                    }
+
+                    &:hover:not(.active) {
+                        color: $white;
+
+                        .word {
+                            .char {
+                                color: $white;
+                                transform: translateY(0);
+                                transition: all 500ms cubic-bezier(0, 0.97, 0.43, 1) calc(250ms * var(--char-index) / var(--char-total));
+                            }
+
+                            .full-text {
+                                transform: translateY(100%);
+                                transition: all 500ms cubic-bezier(0, 0.97, 0.43, 1);
+                            }
+                        }
+                    }
+
+                    &.active {
+                        color: $white;
+                    }
+                }
+            }
+
+            .changelanguage {
+                width: length(64);
+                // background: chocolate;
+                // -webkit-box-sizing: border-box;
+                // -moz-box-sizing: border-box;
+                // box-sizing: border-box;
+                // -moz-appearance: none;
+                // -o-appearance: none;
+                // -ms-appearance: none;
+                // -webkit-appearance: none;
+                // appearance: none;
+                // cursor: pointer;
+                // @include flex-center-vert;
+                // background: url("data:image/svg+xml,%3Csvg width='11' height='12' viewBox='0 0 11 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect y='0.5' width='11' height='11' fill='white' fill-opacity='0.6'/%3E%3C/svg%3E%0A") no-repeat 95% center right;
+            }
+        }
+    }
+
+    &.scrolled {
+        background: $white;
+    }
+}
+
+/**=======================================================**
+                        HEADER SECTION END
+**=======================================================**/
