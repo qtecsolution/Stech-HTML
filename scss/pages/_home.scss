@@ -1,18 +1,27 @@
-.stackbanner {
+/**=====================================================
+                    STECH-BANNER
+=====================================================**/
+.stechbanner {
     background: url(../images/stech-banner.png) no-repeat center center/cover;
     height: 100vh;
     position: relative;
-
+    @include flex-center;
 
     &-content {
         @include flex-center-column;
         text-align: center;
+        gap: length(36);
 
         .banner-3d {
             position: relative;
             z-index: 2;
+            width: length(200);
+            height: length(400);
 
-            img {}
+            img {
+                @include wh100;
+                object-fit: contain;
+            }
         }
 
         .banner-details {
@@ -21,11 +30,15 @@
 
             .banner-title {
                 color: $white;
+                letter-spacing: length(1.6);
             }
         }
     }
 }
 
+/**=====================================================
+            STECH-BANNER-SIMULATOR(CANVAS)
+=====================================================**/
 canvas {
     position: fixed;
     top: 0;
@@ -35,9 +48,48 @@ canvas {
     z-index: 1;
 }
 
-.abc {
+/**=====================================================
+            STECH-BANNER-SIMULATOR(CANVAS)
+=====================================================**/
+.stechdigital {
+    background: $white;
     height: 100vh;
     position: relative;
     z-index: 2;
-    background: red;
+    padding: length(160) length(0);
+
+    &-content {
+        @include flex-column;
+        gap: length(64);
+    }
+
+    &-header {
+        position: relative;
+
+        .ribbon {
+            position: absolute;
+            top: -100%;
+            left: 0;
+            z-index: -1;
+            width: length(143);
+            height: length(256);
+            @include flex-center;
+            overflow: hidden;
+
+            img {
+                @include wh100;
+                object-fit: contain;
+            }
+        }
+
+        .stechdigital-title {
+            @include font-face($raleway,
+                style('normal'),
+                size(40),
+                weight('bold'),
+                line-height(60, 40));
+        }
+    }
+
+    &-body {}
 }

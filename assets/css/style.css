@@ -1,31 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;900&display=swap");
+.header.inverted {
+  -webkit-animation-duration: 250ms;
+  animation-duration: 250ms;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
 @-webkit-keyframes slideDownIn {
   0% {
-    -webkit-transform: translateY(-20px);
-            transform: translateY(-20px);
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
   }
   100% {
     -webkit-transform: translateY(0);
             transform: translateY(0);
   }
   0% {
-    -webkit-transform: translateY(-20px);
-            transform: translateY(-20px);
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
   }
 }
 
 @keyframes slideDownIn {
   0% {
-    -webkit-transform: translateY(-20px);
-            transform: translateY(-20px);
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
   }
   100% {
     -webkit-transform: translateY(0);
             transform: translateY(0);
   }
   0% {
-    -webkit-transform: translateY(-20px);
-            transform: translateY(-20px);
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
   }
+}
+
+.header.inverted {
+  -webkit-animation-name: slideDownIn;
+  animation-name: slideDownIn;
 }
 
 @-webkit-keyframes slideDownInMobile {
@@ -205,54 +218,78 @@
   }
 }
 
-/*------------------------------------*\
-    // FONT STYLE VARIABLES
-\*------------------------------------*/
-/*------------------------------------*\
-    // FONT STYLE FUNCTIONS
-\*------------------------------------*/
-/*------------------------------------*\
-    // FONT STYLE MIXINS
-\*------------------------------------*/
-/*------------------------------------*\
-		DISPLAY FONT SIZES
-\*------------------------------------*/
-/*------------------------------------*\
-		HEADINGS FONT SIZES
-\*------------------------------------*/
-/*------------------------------------*\
-		20/12 FONT SIZES
-\*------------------------------------*/
-/*------------------------------------*\
-		12/12 FONT SIZES
-\*------------------------------------*/
-/*------------------------------------*\
-		14/14 FONT SIZES
-\*------------------------------------*/
-/*------------------------------------*\
-		24/14 FONT SIZES
-\*------------------------------------*/
-/*------------------------------------*\
-		24/16 FONT SIZES
-\*------------------------------------*/
-/*------------------------------------*\
-		26/16 FONT SIZES
-\*------------------------------------*/
-/*------------------------------------*\
-		16/16 FONT SIZES
-\*------------------------------------*/
-/*------------------------------------*\
-		21/18 FONT SIZES
-\*------------------------------------*/
-/*------------------------------------*\
-		30/18 FONT SIZES
-\*------------------------------------*/
-/*------------------------------------*\
-		28/20 FONT SIZES
-\*------------------------------------*/
-/*------------------------------------*\
-		38/24 FONT SIZES
-\*------------------------------------*/
+/**==================================================
+                GOOGLE FONT CDN
+==================================================**/
+/**==================================================
+                FONTS INFO START
+==================================================**/
+/**===============================================
+                FONT STYLE MIXINS
+===============================================**/
+/**===============================================
+                LORENZA FONTS PATH
+===============================================**/
+/**======================================
+            HEADING STYLES
+=======================================**/
+.big-title-1 {
+  font-family: "Raleway";
+  font-style: normal;
+  font-size: 4rem;
+  font-weight: 500;
+  line-height: 1.17188;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-family: "Raleway";
+  font-style: normal;
+  font-size: 2.25rem;
+  font-weight: 700;
+  line-height: 1.36111;
+}
+
+h2 {
+  font-family: "Raleway";
+  font-style: normal;
+  font-size: 600;
+  font-weight: 1.75rem;
+  line-height: 1.35714;
+}
+
+h3 {
+  font-family: "Raleway";
+  font-style: normal;
+  font-size: 600;
+  font-weight: 1.25rem;
+  line-height: 1.365;
+}
+
+h4 {
+  font-family: "Raleway";
+  font-style: normal;
+  font-size: 700;
+  font-weight: 1.125rem;
+  line-height: 1.22222;
+}
+
+h5 {
+  font-family: "Raleway";
+  font-style: normal;
+  font-size: 600;
+  font-weight: 1rem;
+  line-height: 1.5625;
+}
+
+h6 {
+  font-family: "Raleway";
+  font-style: normal;
+  font-size: 700;
+  font-weight: 1rem;
+  line-height: 1.5;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -378,10 +415,16 @@ html {
 }
 
 body {
+  background: #F7FAFC;
   margin: 0;
   padding: 0;
+  font-family: "Lorenza";
+  font-style: normal;
+  font-size: 1.125rem;
+  font-weight: normal;
+  line-height: 1.66667;
+  src: url("../fonts/Lorenza/Lorenza.woff2") format("woff2"), url("../fonts/Lorenza/Lorenza.woff") format("woff");
   overflow-x: hidden;
-  background: #F7FAFC;
   position: relative;
 }
 
@@ -448,60 +491,6 @@ select {
   cursor: pointer;
 }
 
-/**
-** HEADING STYLES START
-**/
-h1 {
-  font-family: "Gilroy";
-  font-style: normal;
-  font-size: 2.25rem;
-  font-weight: 600;
-  line-height: 1.36;
-}
-
-h2 {
-  font-family: "Gilroy";
-  font-style: normal;
-  font-size: 1.75rem;
-  font-weight: 600;
-  line-height: 1.36;
-}
-
-h3 {
-  font-family: "Gilroy";
-  font-style: normal;
-  font-size: 1.5rem;
-  font-weight: 600;
-  line-height: 1.36;
-}
-
-h4 {
-  font-family: "Gilroy";
-  font-style: normal;
-  font-size: 1.25rem;
-  font-weight: 600;
-  line-height: 1.36;
-}
-
-h5 {
-  font-family: "Gilroy";
-  font-style: normal;
-  font-size: 1.125rem;
-  font-weight: 600;
-  line-height: 1.36;
-}
-
-h6 {
-  font-family: "Gilroy";
-  font-style: normal;
-  font-size: 1rem;
-  font-weight: 600;
-  line-height: 1.36;
-}
-
-/**
-** HEADING STYLES END
-**/
 /*------------------------------------*\
     breakpoint vars
 \*------------------------------------*/
@@ -626,13 +615,9 @@ h6 {
                         HEADER SECTION START
 **=======================================================**/
 .header {
-  background: transparent;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
+  position: relative;
   height: 6.25rem;
-  z-index: 100;
+  z-index: 1000;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -701,7 +686,7 @@ h6 {
       -ms-flex-align: center;
           align-items: center;
   gap: 2.25rem;
-  width: calc(100% - 4rem);
+  width: calc(100% - 3rem);
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -712,56 +697,70 @@ h6 {
   overflow: hidden;
 }
 
-.header-content .mainmenu .mainlist-link .word {
-  position: relative;
+.header-content .mainmenu .mainlist-link .char {
+  overflow: hidden;
+  color: transparent;
 }
 
-.header-content .mainmenu .mainlist-link .word .char {
-  display: inline-block;
-  -webkit-transform: translateY(-100%);
-          transform: translateY(-100%);
-  -webkit-transition: all 500ms cubic-bezier(0, 0.97, 0.43, 1);
-  transition: all 500ms cubic-bezier(0, 0.97, 0.43, 1);
+.header-content .mainmenu .mainlist-link .char:before, .header-content .mainmenu .mainlist-link .char:after {
+  visibility: visible;
+  color: rgba(255, 255, 255, 0.6);
+  -webkit-transition: -webkit-transform 250ms cubic-bezier(0.9, 0, 0.2, 1);
+  transition: -webkit-transform 250ms cubic-bezier(0.9, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.9, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.9, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.9, 0, 0.2, 1);
+  -webkit-transition-delay: calc(0.2s + (0.02s * (var(--char-index))));
+          transition-delay: calc(0.2s + (0.02s * (var(--char-index))));
 }
 
-.header-content .mainmenu .mainlist-link .word .full-text {
-  position: absolute;
-  left: 0;
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
-  -webkit-transition: all 500ms cubic-bezier(0, 0.97, 0.43, 1);
-  transition: all 500ms cubic-bezier(0, 0.97, 0.43, 1);
-}
-
-.header-content .mainmenu .mainlist-link:hover:not(.active) {
-  color: white;
-}
-
-.header-content .mainmenu .mainlist-link:hover:not(.active) .word .char {
-  color: white;
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
-  -webkit-transition: all 500ms cubic-bezier(0, 0.97, 0.43, 1) calc(250ms * var(--char-index) / var(--char-total));
-  transition: all 500ms cubic-bezier(0, 0.97, 0.43, 1) calc(250ms * var(--char-index) / var(--char-total));
-}
-
-.header-content .mainmenu .mainlist-link:hover:not(.active) .word .full-text {
+.header-content .mainmenu .mainlist-link .char:before {
+  -webkit-transition-delay: calc(0.02s * (var(--char-index)));
+          transition-delay: calc(0.02s * (var(--char-index)));
   -webkit-transform: translateY(100%);
           transform: translateY(100%);
-  -webkit-transition: all 500ms cubic-bezier(0, 0.97, 0.43, 1);
-  transition: all 500ms cubic-bezier(0, 0.97, 0.43, 1);
 }
 
-.header-content .mainmenu .mainlist-link.active {
+.header-content .mainmenu .mainlist-link:hover:not(.active) .char::before {
+  -webkit-transition-delay: calc(0.2s + (0.02s * (var(--char-index))));
+          transition-delay: calc(0.2s + (0.02s * (var(--char-index))));
+  -webkit-transform: translateY(0%);
+          transform: translateY(0%);
+  color: white;
+}
+
+.header-content .mainmenu .mainlist-link:hover:not(.active) .char::after {
+  -webkit-transition-delay: calc(0.02s * (var(--char-index)));
+          transition-delay: calc(0.02s * (var(--char-index)));
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+}
+
+.header-content .mainmenu .mainlist-link.active .char {
   color: white;
 }
 
 .header-content .mainmenu .changelanguage {
-  width: 4rem;
+  width: 3rem;
+  background: url("data:image/svg+xml,%3Csvg width='11' height='12' viewBox='0 0 11 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_255_35111' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='11' height='12'%3E%3Cpath d='M4.9826 8.15869L1.68519 4.39022C1.29623 3.9457 1.61191 3.25 2.20259 3.25H8.7974C9.38808 3.25 9.70376 3.9457 9.3148 4.39022L6.01739 8.15869C5.74348 8.47173 5.25651 8.47173 4.9826 8.15869Z' fill='black'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_255_35111)'%3E%3Crect y='0.5' width='11' height='11' fill='white' fill-opacity='0.6'/%3E%3C/g%3E%3C/svg%3E%0A") no-repeat center right;
+  color: rgba(255, 255, 255, 0.6);
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  cursor: pointer;
+  text-align: center;
 }
 
-.header.scrolled {
-  background: white;
+.header.inverted {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: black;
+}
+
+.header.inverted .mainmenu .changelanguage {
+  background-color: black;
+  border: none;
 }
 
 /**=======================================================**
@@ -884,13 +883,25 @@ h6 {
   border-radius: 0.5rem;
 }
 
-.stackbanner {
+/**=====================================================
+                    STECH-BANNER
+=====================================================**/
+.stechbanner {
   background: url(../images/stech-banner.png) no-repeat center center/cover;
   height: 100vh;
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-.stackbanner-content {
+.stechbanner-content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -905,22 +916,36 @@ h6 {
       -ms-flex-direction: column;
           flex-direction: column;
   text-align: center;
+  gap: 2.25rem;
 }
 
-.stackbanner-content .banner-3d {
+.stechbanner-content .banner-3d {
+  position: relative;
+  z-index: 2;
+  width: 12.5rem;
+  height: 25rem;
+}
+
+.stechbanner-content .banner-3d img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.stechbanner-content .banner-details {
   position: relative;
   z-index: 2;
 }
 
-.stackbanner-content .banner-details {
-  position: relative;
-  z-index: 2;
-}
-
-.stackbanner-content .banner-details .banner-title {
+.stechbanner-content .banner-details .banner-title {
   color: white;
+  letter-spacing: 0.1rem;
 }
 
+/**=====================================================
+            STECH-BANNER-SIMULATOR(CANVAS)
+=====================================================**/
 canvas {
   position: fixed;
   top: 0;
@@ -931,9 +956,62 @@ canvas {
   z-index: 1;
 }
 
-.abc {
+/**=====================================================
+            STECH-BANNER-SIMULATOR(CANVAS)
+=====================================================**/
+.stechdigital {
+  background: white;
   height: 100vh;
   position: relative;
   z-index: 2;
-  background: red;
+  padding: 10rem 0rem;
+}
+
+.stechdigital-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 4rem;
+}
+
+.stechdigital-header {
+  position: relative;
+}
+
+.stechdigital-header .ribbon {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  z-index: -1;
+  width: 8.9375rem;
+  height: 16rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+}
+
+.stechdigital-header .ribbon img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.stechdigital-header .stechdigital-title {
+  font-family: "Raleway";
+  font-style: normal;
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.5;
 }

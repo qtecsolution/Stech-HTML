@@ -1,19 +1,21 @@
 %animation {
-	-webkit-animation-duration: 0.3s;
-	animation-duration: 0.3s;
+	-webkit-animation-duration: $time;
+	animation-duration: $time;
 	-webkit-animation-fill-mode: both;
 	animation-fill-mode: both;
 }
 
 @keyframes slideDownIn {
 	0% {
-		transform: translateY(-20px);
+		transform: translateY(-100%);
 	}
+
 	100% {
 		transform: translateY(0);
 	}
+
 	0% {
-		transform: translateY(-20px);
+		transform: translateY(-100%);
 	}
 }
 
@@ -26,9 +28,11 @@
 	0% {
 		transform: translateY(-20px);
 	}
+
 	100% {
 		transform: translateY(10px);
 	}
+
 	0% {
 		transform: translateY(-20px);
 	}
@@ -43,9 +47,11 @@
 	0% {
 		transform: translateY(-20px);
 	}
+
 	100% {
 		transform: translateY(0);
 	}
+
 	0% {
 		transform: translateY(20px);
 	}
@@ -60,9 +66,11 @@
 	0% {
 		transform: translateY(size(40));
 	}
+
 	100% {
 		transform: translateY(size(25));
 	}
+
 	0% {
 		transform: translateY(size(40));
 	}
@@ -77,9 +85,11 @@
 	0% {
 		transform: translateX(100px);
 	}
+
 	100% {
 		transform: translateX(0);
 	}
+
 	0% {
 		transform: translateX(-100px);
 	}
@@ -94,9 +104,11 @@
 	0% {
 		transform: translateX(100px);
 	}
+
 	100% {
 		transform: translateX(0);
 	}
+
 	0% {
 		transform: translateX(100px);
 	}
@@ -107,11 +119,11 @@
 	animation-name: slideRightIn;
 }
 
-%floating{
+%floating {
 	animation-name: floating;
 	-webkit-animation-name: floating;
 
-	animation-duration: 2s;	
+	animation-duration: 2s;
 	-webkit-animation-duration: 2s;
 
 	animation-iteration-count: infinite;
@@ -122,24 +134,26 @@
 	0% {
 		transform: translateY(0%)
 	}
+
 	50% {
 		transform: translateY(1%)
-	}	
+	}
+
 	100% {
 		transform: translateY(0%);
-	}			
+	}
 }
 
 @-webkit-keyframes floating {
 	0% {
-		-webkit-transform: translateY(0%);	
+		-webkit-transform: translateY(0%);
 	}
 
 	50% {
-		-webkit-transform: translateY(1%);	
-	}	
-	
+		-webkit-transform: translateY(1%);
+	}
+
 	100% {
 		-webkit-transform: translateY(0%);
-	}			
+	}
 }
