@@ -11,6 +11,14 @@ $lorenza: 'Lorenza';
 $font-styles: ('normal': normal, 'italic': italic, 'oblique': oblique);
 $font-weights: ('thin':100, 'light': 300, 'normal': normal, 'medium': 500, 'semibold': 600, 'bold': 700, 'black': 900);
 
+/**===============================================
+                LORENZA FONTS PATH
+===============================================**/
+
+$lorenza-thin-path: '../fonts/Lorenza/Lorenza-Thin';
+$lorenza-normal-path: '../fonts/Lorenza/Lorenza';
+$lorenza-medium-path: '../fonts/Lorenza/Lorenza-Medium';
+
 // SET FONT-FAMILY
 @function family($font-family) {
 	@return inspect($value: $font-family);
@@ -51,14 +59,6 @@ $font-weights: ('thin':100, 'light': 300, 'normal': normal, 'medium': 500, 'semi
 	line-height: $line-height;
 }
 
-/**===============================================
-                LORENZA FONTS PATH
-===============================================**/
-
-$lorenza-thin-path: '../fonts/Lorenza/Lorenza-Thin';
-$lorenza-normal-path: '../fonts/Lorenza/Lorenza';
-$lorenza-medium-path: '../fonts/Lorenza/Lorenza-Medium';
-
 // FONT WITH PATH
 @mixin font-face-path($fontname, $fontstyle, $fontsize, $fontweight, $line-height, $path) {
 	font: {
@@ -77,13 +77,21 @@ $lorenza-medium-path: '../fonts/Lorenza/Lorenza-Medium';
             HEADING STYLES
 =======================================**/
 
+// .text {
+// 	@include font-face($lorenza,
+// 		style('normal'),
+// 		size(64),
+// 		weight('medium'),
+// 		line-height(75, 64));
+// 	text-transform: uppercase;
+// }
+
 .big-title-1 {
 	@include font-face($raleway,
 		style('normal'),
 		size(64),
 		weight('medium'),
 		line-height(75, 64));
-	text-transform: uppercase;
 }
 
 h1 {

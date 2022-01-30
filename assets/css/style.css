@@ -225,10 +225,10 @@
                 FONTS INFO START
 ==================================================**/
 /**===============================================
-                FONT STYLE MIXINS
+                LORENZA FONTS PATH
 ===============================================**/
 /**===============================================
-                LORENZA FONTS PATH
+                FONT STYLE MIXINS
 ===============================================**/
 /**======================================
             HEADING STYLES
@@ -239,7 +239,6 @@
   font-size: 4rem;
   font-weight: 500;
   line-height: 1.17188;
-  text-transform: uppercase;
 }
 
 h1 {
@@ -766,6 +765,321 @@ select {
 /**=======================================================**
                         HEADER SECTION END
 **=======================================================**/
+/**=====================================================**
+                        HOME-CARDS
+=======================================================**/
+/* CARD-CONCERN START */
+.card-concern {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: white;
+  width: 19.5rem;
+  height: 5.625rem;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 48rem) {
+  .card-concern {
+    width: 100%;
+  }
+}
+
+.card-concern-thumbnail {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+  width: 8.125rem;
+  height: 100%;
+  padding: 0.625rem 2.125rem;
+}
+
+.card-concern-thumbnail img {
+  max-width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  height: 100%;
+}
+
+.card-concern-details {
+  border-left: solid 0.0625rem #EDF2F7;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  padding: 0.625rem;
+  width: calc(100% - 8.125rem);
+  height: 100%;
+  background: white;
+}
+
+.card-concern-details .concern-title {
+  color: #718096;
+  -webkit-font-feature-settings: 'salt'on;
+          font-feature-settings: 'salt'on;
+  font-family: "Raleway";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.625;
+}
+
+.card-concern:not([disabled]):hover {
+  -webkit-filter: drop-shadow(0 0 0.0625rem rgba(12, 26, 75, 0.1)) drop-shadow(0 0.625rem 1rem rgba(20, 37, 63, 0.06));
+          filter: drop-shadow(0 0 0.0625rem rgba(12, 26, 75, 0.1)) drop-shadow(0 0.625rem 1rem rgba(20, 37, 63, 0.06));
+}
+
+.card-concern:not([disabled]):hover .card-concern-details {
+  background: #5A48FF;
+  border-color: #5A48FF;
+}
+
+.card-concern:not([disabled]):hover .card-concern-details .concern-title {
+  color: white;
+}
+
+/* CARD-CONCERN END */
+/* CARD-SERVICE START */
+.card-service {
+  background: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.5rem;
+  width: calc((100% / 5) - 1.5rem);
+  padding: 3.75rem 3rem;
+  overflow: hidden;
+  position: relative;
+  height: 100%;
+}
+
+@media screen and (max-width: 87.4375rem) {
+  .card-service {
+    width: calc((100% / 4) - 1.5rem);
+    padding: 3rem 2rem;
+  }
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .card-service {
+    width: calc((100% / 3) - 1.5rem);
+  }
+}
+
+@media screen and (max-width: 48rem) {
+  .card-service {
+    width: calc((100% / 2) - 1.5rem);
+  }
+}
+
+.card-service .counter {
+  position: absolute;
+  top: -0.5rem;
+  left: -0.5rem;
+  height: 3.25rem;
+  width: 3.25rem;
+  border-radius: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  background: -webkit-gradient(linear, left top, left bottom, from(#0019FF), to(#00FFAD));
+  background: linear-gradient(180deg, #0019FF 0%, #00FFAD 100%);
+  color: white;
+  font-family: "Raleway";
+  font-style: normal;
+  font-size: 600;
+  font-weight: 1.25rem;
+  line-height: 1.365;
+  overflow: hidden;
+}
+
+.card-service-header .serviceicon {
+  background: -webkit-gradient(linear, left top, left bottom, from(#FFFFFF), color-stop(28.37%, #FAFBFC), color-stop(59.78%, #EDEFF2), color-stop(92.52%, #D7DBE2), to(#D1D5DE));
+  background: linear-gradient(180deg, #FFFFFF 0%, #FAFBFC 28.37%, #EDEFF2 59.78%, #D7DBE2 92.52%, #D1D5DE 100%);
+  height: 4.375rem;
+  width: 4.375rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 100%;
+  padding: 0.9375rem;
+}
+
+.card-service-body {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.5rem;
+  overflow: hidden;
+  text-align: center;
+}
+
+.card-service-body .service-title {
+  color: #718096;
+  max-width: 99%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card-service-body .serviceinfo {
+  display: none;
+}
+
+.card-service-body .serviceinfo .service-text {
+  color: #718096;
+}
+
+.card-service:not([disabled]):hover {
+  cursor: pointer;
+}
+
+.card-service:not([disabled]):hover .card-service-body .serviceinfo {
+  display: block;
+}
+
+/* CARD-SERVICE END */
+/* CARD SERVICE-INFO START */
+.card-serviceinfo {
+  overflow: hidden;
+  position: relative;
+}
+
+.card-serviceinfo-thumbnail {
+  width: 100%;
+  height: 45rem;
+  overflow: hidden;
+}
+
+.card-serviceinfo-thumbnail img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transition: transform 250ms ease-in-out;
+  -webkit-transition: -webkit-transform 250ms ease-in-out;
+  transition: -webkit-transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
+}
+
+.card-serviceinfo .service-detail {
+  position: absolute;
+  top: 0rem;
+  left: 0rem;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  padding: 2.125rem 1.75rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.5rem;
+}
+
+.card-serviceinfo .service-detail .service-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.5rem;
+}
+
+.card-serviceinfo .service-detail .service-header .icon {
+  width: 1.875rem;
+  height: 3.375rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.card-serviceinfo .service-detail .service-header .icon img {
+  max-width: 100%;
+}
+
+.card-serviceinfo .service-detail .service-header .servicetitle {
+  color: white;
+}
+
+.card-serviceinfo .service-detail .service-body {
+  display: none;
+}
+
+.card-serviceinfo .service-detail .service-body .servicetext {
+  color: white;
+}
+
+.card-serviceinfo:not([disabled]):hover .service-detail {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.card-serviceinfo:not([disabled]):hover .service-detail .service-body {
+  display: block;
+}
+
+/* CARD SERVICE-INFO END */
 .modal-content {
   border-radius: 1.25rem;
   border-radius: 1.25rem;
@@ -883,6 +1197,152 @@ select {
   border-radius: 0.5rem;
 }
 
+.preloader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 9999;
+  background: black;
+}
+
+.cssloader {
+  height: 12.5rem;
+  width: 12.5rem;
+  margin: 97px auto;
+  position: relative;
+  perspective: 3900px;
+  -o-perspective: 3900px;
+  -ms-perspective: 3900px;
+  -webkit-perspective: 3900px;
+  -moz-perspective: 3900px;
+  transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+}
+
+.cssload-circle {
+  transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  opacity: 0;
+  height: 12.5rem;
+  width: 12.5rem;
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  border-radius: 146px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: cssload-spin 34.5s ease-in-out alternate infinite;
+  -o-animation: cssload-spin 34.5s ease-in-out alternate infinite;
+  -ms-animation: cssload-spin 34.5s ease-in-out alternate infinite;
+  -webkit-animation: cssload-spin 34.5s ease-in-out alternate infinite;
+  -moz-animation: cssload-spin 34.5s ease-in-out alternate infinite;
+}
+
+.cssload-circle:nth-of-type(1) {
+  animation-delay: 575ms;
+  -o-animation-delay: 575ms;
+  -ms-animation-delay: 575ms;
+  -webkit-animation-delay: 575ms;
+  -moz-animation-delay: 575ms;
+}
+
+.cssload-circle:nth-of-type(2) {
+  animation-delay: 1150ms;
+  -o-animation-delay: 1150ms;
+  -ms-animation-delay: 1150ms;
+  -webkit-animation-delay: 1150ms;
+  -moz-animation-delay: 1150ms;
+}
+
+.cssload-circle:nth-of-type(3) {
+  animation-delay: 1725ms;
+  -o-animation-delay: 1725ms;
+  -ms-animation-delay: 1725ms;
+  -webkit-animation-delay: 1725ms;
+  -moz-animation-delay: 1725ms;
+}
+
+.cssload-circle:nth-of-type(4) {
+  animation-delay: 2300ms;
+  -o-animation-delay: 2300ms;
+  -ms-animation-delay: 2300ms;
+  -webkit-animation-delay: 2300ms;
+  -moz-animation-delay: 2300ms;
+}
+
+.cssload-circle:nth-of-type(5) {
+  animation-delay: 2875ms;
+  -o-animation-delay: 2875ms;
+  -ms-animation-delay: 2875ms;
+  -webkit-animation-delay: 2875ms;
+  -moz-animation-delay: 2875ms;
+}
+
+@keyframes cssload-spin {
+  0% {
+    -webkit-transform: rotateY(0deg) rotateX(0deg);
+            transform: rotateY(0deg) rotateX(0deg);
+    opacity: 1;
+  }
+  25% {
+    -webkit-transform: rotateY(180deg) rotateX(360deg);
+            transform: rotateY(180deg) rotateX(360deg);
+  }
+  50% {
+    -webkit-transform: rotateY(540deg) rotateX(540deg);
+            transform: rotateY(540deg) rotateX(540deg);
+  }
+  75% {
+    -webkit-transform: rotateY(720deg) rotateX(900deg);
+            transform: rotateY(720deg) rotateX(900deg);
+  }
+  100% {
+    -webkit-transform: rotateY(900deg) rotateX(1080deg);
+            transform: rotateY(900deg) rotateX(1080deg);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes cssload-spin {
+  0% {
+    -webkit-transform: rotateY(0deg) rotateX(0deg);
+    opacity: 1;
+  }
+  25% {
+    -webkit-transform: rotateY(180deg) rotateX(360deg);
+  }
+  50% {
+    -webkit-transform: rotateY(540deg) rotateX(540deg);
+  }
+  75% {
+    -webkit-transform: rotateY(720deg) rotateX(900deg);
+  }
+  100% {
+    -webkit-transform: rotateY(900deg) rotateX(1080deg);
+    opacity: 1;
+  }
+}
+
 /**=====================================================
                     STECH-BANNER
 =====================================================**/
@@ -941,6 +1401,7 @@ select {
 .stechbanner-content .banner-details .banner-title {
   color: white;
   letter-spacing: 0.1rem;
+  text-transform: uppercase;
 }
 
 /**=====================================================
@@ -961,7 +1422,7 @@ canvas {
 =====================================================**/
 .stechdigital {
   background: white;
-  height: 100vh;
+  min-height: 100vh;
   position: relative;
   z-index: 2;
   padding: 10rem 0rem;
@@ -1015,3 +1476,329 @@ canvas {
   font-weight: 700;
   line-height: 1.5;
 }
+
+/**=====================================================
+            OUT-CONCERN SECTION START
+=====================================================**/
+.ourconcern {
+  background: #F7FAFC;
+  min-height: 100vh;
+  position: relative;
+  z-index: 2;
+  padding: 5rem 0rem;
+}
+
+.ourconcern-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2.75rem;
+}
+
+.ourconcern-content .concern-brand {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1.1875rem 1.5rem;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  overflow: hidden;
+}
+
+.ourconcern-content .concern-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .ourconcern-content .concern-info {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+.ourconcern-content .concern-info .concern-thumbnail {
+  width: 26.5rem;
+  height: 39.875rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+}
+
+@media screen and (max-width: 48rem) {
+  .ourconcern-content .concern-info .concern-thumbnail {
+    width: 100%;
+    height: 26.5rem;
+  }
+}
+
+@media screen and (max-width: 35.9375rem) {
+  .ourconcern-content .concern-info .concern-thumbnail {
+    overflow: hidden;
+  }
+}
+
+.ourconcern-content .concern-info .concern-thumbnail img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.ourconcern-content .concern-info .concern-thumbnail .info {
+  position: absolute;
+  bottom: 0;
+  left: -20%;
+  z-index: 2;
+  background: linear-gradient(269.75deg, #5A48FF 8.49%, rgba(113, 113, 113, 0) 137%);
+  color: #FAFAFA;
+  width: 20.625rem;
+  height: 21.375rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (max-width: 48rem) {
+  .ourconcern-content .concern-info .concern-thumbnail .info {
+    left: -8%;
+  }
+}
+
+@media screen and (max-width: 35.9375rem) {
+  .ourconcern-content .concern-info .concern-thumbnail .info {
+    left: 0;
+    height: 15rem;
+  }
+}
+
+@media screen and (max-width: 48rem) {
+  .ourconcern-content .concern-info .concern-thumbnail .info-title {
+    font-family: "Raleway";
+    font-style: normal;
+    font-size: 2.75rem;
+    font-weight: 500;
+    line-height: 1.25;
+  }
+}
+
+@media screen and (max-width: 35.9375rem) {
+  .ourconcern-content .concern-info .concern-thumbnail .info-title {
+    font-family: "Raleway";
+    font-style: normal;
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 1.34375;
+  }
+}
+
+.ourconcern-details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 5rem;
+}
+
+.ourconcern-header {
+  position: relative;
+}
+
+.ourconcern-header .ribbon {
+  position: absolute;
+  top: auto;
+  bottom: 0rem;
+  left: 0;
+  z-index: -1;
+  width: 5rem;
+  height: 8.75rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+}
+
+.ourconcern-header .ribbon img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.ourconcern-header .ourconcern-title {
+  font-family: "Raleway";
+  font-style: normal;
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+/**=====================================================
+            OUT-SERVICE SECTION START
+=====================================================**/
+.ourservice {
+  background: url(../images/pages/home/our-services/services-bg.png) no-repeat center center/cover;
+  min-height: 100vh;
+  position: relative;
+  z-index: 2;
+  padding: 5rem 0rem;
+}
+
+.ourservice-header {
+  position: relative;
+  z-index: 2;
+  margin: 5rem 0rem 0.875rem;
+}
+
+.ourservice-header .ribbon {
+  position: absolute;
+  top: auto;
+  bottom: 0rem;
+  left: 0;
+  z-index: -1;
+  width: 5rem;
+  height: 8.75rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+}
+
+.ourservice-header .ribbon img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.ourservice-header .service-title {
+  font-family: "Raleway";
+  font-style: normal;
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.5;
+  color: white;
+}
+
+.ourservice-body {
+  position: relative;
+  z-index: 2;
+}
+
+.ourservice-body .service-text {
+  color: white;
+}
+
+.ourservice-details {
+  overflow: hidden;
+}
+
+.ourservice-details .services {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  gap: 1.5rem;
+  -webkit-animation: marquee 10s linear infinite;
+          animation: marquee 10s linear infinite;
+}
+
+.ourservice-details .services:not([disabled]):hover {
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+
+@-webkit-keyframes marquee {
+  0% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+  100% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+}
+
+@keyframes marquee {
+  0% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+  100% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+}
+
+/**=====================================================
+            SERVICE-INFO SECTION START
+=====================================================**/
+.serviceinfo {
+  background: white;
+  position: relative;
+  z-index: 2;
+}
+
+.serviceinfo-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0;
+}
+
+.serviceinfo-content .card-serviceinfo {
+  width: 25%;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.serviceinfo-content .card-serviceinfo:not([disabled]):hover {
+  width: 30%;
+}
+
+/**=====================================================
+                OUR-CLIENTS SECTION START
+=====================================================**/
