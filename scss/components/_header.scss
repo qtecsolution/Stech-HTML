@@ -36,6 +36,10 @@
                 width: calc(100% - 3rem);
                 justify-content: center;
 
+                @include breakpoint(tablet991) {
+                    display: none;
+                }
+
                 &-link {
                     @include font-face($raleway, style('normal'), size(14), weight('semibold'), line-height(14, 14));
                     color: rgba($white, 0.6);

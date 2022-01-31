@@ -911,6 +911,12 @@ select {
           justify-content: center;
 }
 
+@media screen and (max-width: 61.9375rem) {
+  .header-content .mainmenu .mainlist {
+    display: none;
+  }
+}
+
 .header-content .mainmenu .mainlist-link {
   font-family: "Raleway";
   font-style: normal;
@@ -1866,7 +1872,7 @@ select {
   height: 100vh;
   overflow: hidden;
   z-index: 9999;
-  background: black;
+  background: url(../images/stech-banner.png) no-repeat center center/cover;
 }
 
 .cssloader {
@@ -1892,16 +1898,11 @@ select {
   -ms-transform-style: preserve-3d;
   -webkit-transform-style: preserve-3d;
   -moz-transform-style: preserve-3d;
-  box-sizing: border-box;
-  -o-box-sizing: border-box;
-  -ms-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   opacity: 0;
   height: 12.5rem;
   width: 12.5rem;
-  border: 2px solid rgba(255, 255, 255, 0.8);
-  border-radius: 146px;
+  border: solid 0.125rem #00FFAD;
+  border-radius: 9.125rem;
   position: absolute;
   top: 0;
   left: 0;
@@ -1955,24 +1956,24 @@ select {
 @keyframes cssload-spin {
   0% {
     -webkit-transform: rotateY(0deg) rotateX(0deg);
-            transform: rotateY(0deg) rotateX(0deg);
+    transform: rotateY(0deg) rotateX(0deg);
     opacity: 1;
   }
   25% {
     -webkit-transform: rotateY(180deg) rotateX(360deg);
-            transform: rotateY(180deg) rotateX(360deg);
+    transform: rotateY(180deg) rotateX(360deg);
   }
   50% {
     -webkit-transform: rotateY(540deg) rotateX(540deg);
-            transform: rotateY(540deg) rotateX(540deg);
+    transform: rotateY(540deg) rotateX(540deg);
   }
   75% {
     -webkit-transform: rotateY(720deg) rotateX(900deg);
-            transform: rotateY(720deg) rotateX(900deg);
+    transform: rotateY(720deg) rotateX(900deg);
   }
   100% {
     -webkit-transform: rotateY(900deg) rotateX(1080deg);
-            transform: rotateY(900deg) rotateX(1080deg);
+    transform: rotateY(900deg) rotateX(1080deg);
     opacity: 1;
   }
 }
@@ -1995,6 +1996,42 @@ select {
     -webkit-transform: rotateY(900deg) rotateX(1080deg);
     opacity: 1;
   }
+}
+
+.nav-tabs {
+  border-bottom: 0;
+  gap: 1.1875rem 1.5rem;
+}
+
+.nav-tabs .nav-link {
+  color: transparent;
+  margin-bottom: 0rem;
+  background: transparent;
+  border: 0;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  padding: 0rem;
+}
+
+.nav-tabs .nav-link:hover:not(.active) {
+  border-color: transparent;
+  color: transparent;
+}
+
+.nav-tabs .nav-link:hover:not(.active) .card-concern {
+  -webkit-filter: drop-shadow(0 0 0.0625rem rgba(12, 26, 75, 0.1)) drop-shadow(0 0.625rem 1rem rgba(20, 37, 63, 0.06));
+          filter: drop-shadow(0 0 0.0625rem rgba(12, 26, 75, 0.1)) drop-shadow(0 0.625rem 1rem rgba(20, 37, 63, 0.06));
+}
+
+.nav-tabs .nav-link.active {
+  color: transparent;
+  background: transparent;
+  border-color: transparent;
+}
+
+.nav-tabs .nav-link.active .card-concern {
+  -webkit-filter: drop-shadow(0 0 0.0625rem rgba(12, 26, 75, 0.1)) drop-shadow(0 0.625rem 1rem rgba(20, 37, 63, 0.06));
+          filter: drop-shadow(0 0 0.0625rem rgba(12, 26, 75, 0.1)) drop-shadow(0 0.625rem 1rem rgba(20, 37, 63, 0.06));
 }
 
 /**=====================================================
@@ -2214,6 +2251,8 @@ canvas {
       -ms-flex-pack: center;
           justify-content: center;
   position: relative;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
 }
 
 @media screen and (max-width: 48rem) {
@@ -2231,7 +2270,6 @@ canvas {
 
 .ourconcern-content .concern-info .concern-thumbnail img {
   width: 100%;
-  height: 100%;
   -o-object-fit: contain;
      object-fit: contain;
 }
@@ -2262,6 +2300,7 @@ canvas {
 @media screen and (max-width: 35.9375rem) {
   .ourconcern-content .concern-info .concern-thumbnail .info {
     left: 0;
+    width: 100%;
     height: 15rem;
   }
 }

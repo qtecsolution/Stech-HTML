@@ -134,6 +134,7 @@ canvas {
                 height: length(638);
                 @include flex-center;
                 position: relative;
+                @include transitions;
 
                 @include breakpoint(phone768) {
                     @include w100;
@@ -145,7 +146,7 @@ canvas {
                 }
 
                 img {
-                    @include wh100;
+                    @include w100;
                     object-fit: contain;
                 }
 
@@ -165,6 +166,7 @@ canvas {
 
                     @include breakpoint(phone575) {
                         left: 0;
+                        @include w100;
                         height: length(240);
                     }
 
