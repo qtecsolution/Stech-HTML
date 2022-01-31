@@ -100,7 +100,7 @@ video {
     border: 0;
 
     &::selection {
-        // @include setBgColor($primary, $white);
+        @include setBgColor($primary, $white);
     }
 }
 
@@ -125,15 +125,10 @@ html {
 }
 
 body {
-    background: $bodyBg;
+    @include setBgColor($bodyBg, $gray-600);
+    @include font-face($lorenza, style('normal'), size(18), weight('normal'), line-height(30, 18));
     margin: 0;
     padding: 0;
-    @include font-face-path($lorenza,
-        style('normal'),
-        size(18),
-        weight('normal'),
-        line-height(30, 18),
-        $lorenza-normal-path);
     overflow-x: hidden;
     position: relative;
 }

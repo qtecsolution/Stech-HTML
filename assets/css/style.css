@@ -230,9 +230,49 @@
 /**===============================================
                 FONT STYLE MIXINS
 ===============================================**/
+@font-face {
+  font-family: 'Lorenza';
+  src: url("../fonts/Lorenza/Lorenza.woff2") format("woff2"), url("../fonts/Lorenza/Lorenza.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lorenza';
+  src: url("../fonts/Lorenza/Lorenza-Medium.woff2") format("woff2"), url("../fonts/Lorenza/Lorenza-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lorenza';
+  src: url("../fonts/Lorenza/Lorenza-Medium.woff2") format("woff2"), url("../fonts/Lorenza/Lorenza-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lorenza';
+  src: url("../fonts/Lorenza/Lorenza.woff2") format("woff2"), url("../fonts/Lorenza/Lorenza.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 /**======================================
             HEADING STYLES
 =======================================**/
+.text {
+  font-family: "Lorenza";
+  font-style: normal;
+  font-size: 1.125rem;
+  font-weight: normal;
+  line-height: 1.66667;
+}
+
 .big-title-1 {
   font-family: "Raleway";
   font-style: normal;
@@ -393,6 +433,186 @@ video {
   border: 0;
 }
 
+a::-moz-selection,
+abbr::-moz-selection,
+acronym::-moz-selection,
+address::-moz-selection,
+applet::-moz-selection,
+article::-moz-selection,
+aside::-moz-selection,
+audio::-moz-selection,
+b::-moz-selection,
+big::-moz-selection,
+blockquote::-moz-selection,
+button::-moz-selection,
+body::-moz-selection,
+canvas::-moz-selection,
+caption::-moz-selection,
+center::-moz-selection,
+cite::-moz-selection,
+code::-moz-selection,
+dd::-moz-selection,
+del::-moz-selection,
+details::-moz-selection,
+dfn::-moz-selection,
+div::-moz-selection,
+dl::-moz-selection,
+dt::-moz-selection,
+em::-moz-selection,
+embed::-moz-selection,
+fieldset::-moz-selection,
+figcaption::-moz-selection,
+figure::-moz-selection,
+footer::-moz-selection,
+form::-moz-selection,
+h1::-moz-selection,
+h2::-moz-selection,
+h3::-moz-selection,
+h4::-moz-selection,
+h5::-moz-selection,
+h6::-moz-selection,
+header::-moz-selection,
+hgroup::-moz-selection,
+html::-moz-selection,
+i::-moz-selection,
+input::-moz-selection,
+iframe::-moz-selection,
+img::-moz-selection,
+ins::-moz-selection,
+kbd::-moz-selection,
+label::-moz-selection,
+legend::-moz-selection,
+li::-moz-selection,
+mark::-moz-selection,
+menu::-moz-selection,
+main::-moz-selection,
+nav::-moz-selection,
+object::-moz-selection,
+ol::-moz-selection,
+output::-moz-selection,
+option::-moz-selection,
+p::-moz-selection,
+pre::-moz-selection,
+q::-moz-selection,
+ruby::-moz-selection,
+s::-moz-selection,
+samp::-moz-selection,
+section::-moz-selection,
+small::-moz-selection,
+span::-moz-selection,
+strike::-moz-selection,
+strong::-moz-selection,
+sub::-moz-selection,
+summary::-moz-selection,
+select::-moz-selection,
+sup::-moz-selection,
+table::-moz-selection,
+tbody::-moz-selection,
+td::-moz-selection,
+tfoot::-moz-selection,
+th::-moz-selection,
+thead::-moz-selection,
+time::-moz-selection,
+tr::-moz-selection,
+tt::-moz-selection,
+u::-moz-selection,
+ul::-moz-selection,
+var::-moz-selection,
+video::-moz-selection {
+  background: #00FFAD;
+  color: white;
+}
+
+a::selection,
+abbr::selection,
+acronym::selection,
+address::selection,
+applet::selection,
+article::selection,
+aside::selection,
+audio::selection,
+b::selection,
+big::selection,
+blockquote::selection,
+button::selection,
+body::selection,
+canvas::selection,
+caption::selection,
+center::selection,
+cite::selection,
+code::selection,
+dd::selection,
+del::selection,
+details::selection,
+dfn::selection,
+div::selection,
+dl::selection,
+dt::selection,
+em::selection,
+embed::selection,
+fieldset::selection,
+figcaption::selection,
+figure::selection,
+footer::selection,
+form::selection,
+h1::selection,
+h2::selection,
+h3::selection,
+h4::selection,
+h5::selection,
+h6::selection,
+header::selection,
+hgroup::selection,
+html::selection,
+i::selection,
+input::selection,
+iframe::selection,
+img::selection,
+ins::selection,
+kbd::selection,
+label::selection,
+legend::selection,
+li::selection,
+mark::selection,
+menu::selection,
+main::selection,
+nav::selection,
+object::selection,
+ol::selection,
+output::selection,
+option::selection,
+p::selection,
+pre::selection,
+q::selection,
+ruby::selection,
+s::selection,
+samp::selection,
+section::selection,
+small::selection,
+span::selection,
+strike::selection,
+strong::selection,
+sub::selection,
+summary::selection,
+select::selection,
+sup::selection,
+table::selection,
+tbody::selection,
+td::selection,
+tfoot::selection,
+th::selection,
+thead::selection,
+time::selection,
+tr::selection,
+tt::selection,
+u::selection,
+ul::selection,
+var::selection,
+video::selection {
+  background: #00FFAD;
+  color: white;
+}
+
 article,
 aside,
 details,
@@ -415,14 +635,14 @@ html {
 
 body {
   background: #F7FAFC;
-  margin: 0;
-  padding: 0;
+  color: #718096;
   font-family: "Lorenza";
   font-style: normal;
   font-size: 1.125rem;
   font-weight: normal;
   line-height: 1.66667;
-  src: url("../fonts/Lorenza/Lorenza.woff2") format("woff2"), url("../fonts/Lorenza/Lorenza.woff") format("woff");
+  margin: 0;
+  padding: 0;
   overflow-x: hidden;
   position: relative;
 }
@@ -692,6 +912,11 @@ select {
 }
 
 .header-content .mainmenu .mainlist-link {
+  font-family: "Raleway";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1;
   color: rgba(255, 255, 255, 0.6);
   overflow: hidden;
 }
@@ -742,6 +967,11 @@ select {
   width: 3rem;
   background: url("data:image/svg+xml,%3Csvg width='11' height='12' viewBox='0 0 11 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_255_35111' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='11' height='12'%3E%3Cpath d='M4.9826 8.15869L1.68519 4.39022C1.29623 3.9457 1.61191 3.25 2.20259 3.25H8.7974C9.38808 3.25 9.70376 3.9457 9.3148 4.39022L6.01739 8.15869C5.74348 8.47173 5.25651 8.47173 4.9826 8.15869Z' fill='black'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_255_35111)'%3E%3Crect y='0.5' width='11' height='11' fill='white' fill-opacity='0.6'/%3E%3C/g%3E%3C/svg%3E%0A") no-repeat center right;
   color: rgba(255, 255, 255, 0.6);
+  font-family: "Raleway";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1;
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
@@ -765,6 +995,343 @@ select {
 /**=======================================================**
                         HEADER SECTION END
 **=======================================================**/
+/**=====================================================
+                FOOTER SECTION START
+=====================================================**/
+.footer {
+  padding: 5rem 0rem;
+}
+
+.footer .footerlogo,
+.footer .footnewsletter,
+.footer .aboutlist,
+.footer .contactlist,
+.footer .sociallist,
+.footer .contact-title,
+.footer .about-title,
+.footer .copyright-text {
+  position: relative;
+  z-index: 2;
+}
+
+.footer-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 5rem;
+}
+
+.footer-content .stecnewsletter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2.5rem;
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .footer-content .stecnewsletter {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.footer-content .stecnewsletter .footerlogo {
+  width: 12.5rem;
+  height: 3.5rem;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.footer-content .stecnewsletter .footerlogo img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.footer-content .stecnewsletter .footnewsletter {
+  background: white;
+  padding: 0.3125rem;
+  width: 20.75rem;
+  height: 2.875rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer-content .stecnewsletter .footnewsletter .inputfield {
+  background: transparent;
+  color: #2D3748;
+  font-family: "Lorenza";
+  font-style: normal;
+  font-size: 0.8125rem;
+  font-weight: normal;
+  line-height: 1;
+  padding: 0rem 0.6875rem;
+  width: calc(100% - 6.125rem);
+  height: 100%;
+}
+
+.footer-content .stecnewsletter .footnewsletter .inputfield::-webkit-input-placeholder {
+  color: #7A828A;
+}
+
+.footer-content .stecnewsletter .footnewsletter .inputfield:-ms-input-placeholder {
+  color: #7A828A;
+}
+
+.footer-content .stecnewsletter .footnewsletter .inputfield::-ms-input-placeholder {
+  color: #7A828A;
+}
+
+.footer-content .stecnewsletter .footnewsletter .inputfield::placeholder {
+  color: #7A828A;
+}
+
+.footer-content .stecnewsletter .footnewsletter .btn-subscribe {
+  width: 6.125rem;
+  height: 2.25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  background: #0019FF;
+  color: white;
+  font-family: "Raleway";
+  font-style: normal;
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.footer-content .stecnewsletter .footnewsletter .btn-subscribe:not([disabled]):hover {
+  background: #5A48FF;
+}
+
+.footer-content .aboutinfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.5rem;
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .footer-content .aboutinfo {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.footer-content .aboutinfo .about-title {
+  font-family: "Lorenza";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.625;
+  color: white;
+}
+
+.footer-content .aboutinfo .aboutlist {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.5rem;
+}
+
+.footer-content .aboutinfo .aboutlist-link {
+  font-family: "Lorenza";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.625;
+  color: white;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.footer-content .aboutinfo .aboutlist-link:not([disabled]):hover {
+  color: #00FFAD;
+}
+
+.footer-content .contactinfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.5rem;
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .footer-content .contactinfo {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.footer-content .contactinfo .contact-title {
+  font-family: "Lorenza";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.625;
+  color: white;
+}
+
+.footer-content .contactinfo .contactlist-sociallist {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2.5rem;
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .footer-content .contactinfo .contactlist-sociallist {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.footer-content .contactinfo .contactlist-sociallist .contactlist {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.75rem;
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .footer-content .contactinfo .contactlist-sociallist .contactlist {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+    max-width: 100%;
+  }
+}
+
+.footer-content .contactinfo .contactlist-sociallist .contactlist-link {
+  font-family: "Lorenza";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.625;
+  color: white;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.footer-content .contactinfo .contactlist-sociallist .contactlist-link:not([disabled]):hover {
+  color: #00FFAD;
+}
+
+.footer-content .contactinfo .contactlist-sociallist .sociallist {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2.5rem;
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .footer-content .contactinfo .contactlist-sociallist .sociallist {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media screen and (max-width: 35.9375rem) {
+  .footer-content .contactinfo .contactlist-sociallist .sociallist {
+    gap: 1.5rem;
+  }
+}
+
+.footer-content .contactinfo .contactlist-sociallist .sociallist-link {
+  height: 2.25rem;
+  width: 2.25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 100%;
+  overflow: hidden;
+}
+
+.footer-content .copyright-text {
+  color: white;
+  font-family: "Lorenza";
+  font-style: normal;
+  font-size: 0.75rem;
+  font-weight: normal;
+  line-height: 1.66667;
+  text-align: center;
+}
+
 /**=====================================================**
                         HOME-CARDS
 =======================================================**/
@@ -830,14 +1397,14 @@ select {
 }
 
 .card-concern-details .concern-title {
-  color: #718096;
-  -webkit-font-feature-settings: 'salt'on;
-          font-feature-settings: 'salt'on;
   font-family: "Raleway";
   font-style: normal;
   font-size: 1rem;
   font-weight: 500;
   line-height: 1.625;
+  color: #718096;
+  -webkit-font-feature-settings: 'salt'on;
+          font-feature-settings: 'salt'on;
 }
 
 .card-concern:not([disabled]):hover {
@@ -1080,9 +1647,44 @@ select {
 }
 
 /* CARD SERVICE-INFO END */
+/* CARD CLIENT START */
+.card-client {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+  height: 10.875rem;
+  padding: 1.25rem;
+  cursor: pointer;
+  border: solid 0.0625rem #E2E8F0;
+}
+
+.card-client img {
+  max-width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -webkit-transition: transform 250ms ease-in-out;
+  -webkit-transition: -webkit-transform 250ms ease-in-out;
+  transition: -webkit-transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
+}
+
+.card-client:not([disabled]):hover img {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+/* CARD CLIENT END */
 .modal-content {
-  border-radius: 1.25rem;
-  border-radius: 1.25rem;
+  border-radius: 0rem;
+  border-radius: 0rem;
   overflow: hidden;
 }
 
@@ -1121,6 +1723,58 @@ select {
   outline: none;
   -webkit-box-shadow: none;
           box-shadow: none;
+}
+
+.modal-body {
+  position: relative;
+  min-height: 30rem;
+}
+
+@media screen and (max-width: 48rem) {
+  .modal-body {
+    min-height: 18.75rem;
+  }
+}
+
+.modal-body .btn-close {
+  background: transparent;
+  border: none;
+  background: white;
+  height: 1.75rem;
+  width: 1.75rem;
+  border-radius: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  opacity: 1;
+  margin: 0rem;
+  padding: 0rem;
+  position: absolute;
+  top: 0rem;
+  right: -2.5rem;
+  z-index: 100;
+}
+
+.modal-body .btn-close:focus {
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.modal-body iframe {
+  min-height: 30rem;
+}
+
+@media screen and (max-width: 48rem) {
+  .modal-body iframe {
+    min-height: 18.75rem;
+  }
 }
 
 .offcanvas-top {
@@ -1475,6 +2129,24 @@ canvas {
   font-size: 2.5rem;
   font-weight: 700;
   line-height: 1.5;
+  color: #2D3748;
+}
+
+.stechdigital-body .setchdigital-text {
+  font-family: "Lorenza";
+  font-style: normal;
+  font-size: 1.125rem;
+  font-weight: normal;
+  line-height: 1.66667;
+  color: #718096;
+}
+
+.stechdigital-body .setchdigital-text .link {
+  font-family: "Lorenza";
+  font-style: normal;
+  font-size: 1.125rem;
+  font-weight: normal;
+  line-height: 1.66667;
 }
 
 /**=====================================================
@@ -1663,6 +2335,16 @@ canvas {
   font-size: 2.5rem;
   font-weight: 700;
   line-height: 1.5;
+  color: #2D3748;
+}
+
+.ourconcern-body .ourconcern-text {
+  font-family: "Lorenza";
+  font-style: normal;
+  font-size: 1.125rem;
+  font-weight: normal;
+  line-height: 1.66667;
+  color: #718096;
 }
 
 /**=====================================================
@@ -1674,12 +2356,20 @@ canvas {
   position: relative;
   z-index: 2;
   padding: 5rem 0rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 5rem;
 }
 
 .ourservice-header {
   position: relative;
   z-index: 2;
-  margin: 5rem 0rem 0.875rem;
+  margin: 5rem 0rem 0.75rem;
 }
 
 .ourservice-header .ribbon {
@@ -1802,3 +2492,354 @@ canvas {
 /**=====================================================
                 OUR-CLIENTS SECTION START
 =====================================================**/
+.ourclients {
+  background: white;
+  min-height: 100vh;
+  position: relative;
+  z-index: 2;
+  padding: 5rem 0rem;
+}
+
+.ourclients-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 5rem;
+}
+
+.ourclients-details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 5rem;
+}
+
+.ourclients-header {
+  position: relative;
+}
+
+.ourclients-header .ribbon {
+  position: absolute;
+  top: auto;
+  bottom: 0rem;
+  left: 0;
+  z-index: -1;
+  width: 5rem;
+  height: 8.75rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+}
+
+.ourclients-header .ribbon img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.ourclients-header .ourclients-title {
+  font-family: "Raleway";
+  font-style: normal;
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.5;
+  color: #2D3748;
+}
+
+.ourclients-body .ourclients-text {
+  font-family: "Lorenza";
+  font-style: normal;
+  font-size: 1.125rem;
+  font-weight: normal;
+  line-height: 1.66667;
+}
+
+/**=====================================================
+                COMPANY-VALUES SECTION START
+=====================================================**/
+.companyvalues {
+  background: #F7FAFC;
+  min-height: 100vh;
+  position: relative;
+  z-index: 2;
+  padding: 5rem 0rem;
+}
+
+.companyvalues .companyvalue-thumbnail {
+  width: 100%;
+  height: 45rem;
+  overflow: hidden;
+}
+
+.companyvalues .companyvalue-thumbnail img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transition: transform 250ms ease-in-out;
+  -webkit-transition: -webkit-transform 250ms ease-in-out;
+  transition: -webkit-transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
+}
+
+.companyvalues .companyvalue-thumbnail img:not([disabled]):hover {
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
+}
+
+.companyvalues .companyvalus-details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 5rem;
+}
+
+.companyvalues .companyvalus-details .companyvalues-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.75rem;
+}
+
+.companyvalues .companyvalus-details .companyvalues-header .companyvalues-head {
+  position: relative;
+}
+
+.companyvalues .companyvalus-details .companyvalues-header .companyvalues-head .ribbon {
+  position: absolute;
+  top: auto;
+  bottom: 0rem;
+  left: 0;
+  z-index: -1;
+  width: 5rem;
+  height: 8.75rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+}
+
+.companyvalues .companyvalus-details .companyvalues-header .companyvalues-head .ribbon img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.companyvalues .companyvalus-details .companyvalues-header .companyvalues-head .companyvalues-title {
+  font-family: "Raleway";
+  font-style: normal;
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.5;
+  color: #2D3748;
+}
+
+.companyvalues .companyvalus-details .companyvalues-header .companyvalue-text {
+  font-family: "Lorenza";
+  font-style: normal;
+  font-size: 1.125rem;
+  font-weight: normal;
+  line-height: 1.66667;
+  color: #718096;
+}
+
+.companyvalues .companyvalus-details .companyvalues-body .companyvalue {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.25rem;
+}
+
+.companyvalues .companyvalus-details .companyvalues-body .companyvalue-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  align-items: center;
+}
+
+.companyvalues .companyvalus-details .companyvalues-body .companyvalue-header .valuetitle {
+  font-family: "Raleway";
+  font-style: normal;
+  font-size: 600;
+  font-weight: 1rem;
+  line-height: 1.5625;
+  color: #2D3748;
+}
+
+.companyvalues .companyvalus-details .companyvalues-body .companyvalue-header .actualvalue {
+  font-family: "Lorenza";
+  font-style: normal;
+  font-size: 1.125rem;
+  font-weight: normal;
+  line-height: 1.66667;
+  color: #2D3748;
+}
+
+.companyvalues .companyvalus-details .companyvalues-body .companyvalue-body .progress {
+  background: #CBD5E0;
+  height: 0.5rem;
+  border-radius: 0rem;
+  border-radius: 0rem;
+}
+
+.companyvalues .companyvalus-details .companyvalues-body .companyvalue-body .progress-bar {
+  background: #0019FF;
+}
+
+/**=====================================================
+            OUR-STRATEGIES SECTION START
+=====================================================**/
+.ourstrategies {
+  background: white;
+  padding: 5rem 0rem;
+  position: relative;
+  z-index: 2;
+}
+
+.ourstrategies .ourstrategies-details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.75rem;
+}
+
+.ourstrategies .ourstrategies-details .strategies-header {
+  position: relative;
+  z-index: 2;
+}
+
+.ourstrategies .ourstrategies-details .strategies-header .ribbon {
+  position: absolute;
+  top: auto;
+  bottom: 0rem;
+  left: 0;
+  z-index: -1;
+  width: 5rem;
+  height: 8.75rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+}
+
+.ourstrategies .ourstrategies-details .strategies-header .ribbon img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.ourstrategies .ourstrategies-details .strategies-header .strategies-title {
+  font-family: "Raleway";
+  font-style: normal;
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.5;
+  color: #2D3748;
+}
+
+.ourstrategies .ourstrategies-details .strategies-body {
+  position: relative;
+  z-index: 2;
+}
+
+.ourstrategies .ourstrategies-details .strategies-body .strategies-text {
+  color: #718096;
+}
+
+.ourstrategies .ourstrategies-thumbnail {
+  position: relative;
+  width: 100%;
+  height: 30.8125rem;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.ourstrategies .ourstrategies-thumbnail img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transition: transform 250ms ease-in-out;
+  -webkit-transition: -webkit-transform 250ms ease-in-out;
+  transition: -webkit-transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
+}
+
+.ourstrategies .ourstrategies-thumbnail img:not([disabled]):hover {
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
+}
+
+.ourstrategies .ourstrategies-thumbnail .btn-playpause {
+  position: absolute;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  background: transparent;
+  border: none;
+}

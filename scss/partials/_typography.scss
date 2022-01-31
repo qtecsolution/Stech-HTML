@@ -19,6 +19,9 @@ $lorenza-thin-path: '../fonts/Lorenza/Lorenza-Thin';
 $lorenza-normal-path: '../fonts/Lorenza/Lorenza';
 $lorenza-medium-path: '../fonts/Lorenza/Lorenza-Medium';
 
+$path-1: url('../fonts/Lorenza/Lorenza.woff2') format('woff2'),
+url('../fonts/Lorenza/Lorenza.woff') format('woff');
+
 // SET FONT-FAMILY
 @function family($font-family) {
 	@return inspect($value: $font-family);
@@ -47,6 +50,7 @@ $lorenza-medium-path: '../fonts/Lorenza/Lorenza-Medium';
 /**===============================================
                 FONT STYLE MIXINS
 ===============================================**/
+
 // FONT WITHOUT PATH
 @mixin font-face($fontname, $fontstyle, $fontsize, $fontweight, $line-height) {
 	font: {
@@ -59,32 +63,49 @@ $lorenza-medium-path: '../fonts/Lorenza/Lorenza-Medium';
 	line-height: $line-height;
 }
 
-// FONT WITH PATH
-@mixin font-face-path($fontname, $fontstyle, $fontsize, $fontweight, $line-height, $path) {
-	font: {
-		family: quote($fontname);
-		style: $fontstyle;
-		size: $fontsize;
-		weight: $fontweight;
-	}
+@font-face {
+	font-family: 'Lorenza';
+	src: url('../fonts/Lorenza/Lorenza.woff2') format('woff2'),
+		url('../fonts/Lorenza/Lorenza.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
 
-	line-height: $line-height;
-	src: url($path + '.woff2') format('woff2'),
-	url($path + '.woff') format('woff');
+@font-face {
+	font-family: 'Lorenza';
+	src: url('../fonts/Lorenza/Lorenza-Medium.woff2') format('woff2'),
+		url('../fonts/Lorenza/Lorenza-Medium.woff') format('woff');
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Lorenza';
+	src: url('../fonts/Lorenza/Lorenza-Medium.woff2') format('woff2'),
+		url('../fonts/Lorenza/Lorenza-Medium.woff') format('woff');
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Lorenza';
+	src: url('../fonts/Lorenza/Lorenza.woff2') format('woff2'),
+		url('../fonts/Lorenza/Lorenza.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
 }
 
 /**======================================
             HEADING STYLES
 =======================================**/
 
-// .text {
-// 	@include font-face($lorenza,
-// 		style('normal'),
-// 		size(64),
-// 		weight('medium'),
-// 		line-height(75, 64));
-// 	text-transform: uppercase;
-// }
+.text {
+	@include font-face($lorenza, style('normal'), size(18), weight('normal'), line-height(30, 18));
+}
 
 .big-title-1 {
 	@include font-face($raleway,

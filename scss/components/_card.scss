@@ -4,6 +4,7 @@
 
 // 01. CARD-CONCERN
 // 02. CARD-SERVICE
+// 03. CARD-CLIENT
 
 /* CARD-CONCERN START */
 .card-concern {
@@ -41,13 +42,9 @@
         background: $white;
 
         .concern-title {
+            @include font-face($raleway, style('normal'), size(16), weight('medium'), line-height(26, 16));
             color: $gray-600;
             font-feature-settings: 'salt'on;
-            @include font-face($raleway,
-                style('normal'),
-                size(16),
-                weight('medium'),
-                line-height(26, 16));
         }
     }
 
@@ -223,3 +220,27 @@
 }
 
 /* CARD SERVICE-INFO END */
+
+/* CARD CLIENT START */
+.card-client {
+    @include flex-center;
+    overflow: hidden;
+    height: length(174);
+    padding: length(20);
+    cursor: pointer;
+    @include border(solid, 1, $gray-300);
+
+    img {
+        max-width: 100%;
+        object-fit: contain;
+        @include transitiontransform;
+    }
+
+    @include hover {
+        img {
+            @include transform(scale(1.1));
+        }
+    }
+}
+
+/* CARD CLIENT END */
