@@ -1947,13 +1947,13 @@ select {
 .cssloader {
   height: 12.5rem;
   width: 12.5rem;
-  margin: 97px auto;
+  margin: 6.0625rem auto;
   position: relative;
-  perspective: 3900px;
-  -o-perspective: 3900px;
-  -ms-perspective: 3900px;
-  -webkit-perspective: 3900px;
-  -moz-perspective: 3900px;
+  perspective: 243.75rem;
+  -o-perspective: 243.75rem;
+  -ms-perspective: 243.75rem;
+  -webkit-perspective: 243.75rem;
+  -moz-perspective: 243.75rem;
   transform-style: preserve-3d;
   -o-transform-style: preserve-3d;
   -ms-transform-style: preserve-3d;
@@ -2187,7 +2187,7 @@ canvas {
   width: 100%;
   height: 100vh;
   background: url(../images/stech-banner.png) no-repeat center center/cover;
-  z-index: 1;
+  overflow: hidden;
 }
 
 /**=====================================================

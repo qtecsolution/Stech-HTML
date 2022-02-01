@@ -1,9 +1,9 @@
 let triggerTabList = [].slice.call(document.querySelectorAll('#concernTab button'));
 
-triggerTabList.forEach(function(triggerTab) {
-    const tabTrigger = new bootstrap.Tab(triggerTab);
+triggerTabList.forEach(function(triggerEl) {
+    const tabTrigger = new bootstrap.Tab(triggerEl);
 
-    triggerTab.addEventListener('mouseover', function(event) {
+    triggerEl.addEventListener('mouseover', function(event) {
         event.preventDefault();
         tabTrigger.show();
     })

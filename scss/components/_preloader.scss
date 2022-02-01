@@ -10,13 +10,13 @@
 
 .cssloader {
     @include square(length(200));
-    margin: 97px auto;
+    margin: length(97) auto;
     position: relative;
-    perspective: 3900px;
-    -o-perspective: 3900px;
-    -ms-perspective: 3900px;
-    -webkit-perspective: 3900px;
-    -moz-perspective: 3900px;
+    perspective: length(3900);
+    -o-perspective: length(3900);
+    -ms-perspective: length(3900);
+    -webkit-perspective: length(3900);
+    -moz-perspective: length(3900);
     transform-style: preserve-3d;
     -o-transform-style: preserve-3d;
     -ms-transform-style: preserve-3d;
