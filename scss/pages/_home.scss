@@ -16,6 +16,11 @@
         text-align: center;
         gap: length(36);
 
+        @include breakpoint(tablet991) {
+            position: relative;
+            z-index: 2;
+        }
+
         .banner-3d {
             position: relative;
             z-index: 2;
@@ -56,8 +61,6 @@ canvas {
     @include w100;
     height: 100vh;
     background: url(../images/stech-banner.png) no-repeat center center/cover;
-    // z-index: 1;
-    overflow: hidden;
 }
 
 /**=====================================================

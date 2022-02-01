@@ -20,6 +20,11 @@
         @include flex-column;
         gap: length(80);
 
+        @include breakpoint(tablet991) {
+            position: relative;
+            z-index: 2;
+        }
+
         .stecnewsletter {
             @include flex-column;
             gap: length(40);
