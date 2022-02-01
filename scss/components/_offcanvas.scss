@@ -2,7 +2,9 @@
     height: 100vh;
     border-bottom: none;
     background: url(../images/stech-banner.png) no-repeat center center/cover;
-    width: 100%;
+    @include w100;
+    z-index: 5555;
+    max-height: 100vh;
 }
 
 .offcanvas-bottom {

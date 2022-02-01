@@ -57,10 +57,6 @@ canvas {
     height: 100vh;
     background: url(../images/stech-banner.png) no-repeat center center/cover;
     z-index: 1;
-
-    @include breakpoint(tablet991) {
-        height: calc(100vh - 3.75rem);
-    }
 }
 
 /**=====================================================

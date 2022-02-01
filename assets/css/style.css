@@ -666,7 +666,7 @@ body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-  overflow-y: scroll;
+  overflow-y: scroll !important;
   position: relative;
 }
 
@@ -1853,6 +1853,8 @@ select {
   border-bottom: none;
   background: url(../images/stech-banner.png) no-repeat center center/cover;
   width: 100%;
+  z-index: 5555;
+  max-height: 100vh;
 }
 
 .offcanvas-bottom {
@@ -2186,12 +2188,6 @@ canvas {
   height: 100vh;
   background: url(../images/stech-banner.png) no-repeat center center/cover;
   z-index: 1;
-}
-
-@media screen and (max-width: 61.9375rem) {
-  canvas {
-    height: calc(100vh - 3.75rem);
-  }
 }
 
 /**=====================================================
