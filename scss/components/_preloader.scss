@@ -1,11 +1,10 @@
 .preloader {
     @include flex-center;
-    position: fixed;
+    position: absolute;
     @include w100;
     height: 100vh;
     overflow: hidden;
     z-index: 9999;
-    // background: $black;
     background: url(../images/stech-banner.png) no-repeat center center/cover;
 }
 
