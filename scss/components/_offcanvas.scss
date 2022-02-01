@@ -66,9 +66,150 @@
         }
 
         &::-webkit-scrollbar-thumb {
-            // background: $primary;
             @include radius(8);
         }
 
+        .mobilemenu {
+            @include flex-column;
+
+            .accordion {
+                @include radius(0);
+                background: transparent;
+
+                &-item {
+                    background: transparent;
+                    border: none;
+                    @include radius(0);
+
+                    .mobiledropdown {
+                        @include flex-center-vert;
+                        background: transparent;
+                        padding: length(16);
+
+                        .link {
+                            width: 60%;
+                            @include font-face($raleway, style('normal'), size(14), weight('semibold'), line-height(14, 14));
+                            color: $white;
+                        }
+
+                        .accordion-header {
+                            width: 40%;
+                            @include flex-end;
+                            height: length(20);
+
+                            .accordion-button {
+                                @include radius(0);
+                                padding: length(0);
+                                background: transparent;
+
+                                &::after {
+                                    @include square(length(20));
+                                    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffffff'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+                                }
+
+                                &:not(.collapsed) {
+                                    @include w100;
+                                    padding: length(0);
+                                    box-shadow: none;
+                                    @include radius(0);
+                                    background: transparent;
+
+                                    &::after {
+                                        position: absolute;
+                                        z-index: 100;
+                                        top: 50%;
+                                        @include transform(translateY(-50%) rotate(-180deg));
+                                        right: length(0);
+
+                                        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23585858'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+                                    }
+                                }
+
+                                &:focus {
+                                    box-shadow: none;
+                                    background-color: transparent;
+                                    border: none;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &-body {
+                    padding: length(0);
+
+                    .submenu {
+                        @include flex-column;
+                        background: $white;
+
+                        &-link {
+                            @include w100;
+                            @include flex-center-vert;
+                            padding: length(16) length(30);
+                            @include font-face($raleway, style('normal'), size(14), weight('semibold'), line-height(14, 14));
+                            color: $gray-700;
+
+                            &:hover:not(.active) {
+                                @include setBgColor($primary, $gray-700);
+                            }
+                        }
+                    }
+                }
+
+                &:hover:not(.active) {
+                    .accordion-item {
+                        .mobiledropdown {
+                            background: $primary;
+
+                            .link {
+                                color: $gray-700;
+                            }
+
+                            .accordion-header {
+                                .accordion-button {
+                                    &::after {
+                                        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23585858'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &.active {
+                    .accordion-item {
+                        .mobiledropdown {
+                            background: $primary;
+
+                            .link {
+                                color: $gray-700;
+                            }
+
+                            .accordion-header {
+                                .accordion-button {
+                                    &::after {
+                                        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23585858'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .mobilelink {
+                padding: length(16);
+                @include font-face($raleway, style('normal'), size(14), weight('semibold'), line-height(14, 14));
+                color: $white;
+
+                &:hover:not(.active) {
+                    @include setBgColor($primary, $gray-700);
+                }
+
+                &.active {
+                    @include setBgColor($primary, $gray-700);
+                }
+            }
+        }
     }
 }

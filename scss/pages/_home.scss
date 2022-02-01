@@ -428,12 +428,19 @@ canvas {
 
         .services {
             display: flex;
+            flex-wrap: wrap;
             @include w100;
             gap: length(24);
-            animation: marquee 10s linear infinite;
+            padding: length(20);
 
-            @include hover {
-                animation-play-state: paused;
+            @include breakpoint(tab991) {
+                animation: marquee 10s linear infinite;
+                flex-wrap: nowrap;
+                padding: length(0);
+
+                @include hover {
+                    animation-play-state: paused;
+                }
             }
 
             @keyframes marquee {

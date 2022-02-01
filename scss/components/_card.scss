@@ -80,12 +80,17 @@
         padding: length(48) length(32);
     }
 
-    @include breakpoint(tablet991) {
+    @include breakpoint(desktop1199) {
         width: calc((100% / 3) - 1.5rem);
+        padding: length(32);
     }
 
-    @include breakpoint(phone768) {
+    @include breakpoint(tablet991) {
         width: calc((100% / 2) - 1.5rem);
+    }
+
+    @include breakpoint(phone575) {
+        @include w100;
     }
 
     .counter {
@@ -138,6 +143,13 @@
 
     @include hover {
         cursor: pointer;
+
+        .counter {
+            @include square(length(85));
+            top: length(-16);
+            left: length(-16);
+            @include font-face($raleway, style('normal'), weight('semibold'), size(28), line-height(38, 28));
+        }
 
         .card-service-body {
             .serviceinfo {
@@ -196,6 +208,26 @@
 
             .servicetitle {
                 color: $white;
+
+                @include breakpoint(desktop1400) {
+                    font-size: length(24);
+                }
+
+                @include breakpoint(desktop1366) {
+                    font-size: length(20);
+                }
+
+                @include breakpoint(desktop1169) {
+                    font-size: length(18);
+                }
+
+                @include breakpoint(laptop1100) {
+                    font-size: length(16);
+                }
+
+                @include breakpoint(desktop1024) {
+                    font-size: length(15);
+                }
             }
         }
 

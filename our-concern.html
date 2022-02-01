@@ -33,14 +33,6 @@
         <div class="container">
             <!-- HEADER CONTENT START -->
             <div class="header-content">
-                <!-- HAMBURGER ICON START -->
-                <div class="hamburger">
-                    <button class="btn-hamburger" type="button">
-
-                    </button>
-                </div>
-                <!-- HAMBURGER ICON END -->
-
                 <!-- BRAND-LOGO START -->
                 <div class="brandlogo">
                     <a href="index.html" class="link">
@@ -105,6 +97,111 @@
                     <!-- CHANGE-LANGUAGE DROPDOWN END -->
                 </nav>
                 <!-- MAIN MENU END -->
+
+                <!-- HAMBURGER ICON START -->
+                <div class="hamburger">
+                    <button class="btn-hamburger" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu" aria-controls="mobileMenu">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3 12H21" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M3 6H21" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M3 18H21" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                </div>
+                <!-- HAMBURGER ICON END -->
+
+                <!-- MOBILE MENU START -->
+                <div class="offcanvas offcanvas-top" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenu">
+                    <div class="offcanvas-header">
+                        <!-- BRAND-LOGO START -->
+                        <div class="brandlogo">
+                            <a href="index.html" class="link">
+                                <img src="assets/images/logo/logo-mobile.svg" alt="brand-logo">
+                            </a>
+                        </div>
+                        <!-- BRAND-LOGO END -->
+                        
+                        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close">
+                            <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M18.0001 15.8781L25.4251 8.45312L27.5461 10.5741L20.1211 17.9991L27.5461 25.4241L25.4251 27.5451L18.0001 20.1201L10.5751 27.5451L8.4541 25.4241L15.8791 17.9991L8.4541 10.5741L10.5751 8.45312L18.0001 15.8781Z" fill="white"/>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div class="offcanvas-body">
+                        <div class="mobilemenu">
+                            <div class="accordion" id="mobiledropdown-1">
+                                <div class="accordion-item">
+                                    <div class="mobiledropdown">
+                                        <a href="#" class="link">Services</a>
+                                        <h2 class="accordion-header" id="drop-1">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#dropdown-1" aria-expanded="false" aria-controls="dropdown-1"></button>
+                                        </h2>
+                                    </div>
+
+                                    <div id="dropdown-1" class="accordion-collapse collapse" aria-labelledby="drop-1" data-bs-parent="#mobiledropdown-1">
+                                        <div class="accordion-body">
+                                            <div class="submenu">
+                                                <a href="#" class="submenu-link">Events</a>
+                                                <a href="#" class="submenu-link">Blogs</a>
+                                                <a href="#" class="submenu-link">Watch Videos</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <a href="#" class="mobilelink">About Us</a>
+                            
+                            <div class="accordion" id="mobiledropdown-2">
+                                <div class="accordion-item">
+                                    <div class="mobiledropdown">
+                                        <a href="#" class="link">Our Concern</a>
+                                        <h2 class="accordion-header" id="drop-2">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#dropdown-2" aria-expanded="false" aria-controls="dropdown-2"></button>
+                                        </h2>
+                                    </div>
+
+                                    <div id="dropdown-2" class="accordion-collapse collapse" aria-labelledby="drop-2" data-bs-parent="#mobiledropdown-2">
+                                        <div class="accordion-body">
+                                            <div class="submenu">
+                                                <a href="#" class="submenu-link">Events</a>
+                                                <a href="#" class="submenu-link">Blogs</a>
+                                                <a href="#" class="submenu-link">Watch Videos</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="accordion" id="mobiledropdown-3">
+                                <div class="accordion-item">
+                                    <div class="mobiledropdown">
+                                        <a href="#" class="link">Gallery</a>
+                                        <h2 class="accordion-header" id="drop-3">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#dropdown-3" aria-expanded="false" aria-controls="dropdown-3"></button>
+                                        </h2>
+                                    </div>
+
+                                    <div id="dropdown-3" class="accordion-collapse collapse" aria-labelledby="drop-3" data-bs-parent="#mobiledropdown-3">
+                                        <div class="accordion-body">
+                                            <div class="submenu">
+                                                <a href="#" class="submenu-link">Events</a>
+                                                <a href="#" class="submenu-link">Blogs</a>
+                                                <a href="#" class="submenu-link">Watch Videos</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <a href="#" class="mobilelink">News and Event</a>
+
+                            <a href="#" class="mobilelink">Contact Us</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- MOBILE MENU END -->
             </div>
             <!-- HEADER CONTENT END -->
         </div>
