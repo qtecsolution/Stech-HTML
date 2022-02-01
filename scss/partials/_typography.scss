@@ -113,6 +113,14 @@ url('../fonts/Lorenza/Lorenza.woff') format('woff');
 		size(64),
 		weight('medium'),
 		line-height(75, 64));
+
+	@include breakpoint(tablet991) {
+		@include font-face($raleway,
+			style('normal'),
+			size(36),
+			weight('medium'),
+			line-height(57, 36));
+	}
 }
 
 h1 {

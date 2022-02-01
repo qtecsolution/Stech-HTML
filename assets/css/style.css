@@ -1,3 +1,15 @@
+/*------------------------------------*\
+    breakpoint vars
+\*------------------------------------*/
+/*------------------------------------*\
+    breakpoint functions
+\*------------------------------------*/
+/*------------------------------------*\
+    breakpoint mixin
+\*------------------------------------*/
+/*------------------------------------*\
+    breakpoint usage
+\*------------------------------------*/
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;900&display=swap");
 .header.inverted {
   -webkit-animation-duration: 250ms;
@@ -279,6 +291,16 @@
   font-size: 4rem;
   font-weight: 500;
   line-height: 1.17188;
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .big-title-1 {
+    font-family: "Raleway";
+    font-style: normal;
+    font-size: 2.25rem;
+    font-weight: 500;
+    line-height: 1.58333;
+  }
 }
 
 h1 {
@@ -710,18 +732,6 @@ select {
   cursor: pointer;
 }
 
-/*------------------------------------*\
-    breakpoint vars
-\*------------------------------------*/
-/*------------------------------------*\
-    breakpoint functions
-\*------------------------------------*/
-/*------------------------------------*\
-    breakpoint mixin
-\*------------------------------------*/
-/*------------------------------------*\
-    breakpoint usage
-\*------------------------------------*/
 .flex {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -845,6 +855,14 @@ select {
           align-items: center;
 }
 
+@media screen and (max-width: 61.9375rem) {
+  .header {
+    height: 3.75rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+}
+
 .header-content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -873,6 +891,13 @@ select {
   overflow: hidden;
 }
 
+@media screen and (max-width: 61.9375rem) {
+  .header-content .brandlogo .link {
+    width: 7.5625rem;
+    height: 2.125rem;
+  }
+}
+
 .header-content .brandlogo .link img {
   width: 100%;
   height: 100%;
@@ -894,6 +919,12 @@ select {
   width: calc(100% - 10.625rem);
 }
 
+@media screen and (max-width: 61.9375rem) {
+  .header-content .mainmenu {
+    display: none;
+  }
+}
+
 .header-content .mainmenu .mainlist {
   margin: 0;
   padding: 0;
@@ -911,10 +942,19 @@ select {
           justify-content: center;
 }
 
-@media screen and (max-width: 61.9375rem) {
+@media screen and (max-width: 75rem) {
   .header-content .mainmenu .mainlist {
-    display: none;
+    gap: 1.25rem;
   }
+}
+
+.header-content .mainmenu .mainlist-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .header-content .mainmenu .mainlist-link {
@@ -983,6 +1023,30 @@ select {
           appearance: none;
   cursor: pointer;
   text-align: center;
+}
+
+.header-content .hamburger {
+  display: none;
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .header-content .hamburger {
+    display: block;
+  }
+}
+
+.header-content .hamburger .btn-hamburger {
+  background: transparent;
+  border: none;
+}
+
+.header-content .hamburger .btn-hamburger svg path {
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.header-content .hamburger .btn-hamburger:not([disabled]):hover svg path {
+  stroke: #00FFAD;
 }
 
 .header.inverted {
@@ -1786,6 +1850,8 @@ select {
 .offcanvas-top {
   height: 100vh;
   border-bottom: none;
+  background: url(../images/stech-banner.png) no-repeat center center/cover;
+  width: 100%;
 }
 
 .offcanvas-bottom {
@@ -2052,6 +2118,12 @@ select {
           justify-content: center;
 }
 
+@media screen and (max-width: 61.9375rem) {
+  .stechbanner {
+    height: calc(100vh - 3.75rem);
+  }
+}
+
 .stechbanner-content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2075,6 +2147,13 @@ select {
   z-index: 2;
   width: 12.5rem;
   height: 25rem;
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .stechbanner-content .banner-3d {
+    width: 6.125rem;
+    height: 12.5rem;
+  }
 }
 
 .stechbanner-content .banner-3d img {
@@ -2119,6 +2198,12 @@ canvas {
   padding: 10rem 0rem;
 }
 
+@media screen and (max-width: 61.9375rem) {
+  .stechdigital {
+    padding: 5rem 0rem;
+  }
+}
+
 .stechdigital-content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2130,8 +2215,20 @@ canvas {
   gap: 4rem;
 }
 
+@media screen and (max-width: 61.9375rem) {
+  .stechdigital-content {
+    gap: 2rem;
+  }
+}
+
 .stechdigital-header {
   position: relative;
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .stechdigital-header {
+    margin-top: 3rem;
+  }
 }
 
 .stechdigital-header .ribbon {
@@ -2153,6 +2250,19 @@ canvas {
   overflow: hidden;
 }
 
+@media screen and (max-width: 61.9375rem) {
+  .stechdigital-header .ribbon {
+    width: 5.1875rem;
+    height: 9.375rem;
+  }
+}
+
+@media screen and (max-width: 30rem) {
+  .stechdigital-header .ribbon {
+    top: -60%;
+  }
+}
+
 .stechdigital-header .ribbon img {
   width: 100%;
   height: 100%;
@@ -2167,6 +2277,16 @@ canvas {
   font-weight: 700;
   line-height: 1.5;
   color: #2D3748;
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .stechdigital-header .stechdigital-title {
+    font-family: "Raleway";
+    font-style: normal;
+    font-size: 1.75rem;
+    font-weight: 700;
+    line-height: 1.5;
+  }
 }
 
 .stechdigital-body .setchdigital-text {
@@ -2323,6 +2443,130 @@ canvas {
     font-weight: 500;
     line-height: 1.34375;
   }
+}
+
+.ourconcern-content .mobile-concern .accordion {
+  border: none;
+}
+
+.ourconcern-content .mobile-concern .accordion-item {
+  border: none;
+}
+
+.ourconcern-content .mobile-concern .accordion-item:first-of-type {
+  border-radius: 0;
+}
+
+.ourconcern-content .mobile-concern .accordion-item:first-of-type .accordion-button {
+  border-radius: 0;
+}
+
+.ourconcern-content .mobile-concern .accordion-button {
+  padding: 0rem;
+}
+
+.ourconcern-content .mobile-concern .accordion-button .card-concern {
+  width: 100%;
+  height: 100%;
+  height: 5.6875rem;
+}
+
+@media screen and (max-width: 30rem) {
+  .ourconcern-content .mobile-concern .accordion-button .card-concern-details {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    text-align: left;
+  }
+}
+
+.ourconcern-content .mobile-concern .accordion-button:not(.collapsed) {
+  color: transparent;
+  background-color: transparent;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.ourconcern-content .mobile-concern .accordion-button:not(.collapsed) .card-concern {
+  -webkit-filter: drop-shadow(0 0 0.0625rem rgba(12, 26, 75, 0.1)) drop-shadow(0 0.625rem 1rem rgba(20, 37, 63, 0.06));
+          filter: drop-shadow(0 0 0.0625rem rgba(12, 26, 75, 0.1)) drop-shadow(0 0.625rem 1rem rgba(20, 37, 63, 0.06));
+}
+
+.ourconcern-content .mobile-concern .accordion-button:not(.collapsed) .card-concern-details {
+  background: #5A48FF;
+  border-color: #5A48FF;
+}
+
+.ourconcern-content .mobile-concern .accordion-button:not(.collapsed) .card-concern-details .concern-title {
+  color: white;
+}
+
+.ourconcern-content .mobile-concern .accordion-button:not(.collapsed)::after {
+  position: absolute;
+  z-index: 100;
+  top: 50%;
+  -webkit-transform: translateY(-50%) rotate(-180deg);
+  transform: translateY(-50%) rotate(-180deg);
+  right: 1rem;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffffff'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+
+.ourconcern-content .mobile-concern .accordion-button::after {
+  position: absolute;
+  z-index: 100;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  right: 1rem;
+}
+
+.ourconcern-content .mobile-concern .accordion-button:focus {
+  outline: none;
+  border: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.ourconcern-content .mobile-concern .accordion-body {
+  padding: 0rem;
+}
+
+.ourconcern-content .mobile-concern .accordion-body .concern-info-mobile {
+  height: 11.875rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+}
+
+.ourconcern-content .mobile-concern .accordion-body .concern-info-mobile .info {
+  width: calc(100% - 7.875rem);
+  height: 100%;
+  background: linear-gradient(269.75deg, #5A48FF 8.49%, rgba(113, 113, 113, 0) 137%);
+  color: #FAFAFA;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.ourconcern-content .mobile-concern .accordion-body .concern-info-mobile .concern-thumbnail {
+  width: 7.875rem;
+  height: 100%;
+  overflow: hidden;
+}
+
+.ourconcern-content .mobile-concern .accordion-body .concern-info-mobile .concern-thumbnail img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .ourconcern-details {

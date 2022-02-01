@@ -7,6 +7,10 @@
     position: relative;
     @include flex-center;
 
+    @include breakpoint(tablet991) {
+        height: calc(100vh - 3.75rem);
+    }
+
     &-content {
         @include flex-center-column;
         text-align: center;
@@ -17,6 +21,11 @@
             z-index: 2;
             width: length(200);
             height: length(400);
+
+            @include breakpoint(tablet991) {
+                width: length(98);
+                height: length(200);
+            }
 
             img {
                 @include wh100;
@@ -59,13 +68,25 @@ canvas {
     z-index: 2;
     padding: length(160) length(0);
 
+    @include breakpoint(tablet991) {
+        padding: length(80) length(0);
+    }
+
     &-content {
         @include flex-column;
         gap: length(64);
+
+        @include breakpoint(tablet991) {
+            gap: length(32);
+        }
     }
 
     &-header {
         position: relative;
+
+        @include breakpoint(tablet991) {
+            margin-top: length(48);
+        }
 
         .ribbon {
             position: absolute;
@@ -77,6 +98,15 @@ canvas {
             @include flex-center;
             overflow: hidden;
 
+            @include breakpoint(tablet991) {
+                width: length(83);
+                height: length(150);
+            }
+
+            @include breakpoint(phone480) {
+                top: -60%;
+            }
+
             img {
                 @include wh100;
                 object-fit: contain;
@@ -86,6 +116,10 @@ canvas {
         .stechdigital-title {
             @include font-face($raleway, style('normal'), size(40), weight('bold'), line-height(60, 40));
             color: $gray-800;
+
+            @include breakpoint(tablet991) {
+                @include font-face($raleway, style('normal'), size(28), weight('bold'), line-height(42, 28));
+            }
         }
     }
 
@@ -182,6 +216,111 @@ canvas {
                 }
             }
         }
+
+        // MOBILE CONCERN
+        .mobile-concern {
+            .accordion {
+                border: none;
+
+                &-item {
+                    border: none;
+
+                    &:first-of-type {
+                        border-radius: 0;
+
+                        .accordion-button {
+                            border-radius: 0;
+                        }
+                    }
+                }
+
+                &-button {
+                    padding: length(0);
+
+                    .card-concern {
+                        @include wh100;
+                        height: length(91);
+
+                        &-details {
+                            @include breakpoint(phone480) {
+                                justify-content: flex-start;
+                                text-align: left;
+                            }
+                        }
+                    }
+
+                    &:not(.collapsed) {
+                        color: transparent;
+                        background-color: transparent;
+                        box-shadow: none;
+
+                        .card-concern {
+                            filter: $shadowBig;
+
+                            &-details {
+                                background: $concernHoverBg;
+                                border-color: $concernHoverBg;
+
+                                .concern-title {
+                                    color: $white;
+                                }
+                            }
+                        }
+
+                        &::after {
+                            position: absolute;
+                            z-index: 100;
+                            top: 50%;
+                            @include transform(translateY(-50%) rotate(-180deg));
+                            right: length(16);
+
+                            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffffff'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+                        }
+                    }
+
+                    &::after {
+                        position: absolute;
+                        z-index: 100;
+                        @include vertical-align;
+                        right: length(16);
+                    }
+
+                    &:focus {
+                        outline: none;
+                        border: none;
+                        box-shadow: none;
+                    }
+                }
+
+                &-body {
+                    padding: length(0);
+
+                    .concern-info-mobile {
+                        height: length(190);
+                        @include flex-center-vert;
+                        overflow: hidden;
+
+                        .info {
+                            width: calc(100% - 7.875rem);
+                            @include h100;
+                            @include setBgColor($gradient-1, $gray-50);
+                            @include flex-center-vert;
+                        }
+
+                        .concern-thumbnail {
+                            width: length(126);
+                            @include h100;
+                            overflow: hidden;
+
+                            img {
+                                @include wh100;
+                                object-fit: contain;
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 
     &-details {
@@ -221,7 +360,6 @@ canvas {
             @include font-face($lorenza, style('normal'), size(18), weight('normal'), line-height(30, 18));
             color: $gray-600;
         }
-
     }
 }
 

@@ -33,14 +33,6 @@
         <div class="container">
             <!-- HEADER CONTENT START -->
             <div class="header-content">
-                <!-- HAMBURGER ICON START -->
-                <div class="hamburger">
-                    <button class="btn-hamburger" type="button">
-
-                    </button>
-                </div>
-                <!-- HAMBURGER ICON END -->
-
                 <!-- BRAND-LOGO START -->
                 <div class="brandlogo">
                     <a href="index.html" class="link">
@@ -49,7 +41,7 @@
                 </div>
                 <!-- BRAND-LOGO END -->
 
-                <!-- MAIN MENU START -->
+                <!-- DEAKTOP MAIN MENU START -->
                 <nav class="mainmenu">
                     <!-- MAIN-LIST START -->
                     <ul class="mainlist">
@@ -104,7 +96,43 @@
                     </select>
                     <!-- CHANGE-LANGUAGE DROPDOWN END -->
                 </nav>
-                <!-- MAIN MENU END -->
+                <!-- DESKTOP MAIN MENU END -->
+
+                <!-- HAMBURGER ICON START -->
+                <div class="hamburger">
+                    <button class="btn-hamburger" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu" aria-controls="mobileMenu">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3 12H21" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M3 6H21" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M3 18H21" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                </div>
+                <!-- HAMBURGER ICON END -->
+
+                <!-- MOBILE MENU START -->
+                <div class="offcanvas offcanvas-top" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenu">
+                    <div class="offcanvas-header">
+                        <!-- BRAND-LOGO START -->
+                        <div class="brandlogo">
+                            <a href="index.html" class="link">
+                                <img src="assets/images/logo/logo-mobile.svg" alt="brand-logo">
+                            </a>
+                        </div>
+                        <!-- BRAND-LOGO END -->
+                        
+                        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close">
+                            <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M18.0001 15.8781L25.4251 8.45312L27.5461 10.5741L20.1211 17.9991L27.5461 25.4241L25.4251 27.5451L18.0001 20.1201L10.5751 27.5451L8.4541 25.4241L15.8791 17.9991L8.4541 10.5741L10.5751 8.45312L18.0001 15.8781Z" fill="white"/>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div class="offcanvas-body">
+                        
+                    </div>
+                </div>
+                <!-- MOBILE MENU END -->
             </div>
             <!-- HEADER CONTENT END -->
         </div>
@@ -183,6 +211,7 @@
         <div class="container">
             <!-- OUR-CONCERN CONTENT START -->
             <div class="ourconcern-content">
+                <!-- CONCERN TOP CONTENT START -->
                 <div class="row">
                     <div class="col-lg-5 col-12">
                         <!-- OUR-CONCERN DETAILS START -->
@@ -210,8 +239,10 @@
                         <!-- OUR-CONCERN DETAILS END -->
                     </div>
                 </div>
+                <!-- CONCERN TOP CONTENT END -->
 
-                <div class="row g-4 g-lg-0">
+                <!-- DESKTOP CONCERN DETAILS START -->
+                <div class="row g-4 g-lg-0 d-none d-lg-block">
                     <!-- CONCERN TAB MENU START -->
                     <div class="col-lg-6">
                         <ul class="nav nav-tabs" id="concernTab" role="tablist">
@@ -728,6 +759,144 @@
                     </div>
                     <!-- CONCERN TAB DETAILS END -->
                 </div>
+                <!-- DESKTOP CONCERN DETAILS END -->
+
+                <!-- MOBILE CONCERN DETAILS START -->
+                <div class="mobile-concern">
+                    <div class="accordion" id="accordionConcern">
+                        <!-- CONCERN ITEM START -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="heading-1">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-1" aria-expanded="true" aria-controls="collapse-1">
+                                    <!-- CARD-CONCERN START -->
+                                    <div class="card-concern">
+                                        <!-- CARD-CONCERN THUMBNAIL -->
+                                        <div class="card-concern-thumbnail">
+                                            <img src="assets/images/pages/home/our-concern/ourconcern-logos/stech-uniworld.png" alt="card-thumbnail">
+                                        </div>
+                                        <!-- CARD-CONCERN THUMBNAIL -->
+
+                                        <!-- CARD-CONCERN DETAILS -->
+                                        <div class="card-concern-details">
+                                            <h5 class="concern-title">Stech Uni World</h5>
+                                        </div>
+                                        <!-- CARD-CONCERN DETAILS -->
+                                    </div>
+                                    <!-- CONCERN-CONCERN END -->
+                                </button>
+                            </h2>
+
+                            <div id="collapse-1" class="accordion-collapse collapse show" aria-labelledby="heading-1" data-bs-parent="#accordionConcern">
+                                <div class="accordion-body">
+                                    <!-- CONCERN-INFO START -->
+                                    <div class="concern-info-mobile">
+                                        <!-- INFO START -->
+                                        <div class="info">
+                                            <h2 class="info-title" id="featured-title">We do design for Brands</h2>
+                                        </div>
+                                        <!-- INFO END -->
+                                        <!-- CONCERN THUMBNAIL START -->
+                                        <div class="concern-thumbnail">
+                                            <img src="assets/images/pages/home/our-concern/ourconcern-thumbnails/thumbnail-1.png" alt="concern-thumbnail">
+                                        </div>
+                                        <!-- CONCERN THUMBNAIL END -->
+                                    </div>
+                                    <!-- CONCERN-INFO END -->
+                                </div>
+                            </div>
+                        </div>
+                        <!-- CONCERN ITEM END -->
+
+                        <!-- CONCERN ITEM START -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="heading-2">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-2" aria-expanded="false" aria-controls="collapse-2">
+                                    <!-- CARD-CONCERN START -->
+                                    <div class="card-concern">
+                                        <!-- CARD-CONCERN THUMBNAIL -->
+                                        <div class="card-concern-thumbnail">
+                                            <img src="assets/images/pages/home/our-concern/ourconcern-logos/stech-holidays.png" alt="card-thumbnail">
+                                        </div>
+                                        <!-- CARD-CONCERN THUMBNAIL -->
+
+                                        <!-- CARD-CONCERN DETAILS -->
+                                        <div class="card-concern-details">
+                                            <h5 class="concern-title">Stech Holidays</h5>
+                                        </div>
+                                        <!-- CARD-CONCERN DETAILS -->
+                                    </div>
+                                    <!-- CONCERN-CONCERN END -->
+                                </button>
+                            </h2>
+
+                            <div id="collapse-2" class="accordion-collapse collapse" aria-labelledby="heading-2" data-bs-parent="#accordionConcern">
+                                <div class="accordion-body">
+                                    <!-- CONCERN-INFO START -->
+                                    <div class="concern-info-mobile">
+                                        <!-- INFO START -->
+                                        <div class="info">
+                                            <h2 class="info-title" id="featured-title">We do design for Brands</h2>
+                                        </div>
+                                        <!-- INFO END -->
+
+                                        <!-- CONCERN THUMBNAIL START -->
+                                        <div class="concern-thumbnail">
+                                            <img src="assets/images/pages/home/our-concern/ourconcern-thumbnails/thumbnail-2.jpg" alt="concern-thumbnail">
+                                        </div>
+                                        <!-- CONCERN THUMBNAIL END -->
+                                    </div>
+                                    <!-- CONCERN-INFO END -->
+                                </div>
+                            </div>
+                        </div>
+                        <!-- CONCERN ITEM END -->
+
+                        <!-- CONCERN ITEM START -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="heading-3">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-3" aria-expanded="false" aria-controls="collapse-3">
+                                    <!-- CARD-CONCERN START -->
+                                    <div class="card-concern">
+                                        <!-- CARD-CONCERN THUMBNAIL -->
+                                        <div class="card-concern-thumbnail">
+                                            <img src="assets/images/pages/home/our-concern/ourconcern-logos/stech-autobricks.png" alt="card-thumbnail">
+                                        </div>
+                                        <!-- CARD-CONCERN THUMBNAIL -->
+
+                                        <!-- CARD-CONCERN DETAILS -->
+                                        <div class="card-concern-details">
+                                            <h5 class="concern-title">Stech Auto Bricks</h5>
+                                        </div>
+                                        <!-- CARD-CONCERN DETAILS -->
+                                    </div>
+                                    <!-- CONCERN-CONCERN END -->
+                                </button>
+                            </h2>
+
+                            <div id="collapse-3" class="accordion-collapse collapse" aria-labelledby="heading-3" data-bs-parent="#accordionConcern">
+                                <div class="accordion-body">
+                                    <!-- CONCERN-INFO START -->
+                                    <div class="concern-info-mobile">
+                                        <!-- INFO START -->
+                                        <div class="info">
+                                            <h2 class="info-title" id="featured-title">We do design for Brands</h2>
+                                        </div>
+                                        <!-- INFO END -->
+
+                                        <!-- CONCERN THUMBNAIL START -->
+                                        <div class="concern-thumbnail">
+                                            <img src="assets/images/pages/home/our-concern/ourconcern-thumbnails/thumbnail-3.jpg" alt="concern-thumbnail">
+                                        </div>
+                                        <!-- CONCERN THUMBNAIL END -->
+                                    </div>
+                                    <!-- CONCERN-INFO END -->
+                                </div>
+                            </div>
+                        </div>
+                        <!-- CONCERN ITEM END -->
+                    </div>
+                </div>
+                <!-- MOBILE CONCERN DETAILS END -->
             </div>
             <!-- OUR-CONCERN CONTENT END -->
         </div>
