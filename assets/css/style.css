@@ -1936,7 +1936,7 @@ select {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  position: fixed;
+  position: absolute;
   width: 100%;
   height: 100vh;
   overflow: hidden;
