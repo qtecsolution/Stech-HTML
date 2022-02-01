@@ -2188,6 +2188,12 @@ canvas {
   z-index: 1;
 }
 
+@media screen and (max-width: 61.9375rem) {
+  canvas {
+    height: calc(100vh - 3.75rem);
+  }
+}
+
 /**=====================================================
             STECH-BANNER-SIMULATOR(CANVAS)
 =====================================================**/
