@@ -224,6 +224,12 @@ canvas {
 
         // MOBILE CONCERN
         .mobile-concern {
+            display: none;
+
+            @include breakpoint(tablet991) {
+                display: block;
+            }
+
             .accordion {
                 border: none;
 

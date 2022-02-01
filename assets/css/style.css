@@ -2452,6 +2452,16 @@ canvas {
   }
 }
 
+.ourconcern-content .mobile-concern {
+  display: none;
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .ourconcern-content .mobile-concern {
+    display: block;
+  }
+}
+
 .ourconcern-content .mobile-concern .accordion {
   border: none;
 }
