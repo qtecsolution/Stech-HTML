@@ -25,6 +25,11 @@
         @include h100;
         padding: length(10) length(34);
 
+        @include breakpoint(laptop1100) {
+            width: length(96);
+            padding: length(10) length(16);
+        }
+
         img {
             max-width: 100%;
             object-fit: contain;
@@ -40,6 +45,12 @@
         width: calc(100% - 8.125rem);
         @include h100;
         background: $white;
+
+        @include breakpoint(laptop1100) {
+            width: calc(100% - 6rem);
+            text-align: left;
+            justify-content: flex-start;
+        }
 
         .concern-title {
             @include font-face($raleway, style('normal'), size(16), weight('medium'), line-height(26, 16));

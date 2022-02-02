@@ -1,0 +1,335 @@
+/**=====================================================
+            STECH-AESTHETICS SECTION START
+=====================================================**/
+.stechaesthetics {
+    background: $white;
+    min-height: 100vh;
+    position: relative;
+    z-index: 2;
+    padding: length(80) length(0) length(160);
+
+    @include breakpoint(tablet991) {
+        padding: length(40) length(8) length(80);
+    }
+
+    &-content {
+        @include flex-column;
+        gap: length(64);
+
+        @include breakpoint(tablet991) {
+            gap: length(32);
+        }
+    }
+
+    &-header {
+        position: relative;
+        @include flex-center-column;
+        gap: length(24);
+        text-align: center;
+
+        @include breakpoint(tablet991) {
+            margin-top: length(48);
+        }
+
+        .stechaesthetics-title {
+            color: $gray-800;
+            text-transform: uppercase;
+            letter-spacing: length(1.6);
+        }
+
+        .ribbon {
+            width: length(110);
+            height: length(220);
+            @include flex-center;
+            overflow: hidden;
+
+            @include breakpoint(tablet991) {
+                width: length(83);
+                height: length(150);
+            }
+
+            img {
+                @include wh100;
+                object-fit: contain;
+            }
+        }
+    }
+
+    &-body {
+        .stechaesthetics-text {
+            @include font-face($lorenza, style('normal'), size(18), weight('normal'), line-height(30, 18));
+            color: $gray-600;
+            text-align: justify;
+
+            .link {
+                @include font-face($lorenza, style('normal'), size(18), weight('normal'), line-height(30, 18));
+            }
+        }
+    }
+}
+
+.darkaesthetics {
+    background: $bodyBg;
+}
+
+.lightourconcern {
+    background: $white;
+}
+
+/**=====================================================
+            CHAIRMAN-MESSAGE SECTION START
+=====================================================**/
+.chairmanmessage {
+    background: $white;
+    min-height: 100vh;
+    position: relative;
+    z-index: 2;
+    padding: length(80) length(0) length(160);
+
+    @include breakpoint(tablet991) {
+        padding: length(40) length(8) length(80);
+    }
+
+    &-content {
+        @include flex-column;
+        gap: length(80);
+
+        @include breakpoint(tablet991) {
+            gap: length(40);
+        }
+
+        .concern-info {
+            @include flex-end;
+
+            @include breakpoint(tablet991) {
+                justify-content: center;
+            }
+
+            .concern-thumbnail {
+                width: length(424);
+                height: length(638);
+                @include flex-center;
+                position: relative;
+                @include transitions;
+
+                @include breakpoint(phone768) {
+                    @include w100;
+                    height: length(424);
+                }
+
+                @include breakpoint(phone575) {
+                    overflow: hidden;
+                }
+
+                img {
+                    @include w100;
+                    object-fit: contain;
+                }
+
+                .info {
+                    position: absolute;
+                    bottom: 0;
+                    left: -20%;
+                    z-index: 2;
+                    @include setBgColor($gradient-1, $gray-50);
+                    width: length(330);
+                    height: length(342);
+                    @include flex-center-vert;
+
+                    @include breakpoint(laptop1100) {
+                        left: 0;
+                    }
+
+                    @include breakpoint(phone768) {
+                        left: -8%;
+                    }
+
+                    @include breakpoint(phone575) {
+                        left: 0;
+                        @include w100;
+                        height: length(240);
+                    }
+
+                    &-title {
+                        @include breakpoint(phone768) {
+                            @include font-face($raleway, style('normal'), size(44), weight('medium'), line-height(55, 44));
+                        }
+
+                        @include breakpoint(phone575) {
+                            @include font-face($raleway, style('normal'), size(32), weight('medium'), line-height(43, 32));
+                        }
+                    }
+                }
+            }
+        }
+
+        .chairman-profile {
+            .chaiman-thumbnail {
+                width: lenght(532);
+                height: lenght(750);
+                position: relative;
+
+                @include breakpoint(phone575) {
+                    @include w100;
+                    height: length(550);
+                }
+
+                img {
+                    @include wh100;
+                    object-fit: cover;
+                }
+
+                .chairmaninfo {
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    z-index: 100;
+                    width: 80%;
+                    height: length(190);
+                    padding: length(44) length(24);
+                    background: $gradient-1;
+                    @include flex-column;
+                    gap: length(16);
+
+                    @include breakpoint(phone575) {
+                        padding: length(24) length(18);
+                    }
+
+                    .name {
+                        @include font-face($raleway, style('normal'), size(36), weight('bold'), line-height(49, 36));
+                        color: $white;
+
+                        @include breakpoint(phone575) {
+                            @include font-face($raleway, style('normal'), size(28), weight('semibold'), line-height(38, 28));
+                        }
+                    }
+
+                    .post {
+                        @include font-face($raleway, style('normal'), size(28), weight('normal'), line-height(38, 28));
+                        color: $white;
+
+                        @include breakpoint(phone575) {
+                            @include font-face($raleway, style('normal'), size(20), weight('normal'), line-height(27.3, 20));
+                        }
+                    }
+                }
+            }
+        }
+
+        .chairman-descript {
+            padding-left: length(20);
+
+            .breaf-text {
+                @include font-face($lorenza, style('normal'), size(18), weight('normal'), line-height(30, 18));
+                color: $gray-600;
+                text-align: justify;
+            }
+
+            @include breakpoint(tablet991) {
+                padding-left: length(0);
+            }
+        }
+    }
+
+    &-details {
+        @include flex-column;
+        gap: length(12);
+        margin-top: length(80);
+    }
+
+    &-header {
+        position: relative;
+
+        .ribbon {
+            position: absolute;
+            top: auto;
+            bottom: length(0);
+            left: 0;
+            z-index: -1;
+            width: length(80);
+            height: length(140);
+            @include flex-center;
+            overflow: hidden;
+
+            img {
+                @include wh100;
+                object-fit: contain;
+            }
+        }
+
+        .chairmanmessage-title {
+            @include font-face($raleway, style('normal'), size(40), weight('bold'), line-height(60, 40));
+            color: $gray-800;
+        }
+    }
+
+    &-body {
+        .chairmanmessage-text {
+            @include font-face($lorenza, style('normal'), size(18), weight('normal'), line-height(30, 18));
+            color: $gray-600;
+        }
+    }
+}
+
+/**=====================================================
+            CORPORATE-DIRECTORS SECTION START
+=====================================================**/
+.corporatedirectors {
+    background: $bodyBg;
+    min-height: 100vh;
+    position: relative;
+    z-index: 2;
+    padding: length(80) length(0) length(160);
+
+    @include breakpoint(tablet991) {
+        padding: length(40) length(8) length(80);
+    }
+
+    &-content {
+        @include flex-column;
+        gap: length(80);
+
+        @include breakpoint(tablet991) {
+            gap: length(40);
+        }
+    }
+
+    &-details {
+        @include flex-column;
+        gap: length(12);
+        margin-top: length(80);
+    }
+
+    &-header {
+        position: relative;
+
+        .ribbon {
+            position: absolute;
+            top: auto;
+            bottom: length(0);
+            left: 0;
+            z-index: -1;
+            width: length(80);
+            height: length(140);
+            @include flex-center;
+            overflow: hidden;
+
+            img {
+                @include wh100;
+                object-fit: contain;
+            }
+        }
+
+        .corporatedirectors-title {
+            @include font-face($raleway, style('normal'), size(40), weight('bold'), line-height(60, 40));
+            color: $gray-800;
+        }
+    }
+
+    &-body {
+        .corporatedirectors-text {
+            @include font-face($lorenza, style('normal'), size(18), weight('normal'), line-height(30, 18));
+            color: $gray-600;
+        }
+    }
+}

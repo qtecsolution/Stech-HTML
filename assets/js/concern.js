@@ -1,10 +1,8 @@
-let triggerTabList = [].slice.call(document.querySelectorAll('#concernTab button'));
+$(document).ready(function() {
+    $('.tab-nav li').hover(function() {
+        $('.tab-nav li.active').removeClass('active');
+        $(this).addClass('active');
+    });
 
-triggerTabList.forEach(function(triggerEl) {
-    const tabTrigger = new bootstrap.Tab(triggerEl);
-
-    triggerEl.addEventListener('mouseover', function(event) {
-        event.preventDefault();
-        tabTrigger.show();
-    })
+    $('.tab-nav li:first-child').addClass('active');
 });

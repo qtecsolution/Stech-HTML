@@ -1,0 +1,272 @@
+/**=====================================================
+            OUT-CONCERN SECTION START
+=====================================================**/
+.ourconcern {
+    background: $bodyBg;
+    min-height: 100vh;
+    position: relative;
+    z-index: 2;
+    padding: length(80) length(0);
+
+    &-content {
+        @include flex-column;
+        gap: length(44);
+
+        .concern-brand {
+            @include flex-center-vert;
+            gap: length(19) length(24);
+            flex-wrap: wrap;
+            overflow: hidden;
+        }
+
+        .concern-info {
+            @include flex-end;
+
+            @include breakpoint(tablet991) {
+                justify-content: center;
+            }
+
+            .concern-thumbnail {
+                width: length(424);
+                height: length(638);
+                @include flex-center;
+                position: relative;
+                @include transitions;
+
+                @include breakpoint(phone768) {
+                    @include w100;
+                    height: length(424);
+                }
+
+                @include breakpoint(phone575) {
+                    overflow: hidden;
+                }
+
+                img {
+                    @include w100;
+                    object-fit: contain;
+                }
+
+                .info {
+                    position: absolute;
+                    bottom: 0;
+                    left: -20%;
+                    z-index: 2;
+                    @include setBgColor($gradient-1, $gray-50);
+                    width: length(330);
+                    height: length(342);
+                    @include flex-center-vert;
+
+                    @include breakpoint(laptop1100) {
+                        left: 0;
+                    }
+
+                    @include breakpoint(phone768) {
+                        left: -8%;
+                    }
+
+                    @include breakpoint(phone575) {
+                        left: 0;
+                        @include w100;
+                        height: length(240);
+                    }
+
+                    &-title {
+                        @include breakpoint(phone768) {
+                            @include font-face($raleway, style('normal'), size(44), weight('medium'), line-height(55, 44));
+                        }
+
+                        @include breakpoint(phone575) {
+                            @include font-face($raleway, style('normal'), size(32), weight('medium'), line-height(43, 32));
+                        }
+                    }
+                }
+            }
+        }
+
+        // MOBILE CONCERN
+        .mobile-concern {
+            display: none;
+
+            @include breakpoint(tablet991) {
+                display: block;
+            }
+
+            .accordion {
+                border: none;
+
+                &-item {
+                    border: none;
+
+                    &:first-of-type {
+                        border-radius: 0;
+
+                        .accordion-button {
+                            border-radius: 0;
+                        }
+                    }
+                }
+
+                &-button {
+                    padding: length(0);
+
+                    .card-concern {
+                        @include wh100;
+                        height: length(91);
+
+                        &-details {
+                            @include breakpoint(phone480) {
+                                justify-content: flex-start;
+                                text-align: left;
+                            }
+                        }
+                    }
+
+                    &:not(.collapsed) {
+                        color: transparent;
+                        background-color: transparent;
+                        box-shadow: none;
+
+                        .card-concern {
+                            filter: $shadowBig;
+
+                            &-details {
+                                background: $concernHoverBg;
+                                border-color: $concernHoverBg;
+
+                                .concern-title {
+                                    color: $white;
+                                }
+                            }
+                        }
+
+                        &::after {
+                            position: absolute;
+                            z-index: 100;
+                            top: 50%;
+                            @include transform(translateY(-50%) rotate(-180deg));
+                            right: length(16);
+
+                            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffffff'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+                        }
+                    }
+
+                    &::after {
+                        position: absolute;
+                        z-index: 100;
+                        @include vertical-align;
+                        right: length(16);
+                    }
+
+                    &:focus {
+                        outline: none;
+                        border: none;
+                        box-shadow: none;
+                    }
+                }
+
+                &-body {
+                    padding: length(0);
+
+                    .concern-info-mobile {
+                        height: length(190);
+                        @include flex-center-vert;
+                        overflow: hidden;
+
+                        .info {
+                            width: calc(100% - 7.875rem);
+                            @include h100;
+                            @include setBgColor($gradient-1, $gray-50);
+                            @include flex-center-vert;
+                        }
+
+                        .concern-thumbnail {
+                            width: length(126);
+                            @include h100;
+                            overflow: hidden;
+
+                            img {
+                                @include wh100;
+                                object-fit: contain;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &-details {
+        @include flex-column;
+        gap: length(12);
+        margin-top: length(80);
+    }
+
+    &-header {
+        position: relative;
+
+        .ribbon {
+            position: absolute;
+            top: auto;
+            bottom: length(0);
+            left: 0;
+            z-index: -1;
+            width: length(80);
+            height: length(140);
+            @include flex-center;
+            overflow: hidden;
+
+            img {
+                @include wh100;
+                object-fit: contain;
+            }
+        }
+
+        .ourconcern-title {
+            @include font-face($raleway, style('normal'), size(40), weight('bold'), line-height(60, 40));
+            color: $gray-800;
+        }
+    }
+
+    &-body {
+        .ourconcern-text {
+            @include font-face($lorenza, style('normal'), size(18), weight('normal'), line-height(30, 18));
+            color: $gray-600;
+        }
+    }
+}
+
+
+.tab-panel {
+    min-height: length(638);
+
+    @include breakpoint(tablet991) {
+        display: none;
+    }
+}
+
+.tab-nav {
+    list-style: none;
+    position: relative;
+    @include flex-center-vert;
+    flex-wrap: wrap;
+    width: 50%;
+    gap: length(19) length(24);
+}
+
+.tab-nav li {
+    width: calc(50% - 1.5rem);
+}
+
+.tab-nav li.active .content-holder {
+    display: block;
+}
+
+.content-holder {
+    position: absolute;
+    top: 0;
+    left: auto;
+    right: -100%;
+    display: none;
+    min-height: length(638);
+}

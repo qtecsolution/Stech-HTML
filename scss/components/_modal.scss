@@ -3,7 +3,32 @@
 .modal {
     &-content {
         @include radius(0);
-        overflow: hidden;
+        // overflow: hidden;
+        border: length(0);
+
+        .btn-close {
+            position: absolute;
+            right: length(-96);
+            top: length(0);
+            @include square(length(80));
+            @include flex-center;
+            overflow: hidden;
+            background: transparent;
+            z-index: 2000;
+            @include circle;
+            margin: length(0);
+            padding: length(0);
+            opacity: 1;
+
+            svg {
+                @include wh100;
+            }
+
+            &:focus {
+                outline: none;
+                box-shadow: none;
+            }
+        }
     }
 
     &-header {
