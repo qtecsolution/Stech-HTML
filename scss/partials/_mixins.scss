@@ -35,6 +35,12 @@
     align-items: baseline;
 }
 
+// FLEX ALIGNSTART
+@mixin flex-align-start {
+    @include flex;
+    align-items: flex-start;
+}
+
 // FLEX ALIGNEND
 @mixin flex-align-end {
     @include flex;
