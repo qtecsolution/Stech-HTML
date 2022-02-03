@@ -279,10 +279,10 @@
     min-height: 100vh;
     position: relative;
     z-index: 2;
-    padding: length(80) length(0) length(160);
+    padding: length(80) length(0);
 
     @include breakpoint(tablet991) {
-        padding: length(40) length(8) length(80);
+        padding: length(40) length(8);
     }
 
     &-content {
@@ -291,6 +291,12 @@
 
         @include breakpoint(tablet991) {
             gap: length(40);
+        }
+
+        .corporatedirector {
+            .btn-director {
+                @include transparent-button;
+            }
         }
     }
 
@@ -328,6 +334,119 @@
 
     &-body {
         .corporatedirectors-text {
+            @include font-face($lorenza, style('normal'), size(18), weight('normal'), line-height(30, 18));
+            color: $gray-600;
+        }
+    }
+}
+
+/**=====================================================
+            MISSION-VISION SECTION START
+=====================================================**/
+.missionvision {
+    background: $bodyBg;
+    min-height: 100vh;
+    position: relative;
+    z-index: 2;
+    padding: length(80) length(0);
+
+    @include breakpoint(tablet991) {
+        padding: length(40) length(8);
+    }
+
+    &-content {
+        @include flex-column;
+        gap: length(80);
+
+        @include breakpoint(tablet991) {
+            gap: length(40);
+        }
+
+        .mission-thumbnail {
+            @include w100;
+            height: length(426);
+            overflow: hidden;
+
+            img {
+                @include wh100;
+                object-fit: cover;
+                @include transitiontransform;
+
+                @include hover {
+                    @include transform(scale(1.05));
+                }
+            }
+        }
+
+        .missioninfo {
+            .missiontext {
+                @include font-face($lorenza, style('normal'), size(18), weight('normal'), line-height(30, 18));
+                color: $gray-600;
+                text-align: justify;
+            }
+        }
+
+        .vision-thumbnail {
+            @include w100;
+            height: length(426);
+            overflow: hidden;
+
+            img {
+                @include wh100;
+                object-fit: cover;
+                @include transitiontransform;
+
+                @include hover {
+                    @include transform(scale(1.05));
+                }
+            }
+        }
+
+        .visioninfo {
+            .visiontext {
+                @include font-face($lorenza, style('normal'), size(18), weight('normal'), line-height(30, 18));
+                color: $gray-600;
+                text-align: justify;
+            }
+        }
+    }
+
+    &-details {
+        @include flex-column;
+        gap: length(12);
+        margin-top: length(80);
+    }
+
+    &-header {
+        position: relative;
+
+        .ribbon {
+            position: absolute;
+            top: auto;
+            bottom: length(0);
+            left: 0;
+            z-index: -1;
+            width: length(80);
+            height: length(140);
+            @include flex-center;
+            overflow: hidden;
+
+            img {
+                @include wh100;
+                object-fit: contain;
+            }
+        }
+
+        .missionvision-title {
+            @include font-face($raleway, style('normal'), size(36), weight('bold'), line-height(49, 36));
+            color: $gray-800;
+        }
+    }
+
+    &-body {
+        max-width: length(523);
+
+        .missionvision-text {
             @include font-face($lorenza, style('normal'), size(18), weight('normal'), line-height(30, 18));
             color: $gray-600;
         }

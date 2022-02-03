@@ -113,11 +113,7 @@
         @include flex-center;
         text-align: center;
         @include setBgColor($gradient-3, $white);
-        @include font-face($raleway,
-            style('normal'),
-            weight('semibold'),
-            size(20),
-            line-height(27.3, 20));
+        @include font-face($raleway, style('normal'), size(20), weight('semibold'), line-height(27.3, 20));
         overflow: hidden;
     }
 
@@ -159,7 +155,7 @@
             @include square(length(85));
             top: length(-16);
             left: length(-16);
-            @include font-face($raleway, style('normal'), weight('semibold'), size(28), line-height(38, 28));
+            @include font-face($raleway, style('normal'), size(28), weight('semibold'), line-height(38, 28));
         }
 
         .card-service-body {
@@ -287,3 +283,48 @@
 }
 
 /* CARD CLIENT END */
+
+/**=====================================================**
+                        ABOUT-CARDS
+=======================================================**/
+.card-director {
+    @include flex-column;
+    gap: length(16);
+
+    &-header {
+        overflow: hidden;
+        height: length(371);
+        @include flex-center;
+
+        img {
+            @include wh100;
+            object-fit: cover;
+            @include transitiontransform;
+
+            @include hover {
+                @include transform(scale(1.1));
+            }
+        }
+    }
+
+    &-body {
+        @include flex-column;
+        align-items: flex-start;
+        gap: length(8);
+
+        .name {
+            @include font-face($raleway, style('normal'), size(20), weight('semibold'), line-height(27.3, 20));
+            color: $gray-700;
+            @include transitions;
+
+            @include hover {
+                color: $black;
+            }
+        }
+
+        .position {
+            @include font-face($raleway, style('normal'), size(16), weight('semibold'), line-height(25, 16));
+            color: $gray-600;
+        }
+    }
+}

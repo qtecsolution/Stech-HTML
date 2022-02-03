@@ -492,7 +492,7 @@ canvas {
                     @include flex-center-between;
 
                     .valuetitle {
-                        @include font-face($raleway, style('normal'), weight('semibold'), size(16), line-height(25, 16));
+                        @include font-face($raleway, style('normal'), size(16), weight('semibold'), line-height(25, 16));
                         color: $gray-700;
                     }
 

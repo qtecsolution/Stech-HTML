@@ -20,6 +20,21 @@
             padding: length(0);
             opacity: 1;
 
+            @include breakpoint(tablet991) {
+                @include square(length(48));
+                right: length(-58);
+            }
+
+            @include breakpoint(phone768) {
+                right: length(20);
+                top: length(20);
+            }
+
+            @include breakpoint(phone575) {
+                right: length(16);
+                top: length(16);
+            }
+
             svg {
                 @include wh100;
             }
@@ -77,7 +92,6 @@
             right: length(-40);
             z-index: 100;
 
-
             &:focus {
                 outline: none;
                 box-shadow: none;
@@ -89,6 +103,71 @@
 
             @include breakpoint(phone768) {
                 min-height: length(300);
+            }
+        }
+
+        .directormodalinfo {
+            padding: length(64) length(111) length(64) length(32);
+
+            @include breakpoint(tablet991) {
+                padding: length(48) length(32);
+            }
+
+            @include breakpoint(phone575) {
+                padding: length(20);
+            }
+
+            .modalthumbnail {
+                .modalthumb {
+                    @include flex-column;
+                    gap: length(44);
+
+                    &-header {
+                        .name {
+                            @include font-face($raleway, style('normal'), size(36), weight('semibold'), line-height(48.97, 36));
+                            color: $gray-700;
+
+                            @include breakpoint(phone575) {
+                                @include font-face($raleway, style('normal'), size(24), weight('semibold'), line-height(34, 24));
+                            }
+                        }
+
+                        .position {
+                            @include font-face($raleway, style('normal'), size(20), weight('semibold'), line-height(27.3, 20));
+                            color: $gray-600;
+
+                            @include breakpoint(phone575) {
+                                @include font-face($raleway, style('normal'), size(16), weight('semibold'), line-height(26, 16));
+                            }
+                        }
+                    }
+
+                    &-body {
+                        height: length(371);
+                        @include flex-center;
+
+                        img {
+                            @include wh100;
+                            object-fit: cover;
+
+                            @include breakpoint(phone575) {
+                                object-fit: contain;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .modaldetails {
+                .detailtext {
+                    @include font-face($lorenza, style('normal'), size(18), weight('normal'), line-height(30, 18));
+                    color: $gray-600;
+                    text-align: justify;
+
+                    @include breakpoint(phone575) {
+                        @include font-face($lorenza, style('normal'), size(16), weight('normal'), line-height(28, 16));
+                    }
+                }
             }
         }
     }
