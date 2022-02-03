@@ -1,0 +1,153 @@
+/**=====================================================
+            STECH-AESTHETICS SECTION START
+=====================================================**/
+.concernaesthetics {
+    background: $bodyBg;
+    min-height: 100vh;
+    position: relative;
+    z-index: 2;
+    padding: length(80) length(0) length(160);
+
+    @include breakpoint(tablet991) {
+        padding: length(40) length(8) length(80);
+    }
+
+    &-content {
+        @include flex-column;
+        gap: length(40);
+    }
+
+    &-header {
+        position: relative;
+        @include flex-center-column;
+        gap: length(40);
+        text-align: center;
+
+        @include breakpoint(tablet991) {
+            margin-top: length(48);
+        }
+
+        .concernaesthetics-title {
+            color: $gray-800;
+            text-transform: uppercase;
+            letter-spacing: length(1.6);
+        }
+
+        .brandlogo {
+            width: length(170);
+            height: length(200);
+            @include flex-center;
+            overflow: hidden;
+
+            @include breakpoint(tablet991) {
+                width: length(100);
+                height: length(160);
+            }
+
+            img {
+                @include wh100;
+                object-fit: contain;
+            }
+        }
+    }
+
+    &-body {
+        @include flex-center-column;
+        gap: length(40);
+
+        .concernaesthetics-text {
+            @include font-face($lorenza, style('normal'), size(18), weight('normal'), line-height(30, 18));
+            color: $gray-600;
+            text-align: center;
+        }
+
+        .link {
+            @include setBgColor($blue, $white);
+            width: length(200);
+            height: length(48);
+            @include flex-center;
+            gap: length(10);
+            @include transitions;
+
+            .text {
+                @include font-face($raleway, style('normal'), size(14), weight('semibold'), line-height(14, 14));
+            }
+
+            .icon {
+                @include square(length(15));
+                @include flex-center;
+                overflow: hidden;
+            }
+
+            @include hover {
+                background: $concernHoverBg;
+            }
+        }
+    }
+}
+
+/**=====================================================
+            CONCERN-DETAILS SECTION START
+=====================================================**/
+.concerndetails {
+    background: $white;
+    min-height: 100vh;
+    position: relative;
+    z-index: 2;
+    padding: length(80) length(0) length(160);
+
+    @include breakpoint(tablet991) {
+        padding: length(40) length(8) length(80);
+    }
+
+    &-content {
+        @include flex-column;
+        gap: length(40);
+
+        .gallery {
+            @include flex-center-vert;
+            align-items: flex-start;
+            flex-wrap: wrap;
+
+            &-thumbs {
+                @include flex-column;
+                gap: length(24);
+            }
+
+            &-link {
+                position: relative;
+                overflow: hidden;
+                @include w100;
+                height: length(534);
+
+                &.biglink {
+                    height: length(711);
+                }
+
+                img {
+                    @include wh100;
+                    object-fit: cover;
+                }
+
+                .caption {
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 80%;
+                    @include setBgColor($blue, $white);
+                    padding: length(17) length(27);
+                    min-height: length(132);
+                    display: none;
+                    @extend %animation;
+                    @extend %slideUpIn;
+                }
+
+                @include hover {
+                    .caption {
+                        @include flex-center-vert;
+                    }
+                }
+            }
+        }
+    }
+}

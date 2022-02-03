@@ -328,3 +328,103 @@
         }
     }
 }
+
+/**=====================================================**
+                        SERVICE-CARDS
+=======================================================**/
+.cardservice {
+    @include flex-center-column;
+    gap: length(28);
+    padding: length(46) length(24);
+    background: $white;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    text-align: center;
+    // @include transitions;
+
+    .servicecounter {
+        @include square(length(116));
+        @include circle;
+        @include flex-center;
+        text-align: center;
+        position: absolute;
+        top: length(-38);
+        left: length(-35);
+        @include setBgColor($gradient-3, $white);
+
+        .counter {
+            @include font-face($raleway, style('normal'), size(24), weight('bold'), line-height(32.65, 24));
+            position: absolute;
+            top: 47%;
+            left: 47%;
+            right: auto;
+        }
+    }
+
+    &-header {
+        @include flex-center-column;
+        gap: length(15);
+
+        .serviceion {
+            background: $gradient-2;
+            padding: length(20);
+            @include square(length(90));
+            @include circle;
+            @include flex-center;
+            overflow: hidden;
+        }
+
+        .servicetitle {
+            @include font-face($raleway, style('normal'), size(20), weight('semibold'), line-height(27.3, 20));
+            color: $gray-700;
+        }
+    }
+
+    &-body {
+        .servicetext {
+            @include font-face($lorenza, style('normal'), size(18), weight('normal'), line-height(30, 18));
+            color: $gray-600;
+        }
+    }
+
+    @include hover {
+        background: $serviceHoverBg;
+        box-shadow: $serviceShadow;
+
+        .cardservice-header {
+            .servicetitle {
+                color: $white;
+            }
+        }
+
+        .cardservice-body {
+            .servicetext {
+                color: $white;
+            }
+        }
+    }
+}
+
+/**=====================================================**
+                        CLIENTS-CARDS
+=======================================================**/
+.cardclient {
+    @include w100;
+    height: length(174);
+    @include border(solid, 1, $gray-300);
+    @include flex-center;
+    overflow: hidden;
+
+    img {
+        max-width: 100%;
+        object-fit: contain;
+        @include transitiontransform;
+    }
+
+    @include hover {
+        img {
+            @include transform(scale(1.1));
+        }
+    }
+}

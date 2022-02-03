@@ -9,6 +9,8 @@ $grayBg: #C4C4C4;
 $blue: #0019FF;
 $newsletterPlaceholder: #7A828A;
 $mobileDropdownBg: #F2FFFB;
+$serviceHoverBg: #112347;
+$textLabel: #425466;
 
 // GRADIENTS
 $gradient-1: linear-gradient(269.75deg, $concernHoverBg 8.49%, rgba(113, 113, 113, 0) 137%);
@@ -36,5 +38,14 @@ $white: white;
 // SHADOWS
 $shadow-1: rgba(12, 26, 75, 0.1);
 $shadow-2: rgba(20, 37, 63, 0.06);
+$shadow-3: rgba(12, 26, 75, 0.06);
+$shadow-4: rgba(20, 37, 63, 0.2);
+$shadow-5: rgba(50, 50, 71, 0.08);
+$shadow-6: rgba(50, 50, 71, 0.2);
 
 $shadowBig: drop-shadow(0 0 .0625rem $shadow-1) drop-shadow(0 .625rem 1rem $shadow-2);
+$serviceShadow: 0 0 .0625rem $shadow-3,
+0 .625rem 3.125rem $shadow-4;
+
+$inputShadow: 0 .0625rem .125rem $shadow-5,
+0 0 .0625rem $shadow-6;

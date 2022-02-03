@@ -1,0 +1,50 @@
+.baguetteBox-button {
+    background: transparent !important;
+    background-color: transparent !important;
+    color: transparent;
+
+    @include hover {
+        background: transparent;
+
+        svg {
+            polyline {
+                stroke: $primary;
+            }
+        }
+    }
+
+    &:active,
+    &:visited {
+        background: transparent;
+
+        svg {
+            polyline {
+                stroke: $primary;
+            }
+        }
+    }
+}
+
+#baguetteBox-overlay .full-image figcaption {
+    @include setBgColor($black, $white);
+    @include font-face($raleway, style('normal'), size(18), weight('semibold'), line-height(30, 18));
+    padding: length(32);
+    text-align: center;
+    @include flex-center;
+}
+
+.baguetteBox-button#close-button {
+    svg {
+        @include transitiontransform;
+    }
+
+    @include hover {
+        svg {
+            @include transform(rotate(90deg));
+
+            g {
+                stroke: $primary;
+            }
+        }
+    }
+}

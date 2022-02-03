@@ -1,0 +1,193 @@
+/**=====================================================
+            CONTACT-US SECTION START
+=====================================================**/
+.contacts {
+    background: $white;
+    position: relative;
+    z-index: 2;
+    padding: length(80) length(0);
+
+    @include breakpoint(tablet991) {
+        padding: length(40) length(0);
+    }
+
+    .contactform {
+        @include flex-column;
+        gap: length(40);
+
+        @include breakpoint(tablet991) {
+            gap: length(20);
+        }
+
+        .inputbox {
+            @include flex-column;
+            gap: length(8);
+
+            .form-label {
+                @include font-face($raleway, style('normal'), size(14), weight('medium'), line-height(16.44, 14));
+                color: $textLabel;
+                margin-bottom: length(0);
+            }
+
+            .form-control {
+                box-shadow: $inputShadow;
+                @include font-face($lorenza, style('normal'), size(14), weight('normal'), line-height(16.44, 14));
+                color: $gray-700;
+                height: length(60);
+                padding: length(16);
+                @include radius(0);
+                @include border(solid, 1, transparent);
+                @include transitions;
+
+                &:focus {
+                    outline: none;
+                    box-shadow: none;
+                    border-color: $gray-600;
+                }
+            }
+
+            .textarea {
+                box-shadow: $inputShadow;
+                @include font-face($lorenza, style('normal'), size(14), weight('normal'), line-height(16.44, 14));
+                color: $gray-700;
+                padding: length(16);
+                @include border(solid, 1, transparent);
+                @include transitions;
+
+                &:focus {
+                    outline: none;
+                    box-shadow: none;
+                    border-color: $gray-600;
+                }
+            }
+
+            .form-select {
+                box-shadow: $inputShadow;
+                @include font-face($lorenza, style('normal'), size(14), weight('normal'), line-height(16.44, 14));
+                color: $gray-700;
+                height: length(60);
+                padding: length(16);
+                @include radius(0);
+                @include border(solid, 1, transparent);
+                @include transitions;
+
+                &:focus {
+                    outline: none;
+                    box-shadow: none;
+                    border-color: $gray-600;
+                }
+            }
+        }
+
+        .btn-submit {
+            width: length(200);
+            height: length(44);
+            padding: length(16);
+            text-align: center;
+            @include font-face($raleway, style('normal'), size(12), weight('semibold'), line-height(16, 12));
+            @include setBgColor($blue, $white);
+            @include transitions;
+
+            @include hover {
+                background: $concernHoverBg;
+            }
+        }
+    }
+}
+
+/**=====================================================
+            CONTACT-INFO SECTION START
+=====================================================**/
+.contact-info {
+    background: $bodyBg;
+    position: relative;
+    z-index: 2;
+    padding: length(80) length(0);
+
+    @include breakpoint(tablet991) {
+        padding: length(40) length(0);
+    }
+
+    &-content {
+        @include flex-column;
+        gap: length(40);
+    }
+
+    &-header {
+        .contactlinks {
+            @include flex-column;
+            gap: length(8);
+
+            @include breakpoint(tablet991) {
+                align-items: center;
+                text-align: center;
+            }
+
+            .link {
+                @include font-face($lorenza, style('normal'), size(16), weight('normal'), line-height(25.92, 16));
+                color: $textLabel;
+                font-feature-settings: 'salt'on;
+                @include transitions;
+
+                @include hover {
+                    color: $black;
+                }
+            }
+        }
+
+        .contactaddress {
+            @include flex-center;
+            @include border-single(left, solid, 1, $gray-400);
+            @include border-single(right, solid, 1, $gray-400);
+
+            @include breakpoint(tablet991) {
+                border-left: 0;
+                border-right: 0;
+                @include border-single(top, solid, 1, $gray-400);
+                @include border-single(bottom, solid, 1, $gray-400);
+                padding: length(16);
+                text-align: center;
+            }
+
+            .adderss {
+                @include font-face($lorenza, style('normal'), size(16), weight('normal'), line-height(25.92, 16));
+                color: $textLabel;
+                font-feature-settings: 'salt'on;
+            }
+        }
+
+        .sociallist {
+            @include list-horizontal;
+            gap: length(40);
+            justify-content: flex-end;
+            @include w100;
+
+            @include breakpoint(tablet991) {
+                justify-content: center;
+                padding: length(16) length(16) length(0);
+            }
+
+            @include breakpoint(phone575) {
+                gap: length(24);
+            }
+
+            &-link {
+                @include square(length(36));
+                @include flex-center;
+                @include circle;
+                overflow: hidden;
+            }
+        }
+    }
+
+    &-body {
+        @include w100;
+        @include flex-center;
+        overflow: hidden;
+
+        img {
+            max-width: 100%;
+            object-fit: cover;
+        }
+    }
+}
