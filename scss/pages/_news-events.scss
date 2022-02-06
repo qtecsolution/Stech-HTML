@@ -1,0 +1,178 @@
+/**=====================================================
+            NEWS-EVENT SECTION START
+=====================================================**/
+.newsevent {
+    background: $newsEventBg;
+    position: relative;
+    z-index: 2;
+    padding: length(80) length(0);
+
+    @include breakpoint(tablet991) {
+        padding: length(40) length(0);
+    }
+
+    &-thumbnail {
+        @include w100;
+        height: length(502);
+        overflow: hidden;
+
+        img {
+            @include wh100;
+            object-fit: cover;
+            @include transitiontransform;
+
+            @include hover {
+                @include transform(scale(1.1));
+            }
+        }
+    }
+
+    &-details {
+        background: $white;
+        @include flex-column;
+        @include h100;
+        gap: length(16);
+        padding: length(16) length(16) length(48);
+
+        @include breakpoint(mobile575) {
+            padding: length(32) length(32) length(48);
+            gap: length(24);
+        }
+
+        @include breakpoint(tab991) {
+            padding: length(32);
+            gap: length(28);
+        }
+    }
+
+    &-header {
+        @include flex-column;
+        gap: length(8);
+    }
+
+    &-title {
+        @include font-face($raleway, style('normal'), size(19), weight('bold'), line-height(32, 19));
+        color: $gray-800;
+        @include line-clamp;
+        height: length(64);
+
+        @include breakpoint(mobile768) {
+            @include font-face($raleway, style('normal'), size(36), weight('bold'), line-height(49, 36));
+            height: length(98);
+        }
+    }
+
+    &-date {
+        @include font-face($lorenza, style('normal'), size(14), weight('normal'), line-height(24, 14));
+        color: $textLabel;
+        font-feature-settings: 'salt'on;
+
+        @include breakpoint(mobile768) {
+            @include font-face($lorenza, style('normal'), size(16), weight('normal'), line-height(26, 16));
+        }
+    }
+
+    &-body {
+        @include flex-column;
+        gap: length(24);
+
+        @include breakpoint(tab991) {
+            gap: length(44);
+        }
+
+        .descriptions {
+            .newsevent-text {
+                @include font-face($lorenza, style('normal'), size(16), weight('normal'), line-height(26, 16));
+                color: $gray-600;
+
+                @include breakpoint(mobile768) {
+                    @include font-face($lorenza, style('normal'), size(18), weight('normal'), line-height(30, 18));
+                }
+            }
+        }
+
+        .read {
+            .btn-read {
+                width: length(200);
+                height: length(48);
+                padding: length(16);
+                @include setBgColor($blue, $white);
+                @include font-face($raleway, style('normal'), size(14), weight('bold'), line-height(14, 14));
+                @include flex-center;
+                text-align: center;
+                @include transitions;
+
+                @include hover {
+                    background: $concernHoverBg;
+                }
+
+                @include breakpoint(mobile768) {
+                    @include font-face($raleway, style('normal'), size(16), weight('bold'), line-height(16, 16));
+                }
+            }
+        }
+    }
+}
+
+/**=====================================================
+            EVENTS SECTION START
+=====================================================**/
+.events {
+    background: $white;
+    min-height: 100vh;
+    position: relative;
+    z-index: 2;
+    padding: length(80) length(0) length(160);
+
+    @include breakpoint(tablet991) {
+        padding: length(40) length(8) length(80);
+    }
+
+    &-content {
+        @include flex-column;
+        gap: length(80);
+
+        @include breakpoint(tablet991) {
+            gap: length(40);
+        }
+    }
+
+    &-details {
+        @include flex-column;
+        gap: length(12);
+        margin-top: length(80);
+    }
+
+    &-header {
+        position: relative;
+
+        .ribbon {
+            position: absolute;
+            top: auto;
+            bottom: length(0);
+            left: 0;
+            z-index: -1;
+            width: length(80);
+            height: length(140);
+            @include flex-center;
+            overflow: hidden;
+
+            img {
+                @include wh100;
+                object-fit: contain;
+            }
+        }
+
+        .events-title {
+            @include font-face($raleway, style('normal'), size(40), weight('bold'), line-height(60, 40));
+            color: $gray-800;
+        }
+    }
+
+    &-body {
+        .events-text {
+            @include font-face($lorenza, style('normal'), size(18), weight('normal'), line-height(30, 18));
+            color: $gray-600;
+        }
+    }
+}

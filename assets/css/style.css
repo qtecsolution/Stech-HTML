@@ -2077,6 +2077,9 @@ select {
   transform: scale(1.1);
 }
 
+/**=====================================================**
+                        NEWS-EVENTS-CARDS
+=======================================================**/
 .modal-content {
   border-radius: 0rem;
   border-radius: 0rem;
@@ -5142,6 +5145,301 @@ canvas {
 }
 
 .ourservices-body .ourservices-text {
+  font-family: "Lorenza";
+  font-style: normal;
+  font-size: 1.125rem;
+  font-weight: normal;
+  line-height: 1.66667;
+  color: #718096;
+}
+
+/**=====================================================
+            NEWS-EVENT SECTION START
+=====================================================**/
+.newsevent {
+  background: #F2F4FF;
+  position: relative;
+  z-index: 2;
+  padding: 5rem 0rem;
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .newsevent {
+    padding: 2.5rem 0rem;
+  }
+}
+
+.newsevent-thumbnail {
+  width: 100%;
+  height: 31.375rem;
+  overflow: hidden;
+}
+
+.newsevent-thumbnail img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transition: transform 250ms ease-in-out;
+  -webkit-transition: -webkit-transform 250ms ease-in-out;
+  transition: -webkit-transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
+}
+
+.newsevent-thumbnail img:not([disabled]):hover {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.newsevent-details {
+  background: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+  gap: 1rem;
+  padding: 1rem 1rem 3rem;
+}
+
+@media screen and (min-width: 35.9375rem) {
+  .newsevent-details {
+    padding: 2rem 2rem 3rem;
+    gap: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 61.9375rem) {
+  .newsevent-details {
+    padding: 2rem;
+    gap: 1.75rem;
+  }
+}
+
+.newsevent-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.5rem;
+}
+
+.newsevent-title {
+  font-family: "Raleway";
+  font-style: normal;
+  font-size: 1.1875rem;
+  font-weight: 700;
+  line-height: 1.68421;
+  color: #2D3748;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  height: 4rem;
+}
+
+@media screen and (min-width: 48rem) {
+  .newsevent-title {
+    font-family: "Raleway";
+    font-style: normal;
+    font-size: 2.25rem;
+    font-weight: 700;
+    line-height: 1.36111;
+    height: 6.125rem;
+  }
+}
+
+.newsevent-date {
+  font-family: "Lorenza";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: normal;
+  line-height: 1.71429;
+  color: #425466;
+  -webkit-font-feature-settings: 'salt'on;
+          font-feature-settings: 'salt'on;
+}
+
+@media screen and (min-width: 48rem) {
+  .newsevent-date {
+    font-family: "Lorenza";
+    font-style: normal;
+    font-size: 1rem;
+    font-weight: normal;
+    line-height: 1.625;
+  }
+}
+
+.newsevent-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.5rem;
+}
+
+@media screen and (min-width: 61.9375rem) {
+  .newsevent-body {
+    gap: 2.75rem;
+  }
+}
+
+.newsevent-body .descriptions .newsevent-text {
+  font-family: "Lorenza";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.625;
+  color: #718096;
+}
+
+@media screen and (min-width: 48rem) {
+  .newsevent-body .descriptions .newsevent-text {
+    font-family: "Lorenza";
+    font-style: normal;
+    font-size: 1.125rem;
+    font-weight: normal;
+    line-height: 1.66667;
+  }
+}
+
+.newsevent-body .read .btn-read {
+  width: 12.5rem;
+  height: 3rem;
+  padding: 1rem;
+  background: #0019FF;
+  color: white;
+  font-family: "Raleway";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.newsevent-body .read .btn-read:not([disabled]):hover {
+  background: #5A48FF;
+}
+
+@media screen and (min-width: 48rem) {
+  .newsevent-body .read .btn-read {
+    font-family: "Raleway";
+    font-style: normal;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1;
+  }
+}
+
+/**=====================================================
+            EVENTS SECTION START
+=====================================================**/
+.events {
+  background: white;
+  min-height: 100vh;
+  position: relative;
+  z-index: 2;
+  padding: 5rem 0rem 10rem;
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .events {
+    padding: 2.5rem 0.5rem 5rem;
+  }
+}
+
+.events-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 5rem;
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .events-content {
+    gap: 2.5rem;
+  }
+}
+
+.events-details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 5rem;
+}
+
+.events-header {
+  position: relative;
+}
+
+.events-header .ribbon {
+  position: absolute;
+  top: auto;
+  bottom: 0rem;
+  left: 0;
+  z-index: -1;
+  width: 5rem;
+  height: 8.75rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+}
+
+.events-header .ribbon img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.events-header .events-title {
+  font-family: "Raleway";
+  font-style: normal;
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.5;
+  color: #2D3748;
+}
+
+.events-body .events-text {
   font-family: "Lorenza";
   font-style: normal;
   font-size: 1.125rem;
