@@ -11,7 +11,7 @@
     breakpoint usage
 \*------------------------------------*/
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;900&display=swap");
-.header.inverted, .concerndetails-content .gallery-link .caption {
+.header.inverted, .concerndetails-content .gallery-link .caption, .stechgallary-content .gallery-link .caption {
   -webkit-animation-duration: 250ms;
   animation-duration: 250ms;
   -webkit-animation-fill-mode: both;
@@ -113,7 +113,7 @@
   }
 }
 
-.concerndetails-content .gallery-link .caption {
+.concerndetails-content .gallery-link .caption, .stechgallary-content .gallery-link .caption {
   -webkit-animation-name: slideUpIn;
   animation-name: slideUpIn;
 }
@@ -2080,6 +2080,198 @@ select {
 /**=====================================================**
                         NEWS-EVENTS-CARDS
 =======================================================**/
+.cardevent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.5rem;
+  height: 100%;
+}
+
+.cardevent-header {
+  width: 100%;
+  height: 10.3125rem;
+  overflow: hidden;
+}
+
+.cardevent-header img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transition: transform 250ms ease-in-out;
+  -webkit-transition: -webkit-transform 250ms ease-in-out;
+  transition: -webkit-transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
+}
+
+.cardevent-header img:not([disabled]):hover {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.cardevent-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.75rem;
+}
+
+.cardevent-body .title-date {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.cardevent-body .title-date .cardevent-title {
+  color: #2D3748;
+}
+
+.cardevent-body .title-date .date {
+  font-family: "Lorenza";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.625;
+  color: #718096;
+}
+
+.cardevent-body .description .cardevent-text {
+  font-family: "Lorenza";
+  font-style: normal;
+  font-size: 1.125rem;
+  font-weight: normal;
+  line-height: 1.66667;
+  color: #718096;
+}
+
+.cardevent-body .read .readmore {
+  font-family: "Raleway";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5625;
+  color: #2D3748;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.cardevent-body .read .readmore:not([disabled]):hover {
+  color: #0019FF;
+}
+
+.cardnews {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.5rem;
+  height: 100%;
+}
+
+.cardnews-header {
+  width: 100%;
+  height: 10.3125rem;
+  overflow: hidden;
+}
+
+.cardnews-header img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transition: transform 250ms ease-in-out;
+  -webkit-transition: -webkit-transform 250ms ease-in-out;
+  transition: -webkit-transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
+}
+
+.cardnews-header img:not([disabled]):hover {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.cardnews-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.75rem;
+}
+
+.cardnews-body .title-date {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.cardnews-body .title-date .cardnews-title {
+  color: #2D3748;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  height: 3.4375rem;
+}
+
+.cardnews-body .title-date .date {
+  font-family: "Lorenza";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.625;
+  color: #718096;
+}
+
+.cardnews-body .description .cardnews-text {
+  font-family: "Lorenza";
+  font-style: normal;
+  font-size: 1.125rem;
+  font-weight: normal;
+  line-height: 1.66667;
+  color: #718096;
+}
+
+.cardnews-body .read .readmore {
+  font-family: "Raleway";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5625;
+  color: #2D3748;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.cardnews-body .read .readmore:not([disabled]):hover {
+  color: #0019FF;
+}
+
 .modal-content {
   border-radius: 0rem;
   border-radius: 0rem;
@@ -2924,8 +3116,9 @@ canvas {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   background: url(../images/stech-banner.png) no-repeat center center/cover;
+  z-index: 1;
 }
 
 /**=====================================================
@@ -5154,6 +5347,154 @@ canvas {
 }
 
 /**=====================================================
+            GALLERY-BANNER
+=====================================================**/
+.gallerybanner {
+  position: relative;
+  top: 0;
+  z-index: 20;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: url(../images/pages/gallery/gallery-banner.png) no-repeat center center/cover;
+  padding: 10rem 0rem;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .gallerybanner {
+    padding: 5rem 0rem;
+  }
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .gallerybanner-content {
+    position: relative;
+    z-index: 2;
+  }
+}
+
+.gallerybanner-content .banner-details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  gap: 2.5rem;
+  position: relative;
+  z-index: 2;
+  height: 100%;
+}
+
+.gallerybanner-content .banner-details .banner-title {
+  color: white;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+}
+
+.gallerybanner-content .banner-details .btn-playpause {
+  height: 9rem;
+  width: 9rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+  background: transparent;
+  border: none;
+  margin-inline: auto;
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .gallerybanner-content .banner-details .btn-playpause {
+    height: 4.375rem;
+    width: 4.375rem;
+  }
+}
+
+/**=====================================================
+            STECH-GALLERY SECTION START
+=====================================================**/
+.stechgallary {
+  background: #F7FAFC;
+  height: 100vh;
+  position: relative;
+  z-index: 2;
+  padding: 5rem 0rem;
+  overflow: hidden;
+}
+
+.stechgallary-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 5rem;
+}
+
+.stechgallary-content .gallery-thumbs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.5rem;
+}
+
+.stechgallary-content .gallery-link {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.stechgallary-content .gallery-link img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.stechgallary-content .gallery-link .caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 80%;
+  background: #0019FF;
+  color: white;
+  padding: 1.0625rem 1.6875rem;
+  min-height: 8.25rem;
+  display: none;
+}
+
+.stechgallary-content .gallery-link:not([disabled]):hover .caption {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/**=====================================================
             NEWS-EVENT SECTION START
 =====================================================**/
 .newsevent {
@@ -5446,6 +5787,269 @@ canvas {
   font-weight: normal;
   line-height: 1.66667;
   color: #718096;
+}
+
+/**=====================================================
+                NEWS SECTION START
+=====================================================**/
+.news {
+  background: white;
+  min-height: 100vh;
+  position: relative;
+  z-index: 2;
+  padding: 5rem 0rem 10rem;
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .news {
+    padding: 2.5rem 0.5rem 5rem;
+  }
+}
+
+.news-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 5rem;
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .news-content {
+    gap: 2.5rem;
+  }
+}
+
+.news-content .seeall {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 3.75rem;
+}
+
+.news-content .seeall .seelink {
+  border: solid 0.0625rem #0019FF;
+  font-family: "Raleway";
+  font-style: normal;
+  font-size: 1.0625rem;
+  font-weight: 600;
+  line-height: 1.0625;
+  width: 12.5rem;
+  height: 3rem;
+  display: inline-block;
+  background: white;
+  color: #0019FF;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.news-content .seeall .seelink:not([disabled]):hover {
+  background: #0019FF;
+  color: white;
+}
+
+.news-details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 5rem;
+}
+
+.news-header {
+  position: relative;
+}
+
+.news-header .ribbon {
+  position: absolute;
+  top: auto;
+  bottom: 0rem;
+  left: 0;
+  z-index: -1;
+  width: 5rem;
+  height: 8.75rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+}
+
+.news-header .ribbon img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.news-header .news-title {
+  font-family: "Raleway";
+  font-style: normal;
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.5;
+  color: #2D3748;
+}
+
+.news-body .news-text {
+  font-family: "Lorenza";
+  font-style: normal;
+  font-size: 1.125rem;
+  font-weight: normal;
+  line-height: 1.66667;
+  color: #718096;
+}
+
+/**=====================================================
+                STECH-SUBSCRIBE SECTION START
+=====================================================**/
+.stechsubscribe {
+  background: url(../images/pages/news-events/newsletter-bg.svg) no-repeat;
+  position: relative;
+  z-index: 2;
+  padding: 5rem 0rem;
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .stechsubscribe {
+    padding: 2.5rem 0.5rem;
+  }
+}
+
+.stechsubscribe-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2.5rem;
+  text-align: center;
+}
+
+.stechsubscribe-content .stechsubscribe-title {
+  font-family: "Raleway";
+  font-style: normal;
+  font-size: 2.25rem;
+  font-weight: 700;
+  line-height: 1.36111;
+  color: white;
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .stechsubscribe-content .stechsubscribe-title {
+    font-family: "Raleway";
+    font-style: normal;
+    font-size: 1.75rem;
+    font-weight: 600;
+    line-height: 1.35714;
+  }
+}
+
+.stechsubscribe-content .stechnewsletter {
+  background: white;
+  padding: 0.3125rem;
+  width: 26.5rem;
+  height: 2.875rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.stechsubscribe-content .stechnewsletter .inputfield {
+  background: transparent;
+  color: #2D3748;
+  font-family: "Lorenza";
+  font-style: normal;
+  font-size: 0.8125rem;
+  font-weight: normal;
+  line-height: 1;
+  padding: 0rem 0.6875rem;
+  width: calc(100% - 6.125rem);
+  height: 100%;
+}
+
+.stechsubscribe-content .stechnewsletter .inputfield::-webkit-input-placeholder {
+  color: #7A828A;
+}
+
+.stechsubscribe-content .stechnewsletter .inputfield:-ms-input-placeholder {
+  color: #7A828A;
+}
+
+.stechsubscribe-content .stechnewsletter .inputfield::-ms-input-placeholder {
+  color: #7A828A;
+}
+
+.stechsubscribe-content .stechnewsletter .inputfield::placeholder {
+  color: #7A828A;
+}
+
+.stechsubscribe-content .stechnewsletter .btn-subscribe {
+  width: 6.125rem;
+  height: 2.25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  background: #0019FF;
+  color: white;
+  font-family: "Raleway";
+  font-style: normal;
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.stechsubscribe-content .stechnewsletter .btn-subscribe:not([disabled]):hover {
+  background: #5A48FF;
 }
 
 /**=====================================================

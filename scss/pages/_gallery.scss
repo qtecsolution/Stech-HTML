@@ -1,0 +1,111 @@
+
+/**=====================================================
+            GALLERY-BANNER
+=====================================================**/
+.gallerybanner {
+    position: relative;
+    top: 0;
+    z-index: 20;
+    left: 0;
+    @include w100;
+    height: 100vh;
+    background: url(../images/pages/gallery/gallery-banner.png) no-repeat center center/cover;
+    padding: length(160) length(0);
+    overflow: hidden;
+
+    @include breakpoint(tablet991) {
+        padding: length(80) length(0);
+    }
+
+    &-content {
+
+        @include breakpoint(tablet991) {
+            position: relative;
+            z-index: 2;
+        }
+
+        .banner-details {
+            @include flex-center-column;
+            text-align: center;
+            gap: length(40);
+            position: relative;
+            z-index: 2;
+            @include h100;
+
+            .banner-title {
+                color: $white;
+                letter-spacing: length(1.6);
+                text-transform: uppercase;
+            }
+
+            .btn-playpause {
+                @include square(length(144));
+                @include flex-center;
+                overflow: hidden;
+                @include transparent-button;
+                margin-inline: auto;
+
+                @include breakpoint(tablet991) {
+                    @include square(length(70));
+                }
+            }
+        }
+    }
+}
+
+
+/**=====================================================
+            STECH-GALLERY SECTION START
+=====================================================**/
+.stechgallary {
+    background: $bodyBg;
+    height: 100vh;
+    position: relative;
+    z-index: 2;
+    padding: length(80) length(0);
+    overflow: hidden;
+
+    &-content {
+        @include flex-column;
+        gap: length(80);
+
+        .gallery-thumbs {
+            @include flex-column;
+            gap: length(24);
+        }
+    
+        .gallery-link {
+            position: relative;
+            overflow: hidden;
+            @include w100;
+
+            img {
+                @include wh100;
+                object-fit: cover;
+            }
+    
+            .caption {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 80%;
+                @include setBgColor($blue, $white);
+                padding: length(17) length(27);
+                min-height: length(132);
+                display: none;
+                @extend %animation;
+                @extend %slideUpIn;
+            }
+    
+            @include hover {
+                .caption {
+                    @include flex-center-vert;
+                }
+            }
+        }
+
+        .midlink {
+            
+        }
+    }
+}

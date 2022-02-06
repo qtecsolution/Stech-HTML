@@ -433,7 +433,119 @@
                         NEWS-EVENTS-CARDS
 =======================================================**/
 .cardevent {
-    &-header {}
+    @include flex-column;
+    gap: length(8);
+    @include h100;
 
-    &-body {}
+    &-header {
+        @include w100;
+        height: length(165);
+        overflow: hidden;
+
+        img {
+            @include wh100;
+            object-fit: cover;
+            @include transitiontransform;
+
+            @include hover {
+                @include transform(scale(1.1));
+            }
+        }
+    }
+
+    &-body {
+        @include flex-column;
+        gap: length(12);
+
+        .title-date {
+            @include flex-column;
+
+            .cardevent-title {
+                color: $gray-800;
+            }
+            .date {
+                @include font-face($lorenza, style('normal'), size(16), weight('normal'), line-height(26, 16));
+                color: $gray-600;
+            }
+        }
+
+        .description {
+            .cardevent-text {
+                @include font-face($lorenza, style('normal'), size(18), weight('normal'), line-height(30, 18));
+                color: $gray-600;
+            }
+        }
+
+        .read {
+            .readmore {
+                @include font-face($raleway, style('normal'), size(16), weight('semibold'), line-height(25, 16));
+                color: $gray-800;
+                @include transitions;
+
+                @include hover {
+                    color: $blue;
+                }
+            }
+        }
+    }
+}
+
+.cardnews {
+    @include flex-column;
+    gap: length(8);
+    @include h100;
+
+    &-header {
+        @include w100;
+        height: length(165);
+        overflow: hidden;
+
+        img {
+            @include wh100;
+            object-fit: cover;
+            @include transitiontransform;
+
+            @include hover {
+                @include transform(scale(1.1));
+            }
+        }
+    }
+
+    &-body {
+        @include flex-column;
+        gap: length(12);
+
+        .title-date {
+            @include flex-column;
+
+            .cardnews-title {
+                color: $gray-800;
+                @include line-clamp;
+                height: length(55);
+            }
+            .date {
+                @include font-face($lorenza, style('normal'), size(16), weight('normal'), line-height(26, 16));
+                color: $gray-600;
+            }
+        }
+
+        .description {
+            .cardnews-text {
+                @include font-face($lorenza, style('normal'), size(18), weight('normal'), line-height(30, 18));
+                color: $gray-600;
+            }
+        }
+
+        .read {
+            .readmore {
+                @include font-face($raleway, style('normal'), size(16), weight('semibold'), line-height(25, 16));
+                color: $gray-800;
+                @include transitions;
+
+                @include hover {
+                    color: $blue;
+                }
+            }
+        }
+    }
 }

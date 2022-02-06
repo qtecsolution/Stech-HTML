@@ -176,3 +176,151 @@
         }
     }
 }
+
+/**=====================================================
+                NEWS SECTION START
+=====================================================**/
+.news {
+    background: $white;
+    min-height: 100vh;
+    position: relative;
+    z-index: 2;
+    padding: length(80) length(0) length(160);
+
+    @include breakpoint(tablet991) {
+        padding: length(40) length(8) length(80);
+    }
+
+    &-content {
+        @include flex-column;
+        gap: length(80);
+
+        @include breakpoint(tablet991) {
+            gap: length(40);
+        }
+
+        .seeall {
+            @include w100;
+            @include flex-center;
+            height: length(60);
+
+            .seelink {
+                @include border(solid, 1, $blue);
+                @include font-face($raleway, style('normal'), size(17), weight('semibold'), line-height(17, 16));
+                width: length(200);
+                height: length(48);
+                display: inline-block;
+                @include setBgColor($white, $blue);
+                @include flex-center;
+                text-align: center;
+                @include transitions;
+
+                @include hover {
+                    @include setBgColor($blue, $white);
+                }
+            }
+        }
+    }
+
+    &-details {
+        @include flex-column;
+        gap: length(12);
+        margin-top: length(80);
+    }
+
+    &-header {
+        position: relative;
+
+        .ribbon {
+            position: absolute;
+            top: auto;
+            bottom: length(0);
+            left: 0;
+            z-index: -1;
+            width: length(80);
+            height: length(140);
+            @include flex-center;
+            overflow: hidden;
+
+            img {
+                @include wh100;
+                object-fit: contain;
+            }
+        }
+
+        .news-title {
+            @include font-face($raleway, style('normal'), size(40), weight('bold'), line-height(60, 40));
+            color: $gray-800;
+        }
+    }
+
+    &-body {
+        .news-text {
+            @include font-face($lorenza, style('normal'), size(18), weight('normal'), line-height(30, 18));
+            color: $gray-600;
+        }
+    }
+}
+
+/**=====================================================
+                STECH-SUBSCRIBE SECTION START
+=====================================================**/
+.stechsubscribe {
+    background: url(../images/pages/news-events/newsletter-bg.svg) no-repeat;
+    position: relative;
+    z-index: 2;
+    padding: length(80) length(0);
+
+    @include breakpoint(tablet991) {
+        padding: length(40) length(8);
+    }
+
+    &-content {
+        @include flex-center-column;
+        gap: length(40);
+        text-align: center;
+
+        .stechsubscribe-title {
+            @include font-face($raleway, style('normal'), size(36), weight('bold'), line-height(49, 36));
+            color: $white;
+
+            @include breakpoint(tablet991) {
+                @include font-face($raleway, style('normal'), size(28), weight('semibold'), line-height(38, 28));
+            }
+        }
+
+        .stechnewsletter {
+            background: $white;
+            padding: length(5);
+            width: length(424);
+            height: length(46);
+            @include flex-center-vert;
+
+            .inputfield {
+                @include setBgColor(transparent, $gray-800);
+                @include font-face($lorenza, style('normal'), size(13), weight('normal'), line-height(13, 13));
+                padding: length(0) length(11);
+                width: calc(100% - 6.125rem);
+                @include h100;
+
+                &::placeholder {
+                    color: $newsletterPlaceholder;
+                }
+            }
+
+            .btn-subscribe {
+                width: length(98);
+                height: length(36);
+                @include flex-center;
+                text-align: center;
+                @include setBgColor($blue, $white);
+                @include font-face($raleway, style('normal'), size(12), weight('semibold'), line-height(12, 12));
+                @include transitions;
+
+                @include hover {
+                    background: $concernHoverBg;
+                }
+            }
+        }
+    }
+}
