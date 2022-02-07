@@ -11,7 +11,7 @@
     breakpoint usage
 \*------------------------------------*/
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;900&display=swap");
-.header.inverted, .concerndetails-content .gallery-link .caption, .stechgallary-content .gallery-link .caption {
+.header.inverted, .concerndetails-content .gallery-link .caption, .stechgallery-content .video-thumbs .caption, .stechgallery-content .fullscreenvideo-thumbs .caption, .stechgallery-content .gallery-link .caption, .stechgallerybox .gallery-link .caption, .stechgallerybox .video-thumbs .caption {
   -webkit-animation-duration: 250ms;
   animation-duration: 250ms;
   -webkit-animation-fill-mode: both;
@@ -113,7 +113,7 @@
   }
 }
 
-.concerndetails-content .gallery-link .caption, .stechgallary-content .gallery-link .caption {
+.concerndetails-content .gallery-link .caption, .stechgallery-content .video-thumbs .caption, .stechgallery-content .fullscreenvideo-thumbs .caption, .stechgallery-content .gallery-link .caption, .stechgallerybox .gallery-link .caption, .stechgallerybox .video-thumbs .caption {
   -webkit-animation-name: slideUpIn;
   animation-name: slideUpIn;
 }
@@ -1413,6 +1413,44 @@ select {
   font-weight: normal;
   line-height: 1.66667;
   text-align: center;
+}
+
+@-webkit-keyframes waves {
+  0% {
+    -webkit-transform: scale(0.2, 0.2);
+    transform: scale(0.2, 0.2);
+    opacity: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  }
+  50% {
+    opacity: 0.9;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
+  }
+  100% {
+    -webkit-transform: scale(0.9, 0.9);
+    transform: scale(0.9, 0.9);
+    opacity: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  }
+}
+
+@keyframes waves {
+  0% {
+    -webkit-transform: scale(0.2, 0.2);
+    transform: scale(0.2, 0.2);
+    opacity: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  }
+  50% {
+    opacity: 0.9;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
+  }
+  100% {
+    -webkit-transform: scale(0.9, 0.9);
+    transform: scale(0.9, 0.9);
+    opacity: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  }
 }
 
 /**=====================================================**
@@ -3027,6 +3065,32 @@ select {
           filter: drop-shadow(0 0 0.0625rem rgba(12, 26, 75, 0.1)) drop-shadow(0 0.625rem 1rem rgba(20, 37, 63, 0.06));
 }
 
+@-webkit-keyframes pulse-border {
+  0% {
+    -webkit-transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1);
+    transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1.5);
+    transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1.5);
+    opacity: 0;
+  }
+}
+
+@keyframes pulse-border {
+  0% {
+    -webkit-transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1);
+    transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1.5);
+    transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1.5);
+    opacity: 0;
+  }
+}
+
 /**=====================================================
                     STECH-BANNER
 =====================================================**/
@@ -3890,8 +3954,61 @@ canvas {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+  height: 9rem;
+  width: 9rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 100%;
   background: transparent;
   border: none;
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .ourstrategies .ourstrategies-thumbnail .btn-playpause {
+    height: 4.5rem;
+    width: 4.5rem;
+  }
+}
+
+.ourstrategies .ourstrategies-thumbnail .btn-playpause::before, .ourstrategies .ourstrategies-thumbnail .btn-playpause::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50% -50%);
+  transform: translate(-50% -50%);
+  display: block;
+  height: 9rem;
+  width: 9rem;
+  background: transparent;
+  border-radius: 100%;
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .ourstrategies .ourstrategies-thumbnail .btn-playpause::before, .ourstrategies .ourstrategies-thumbnail .btn-playpause::after {
+    height: 4.5rem;
+    width: 4.5rem;
+  }
+}
+
+.ourstrategies .ourstrategies-thumbnail .btn-playpause::before {
+  content: "";
+  background: rgba(255, 255, 255, 0.75);
+  -webkit-animation: pulse-border 1500ms ease-out infinite;
+          animation: pulse-border 1500ms ease-out infinite;
+}
+
+.ourstrategies .ourstrategies-thumbnail .btn-playpause::after {
+  z-index: 1;
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
 }
 
 /**=====================================================
@@ -5413,32 +5530,67 @@ canvas {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  overflow: hidden;
+  border-radius: 100%;
   background: transparent;
   border: none;
   margin-inline: auto;
+  position: relative;
 }
 
 @media screen and (max-width: 61.9375rem) {
   .gallerybanner-content .banner-details .btn-playpause {
-    height: 4.375rem;
-    width: 4.375rem;
+    height: 4.5rem;
+    width: 4.5rem;
   }
+}
+
+.gallerybanner-content .banner-details .btn-playpause::before, .gallerybanner-content .banner-details .btn-playpause::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50% -50%);
+  transform: translate(-50% -50%);
+  display: block;
+  height: 9rem;
+  width: 9rem;
+  background: transparent;
+  border-radius: 100%;
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .gallerybanner-content .banner-details .btn-playpause::before, .gallerybanner-content .banner-details .btn-playpause::after {
+    height: 4.5rem;
+    width: 4.5rem;
+  }
+}
+
+.gallerybanner-content .banner-details .btn-playpause::before {
+  content: "";
+  background: rgba(255, 255, 255, 0.75);
+  -webkit-animation: pulse-border 1500ms ease-out infinite;
+          animation: pulse-border 1500ms ease-out infinite;
+}
+
+.gallerybanner-content .banner-details .btn-playpause::after {
+  z-index: 1;
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
 }
 
 /**=====================================================
             STECH-GALLERY SECTION START
 =====================================================**/
-.stechgallary {
+.stechgallery {
   background: #F7FAFC;
-  height: 100vh;
+  min-height: 100vh;
   position: relative;
   z-index: 2;
   padding: 5rem 0rem;
   overflow: hidden;
 }
 
-.stechgallary-content {
+.stechgallery-content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -5449,7 +5601,7 @@ canvas {
   gap: 5rem;
 }
 
-.stechgallary-content .gallery-thumbs {
+.stechgallery-content .gallery-thumbs {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -5460,38 +5612,518 @@ canvas {
   gap: 1.5rem;
 }
 
-.stechgallary-content .gallery-link {
+.stechgallery-content .video-thumbs {
   position: relative;
   overflow: hidden;
-  width: 100%;
+  height: 100%;
 }
 
-.stechgallary-content .gallery-link img {
+.stechgallery-content .video-thumbs img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  -webkit-transition: transform 250ms ease-in-out;
+  -webkit-transition: -webkit-transform 250ms ease-in-out;
+  transition: -webkit-transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
 }
 
-.stechgallary-content .gallery-link .caption {
+.stechgallery-content .video-thumbs .caption {
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 80%;
+  width: 100%;
   background: #0019FF;
   color: white;
   padding: 1.0625rem 1.6875rem;
-  min-height: 8.25rem;
   display: none;
 }
 
-.stechgallary-content .gallery-link:not([disabled]):hover .caption {
+.stechgallery-content .video-thumbs .btn-playpause {
+  height: 5.625rem;
+  width: 5.625rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 100%;
+  background: transparent;
+  border: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  z-index: 120;
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .stechgallery-content .video-thumbs .btn-playpause {
+    height: 3rem;
+    width: 3rem;
+  }
+}
+
+.stechgallery-content .video-thumbs .btn-playpause::before, .stechgallery-content .video-thumbs .btn-playpause::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50% -50%);
+  transform: translate(-50% -50%);
+  display: block;
+  height: 5.625rem;
+  width: 5.625rem;
+  background: transparent;
+  border-radius: 100%;
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .stechgallery-content .video-thumbs .btn-playpause::before, .stechgallery-content .video-thumbs .btn-playpause::after {
+    height: 3rem;
+    width: 3rem;
+  }
+}
+
+.stechgallery-content .video-thumbs .btn-playpause::before {
+  content: "";
+  background: rgba(255, 255, 255, 0.75);
+  -webkit-animation: pulse-border 1500ms ease-out infinite;
+          animation: pulse-border 1500ms ease-out infinite;
+}
+
+.stechgallery-content .video-thumbs .btn-playpause::after {
+  z-index: 1;
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+}
+
+.stechgallery-content .video-thumbs:not([disabled]):hover .caption {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.stechgallery-content .video-thumbs:not([disabled]):hover img {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.stechgallery-content .fullscreenvideo-thumbs {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+}
+
+.stechgallery-content .fullscreenvideo-thumbs img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transition: transform 250ms ease-in-out;
+  -webkit-transition: -webkit-transform 250ms ease-in-out;
+  transition: -webkit-transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
+}
+
+.stechgallery-content .fullscreenvideo-thumbs .caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50%;
+  background: #0019FF;
+  color: white;
+  padding: 1.0625rem 1.6875rem;
+  display: none;
+}
+
+@media screen and (max-width: 48rem) {
+  .stechgallery-content .fullscreenvideo-thumbs .caption {
+    width: 100%;
+  }
+}
+
+.stechgallery-content .fullscreenvideo-thumbs .caption-title {
+  font-family: "Raleway";
+  font-style: normal;
+  font-size: 2.25rem;
+  font-weight: 700;
+  line-height: 1.36111;
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .stechgallery-content .fullscreenvideo-thumbs .caption-title {
+    font-family: "Raleway";
+    font-style: normal;
+    font-size: 1.75rem;
+    font-weight: 600;
+    line-height: 1.35714;
+  }
+}
+
+@media screen and (max-width: 48rem) {
+  .stechgallery-content .fullscreenvideo-thumbs .caption-title {
+    font-family: "Raleway";
+    font-style: normal;
+    font-size: 1.125rem;
+    font-weight: 600;
+    line-height: 1.66667;
+  }
+}
+
+.stechgallery-content .fullscreenvideo-thumbs .btn-playpause {
+  height: 9rem;
+  width: 9rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 100%;
+  background: transparent;
+  border: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  z-index: 120;
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .stechgallery-content .fullscreenvideo-thumbs .btn-playpause {
+    height: 4.5rem;
+    width: 4.5rem;
+  }
+}
+
+@media screen and (max-width: 35.9375rem) {
+  .stechgallery-content .fullscreenvideo-thumbs .btn-playpause {
+    height: 3rem;
+    width: 3rem;
+  }
+}
+
+.stechgallery-content .fullscreenvideo-thumbs .btn-playpause::before, .stechgallery-content .fullscreenvideo-thumbs .btn-playpause::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50% -50%);
+  transform: translate(-50% -50%);
+  display: block;
+  height: 9rem;
+  width: 9rem;
+  background: transparent;
+  border-radius: 100%;
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .stechgallery-content .fullscreenvideo-thumbs .btn-playpause::before, .stechgallery-content .fullscreenvideo-thumbs .btn-playpause::after {
+    height: 4.5rem;
+    width: 4.5rem;
+  }
+}
+
+@media screen and (max-width: 35.9375rem) {
+  .stechgallery-content .fullscreenvideo-thumbs .btn-playpause::before, .stechgallery-content .fullscreenvideo-thumbs .btn-playpause::after {
+    height: 3rem;
+    width: 3rem;
+  }
+}
+
+.stechgallery-content .fullscreenvideo-thumbs .btn-playpause::before {
+  content: "";
+  background: rgba(255, 255, 255, 0.75);
+  -webkit-animation: pulse-border 1500ms ease-out infinite;
+          animation: pulse-border 1500ms ease-out infinite;
+}
+
+.stechgallery-content .fullscreenvideo-thumbs .btn-playpause::after {
+  z-index: 1;
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+}
+
+.stechgallery-content .fullscreenvideo-thumbs:not([disabled]):hover .caption {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.stechgallery-content .fullscreenvideo-thumbs:not([disabled]):hover img {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.stechgallery-content .gallery-link {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.stechgallery-content .gallery-link img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transition: transform 250ms ease-in-out;
+  -webkit-transition: -webkit-transform 250ms ease-in-out;
+  transition: -webkit-transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
+}
+
+.stechgallery-content .gallery-link .caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 90%;
+  background: #0019FF;
+  color: white;
+  padding: 1.0625rem;
+  display: none;
+}
+
+@media screen and (max-width: 48rem) {
+  .stechgallery-content .gallery-link .caption {
+    width: 100%;
+  }
+}
+
+.stechgallery-content .gallery-link .caption-title {
+  font-family: "Raleway";
+  font-style: normal;
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 1.66667;
+}
+
+.stechgallery-content .gallery-link:not([disabled]):hover .caption {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.stechgallery-content .gallery-link:not([disabled]):hover img {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+/**=====================================================
+            STECH-GALLERY-BOX SECTION START
+=====================================================**/
+.stechgallerybox {
+  background: #F7FAFC;
+  min-height: 100vh;
+  position: relative;
+  z-index: 2;
+  padding: 5rem 0rem;
+  overflow: hidden;
+}
+
+.stechgallerybox .gallery-thumbs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.5rem;
+}
+
+.stechgallerybox .gallery-link {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.stechgallerybox .gallery-link img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transition: transform 250ms ease-in-out;
+  -webkit-transition: -webkit-transform 250ms ease-in-out;
+  transition: -webkit-transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
+}
+
+.stechgallerybox .gallery-link .caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 90%;
+  background: #0019FF;
+  color: white;
+  padding: 1.0625rem;
+  display: none;
+}
+
+@media screen and (max-width: 48rem) {
+  .stechgallerybox .gallery-link .caption {
+    width: 100%;
+  }
+}
+
+.stechgallerybox .gallery-link .caption-title {
+  font-family: "Raleway";
+  font-style: normal;
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 1.66667;
+}
+
+.stechgallerybox .gallery-link:not([disabled]):hover .caption {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.stechgallerybox .gallery-link:not([disabled]):hover img {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.stechgallerybox .video-thumbs {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+}
+
+.stechgallerybox .video-thumbs img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transition: transform 250ms ease-in-out;
+  -webkit-transition: -webkit-transform 250ms ease-in-out;
+  transition: -webkit-transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
+}
+
+.stechgallerybox .video-thumbs .caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #0019FF;
+  color: white;
+  padding: 1.0625rem 1.6875rem;
+  display: none;
+}
+
+.stechgallerybox .video-thumbs .caption-title {
+  font-family: "Raleway";
+  font-style: normal;
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 1.66667;
+}
+
+.stechgallerybox .video-thumbs .btn-playpause {
+  height: 5.625rem;
+  width: 5.625rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 100%;
+  background: transparent;
+  border: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  z-index: 120;
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .stechgallerybox .video-thumbs .btn-playpause {
+    height: 3rem;
+    width: 3rem;
+  }
+}
+
+.stechgallerybox .video-thumbs .btn-playpause::before, .stechgallerybox .video-thumbs .btn-playpause::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50% -50%);
+  transform: translate(-50% -50%);
+  display: block;
+  height: 5.625rem;
+  width: 5.625rem;
+  background: transparent;
+  border-radius: 100%;
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .stechgallerybox .video-thumbs .btn-playpause::before, .stechgallerybox .video-thumbs .btn-playpause::after {
+    height: 3rem;
+    width: 3rem;
+  }
+}
+
+.stechgallerybox .video-thumbs .btn-playpause::before {
+  content: "";
+  background: rgba(255, 255, 255, 0.75);
+  -webkit-animation: pulse-border 1500ms ease-out infinite;
+          animation: pulse-border 1500ms ease-out infinite;
+}
+
+.stechgallerybox .video-thumbs .btn-playpause::after {
+  z-index: 1;
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+}
+
+.stechgallerybox .video-thumbs:not([disabled]):hover .caption {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.stechgallerybox .video-thumbs:not([disabled]):hover img {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 /**=====================================================

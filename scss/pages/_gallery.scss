@@ -41,25 +41,52 @@
             .btn-playpause {
                 @include square(length(144));
                 @include flex-center;
-                overflow: hidden;
+                @include circle;
                 @include transparent-button;
                 margin-inline: auto;
+                position: relative;
 
                 @include breakpoint(tablet991) {
-                    @include square(length(70));
+                    @include square(length(72));
+                }
+
+                &::before, &::after {
+                    content: "";
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    @include transform(translate(-50% -50%));
+                    display: block;
+                    @include square(length(144));
+                    background: transparent;
+                    @include circle;
+
+                    @include breakpoint(tablet991) {
+                        @include square(length(72));
+                    }
+                }
+
+                &::before {
+                    content: "";
+                    background: rgba($white, 0.75);
+                    animation: pulse-border 1500ms ease-out infinite;
+                }
+
+                &::after {
+                    z-index: 1;
+                    transition: all 200ms;
                 }
             }
         }
     }
 }
 
-
 /**=====================================================
             STECH-GALLERY SECTION START
 =====================================================**/
-.stechgallary {
+.stechgallery {
     background: $bodyBg;
-    height: 100vh;
+    min-height: 100vh;
     position: relative;
     z-index: 2;
     padding: length(80) length(0);
@@ -73,6 +100,184 @@
             @include flex-column;
             gap: length(24);
         }
+
+        .video-thumbs {
+            position: relative;
+            overflow: hidden;
+            @include h100;
+
+            img {
+                @include wh100;
+                object-fit: cover;
+                @include transitiontransform;
+            }
+    
+            .caption {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                @include w100;
+                @include setBgColor($blue, $white);
+                padding: length(17) length(27);
+                display: none;
+                @extend %animation;
+                @extend %slideUpIn;
+            }
+
+            .btn-playpause {
+                @include square(length(90));
+                @include flex-center;
+                @include circle;
+                @include transparent-button;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                @include transform(translate(-50%, -50%));
+                z-index: 120;
+    
+                @include breakpoint(tablet991) {
+                    @include square(length(48));
+                }
+    
+                &::before, &::after {
+                    content: "";
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    @include transform(translate(-50% -50%));
+                    display: block;
+                    @include square(length(90));
+                    background: transparent;
+                    @include circle;
+    
+                    @include breakpoint(tablet991) {
+                        @include square(length(48));
+                    }
+                }
+    
+                &::before {
+                    content: "";
+                    background: rgba($white, 0.75);
+                    animation: pulse-border 1500ms ease-out infinite;
+                }
+    
+                &::after {
+                    z-index: 1;
+                    transition: all 200ms;
+                }
+            }
+    
+            @include hover {
+                .caption {
+                    @include flex-center-vert;
+                }
+
+                img {
+                    @include transform(scale(1.1));
+                }
+            }
+        }
+
+        .fullscreenvideo-thumbs {
+            position: relative;
+            overflow: hidden;
+            @include h100;
+
+            img {
+                @include wh100;
+                object-fit: cover;
+                @include transitiontransform;
+            }
+    
+            .caption {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 50%;
+                @include setBgColor($blue, $white);
+                padding: length(17) length(27);
+                display: none;
+                @extend %animation;
+                @extend %slideUpIn;
+
+                @include breakpoint(phone768) {
+                    @include w100;
+                }
+
+                &-title {
+                    @include font-face($raleway, style('normal'), size(36), weight('bold'), line-height(49, 36));
+
+                    @include breakpoint(tablet991) {
+                        @include font-face($raleway, style('normal'), size(28), weight('semibold'), line-height(38, 28));
+                    }
+
+                    @include breakpoint(phone768) {
+                        @include font-face($raleway, style('normal'), size(18), weight('semibold'), line-height(30, 18));
+                    }
+                }
+            }
+
+            .btn-playpause {
+                @include square(length(144));
+                @include flex-center;
+                @include circle;
+                @include transparent-button;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                @include transform(translate(-50%, -50%));
+                z-index: 120;
+    
+                @include breakpoint(tablet991) {
+                    @include square(length(72));
+                }
+
+                @include breakpoint(phone575) {
+                    @include square(length(48));
+                }
+    
+                &::before, &::after {
+                    content: "";
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    @include transform(translate(-50% -50%));
+                    display: block;
+                    @include square(length(144));
+                    background: transparent;
+                    @include circle;
+    
+                    @include breakpoint(tablet991) {
+                        @include square(length(72));
+                    }
+
+                    @include breakpoint(phone575) {
+                        @include square(length(48));
+                    }
+                }
+    
+                &::before {
+                    content: "";
+                    background: rgba($white, 0.75);
+                    animation: pulse-border 1500ms ease-out infinite;
+                }
+    
+                &::after {
+                    z-index: 1;
+                    transition: all 200ms;
+                }
+            }
+    
+            @include hover {
+                .caption {
+                    @include flex-center-vert;
+                }
+
+                img {
+                    @include transform(scale(1.1));
+                }
+            }
+        }
     
         .gallery-link {
             position: relative;
@@ -82,30 +287,180 @@
             img {
                 @include wh100;
                 object-fit: cover;
+                @include transitiontransform;
             }
     
             .caption {
                 position: absolute;
                 bottom: 0;
                 left: 0;
-                width: 80%;
+                width: 90%;
                 @include setBgColor($blue, $white);
-                padding: length(17) length(27);
-                min-height: length(132);
+                padding: length(17);
                 display: none;
                 @extend %animation;
                 @extend %slideUpIn;
+
+                @include breakpoint(phone768) {
+                    @include w100;
+                }
+
+                &-title {
+                    @include font-face($raleway, style('normal'), size(18), weight('bold'), line-height(30, 18));
+                }
             }
     
             @include hover {
                 .caption {
                     @include flex-center-vert;
                 }
+
+                img {
+                    @include transform(scale(1.1));
+                }
+            }
+        }
+    }
+}
+
+
+/**=====================================================
+            STECH-GALLERY-BOX SECTION START
+=====================================================**/
+.stechgallerybox {
+    background: $bodyBg;
+    min-height: 100vh;
+    position: relative;
+    z-index: 2;
+    padding: length(80) length(0);
+    overflow: hidden;
+
+
+    .gallery-thumbs {
+        @include flex-column;
+        gap: length(24);
+    }
+
+    .gallery-link {
+        position: relative;
+        overflow: hidden;
+        @include w100;
+
+        img {
+            @include wh100;
+            object-fit: cover;
+            @include transitiontransform;
+        }
+
+        .caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 90%;
+            @include setBgColor($blue, $white);
+            padding: length(17);
+            display: none;
+            @extend %animation;
+            @extend %slideUpIn;
+
+            @include breakpoint(phone768) {
+                @include w100;
+            }
+
+            &-title {
+                @include font-face($raleway, style('normal'), size(18), weight('bold'), line-height(30, 18));
             }
         }
 
-        .midlink {
-            
+        @include hover {
+            .caption {
+                @include flex-center-vert;
+            }
+
+            img {
+                @include transform(scale(1.1));
+            }
+        }
+    }
+
+    .video-thumbs {
+        position: relative;
+        overflow: hidden;
+        @include h100;
+
+        img {
+            @include wh100;
+            object-fit: cover;
+            @include transitiontransform;
+        }
+
+        .caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            @include w100;
+            @include setBgColor($blue, $white);
+            padding: length(17) length(27);
+            display: none;
+            @extend %animation;
+            @extend %slideUpIn;
+
+            &-title {
+                @include font-face($raleway, style('normal'), size(18), weight('bold'), line-height(30, 18));
+            }
+        }
+
+        .btn-playpause {
+            @include square(length(90));
+            @include flex-center;
+            @include circle;
+            @include transparent-button;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            @include transform(translate(-50%, -50%));
+            z-index: 120;
+
+            @include breakpoint(tablet991) {
+                @include square(length(48));
+            }
+
+            &::before, &::after {
+                content: "";
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                @include transform(translate(-50% -50%));
+                display: block;
+                @include square(length(90));
+                background: transparent;
+                @include circle;
+
+                @include breakpoint(tablet991) {
+                    @include square(length(48));
+                }
+            }
+
+            &::before {
+                content: "";
+                background: rgba($white, 0.75);
+                animation: pulse-border 1500ms ease-out infinite;
+            }
+
+            &::after {
+                z-index: 1;
+                transition: all 200ms;
+            }
+        }
+
+        @include hover {
+            .caption {
+                @include flex-center-vert;
+            }
+
+            img {
+                @include transform(scale(1.1));
+            }
         }
     }
 }
