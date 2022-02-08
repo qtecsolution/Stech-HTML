@@ -3091,6 +3091,32 @@ select {
   }
 }
 
+@-webkit-keyframes ribbonanimate {
+  0% {
+    -webkit-transform: translateY(3.125rem) scaleY(0) translateZ(0);
+    transform: translateY(3.125rem) scaleY(0) translateZ(0);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0) scaleY(1) translateZ(0);
+    transform: translateY(0) scaleY(1) translateZ(0);
+    opacity: 1;
+  }
+}
+
+@keyframes ribbonanimate {
+  0% {
+    -webkit-transform: translateY(3.125rem) scaleY(0) translateZ(0);
+    transform: translateY(3.125rem) scaleY(0) translateZ(0);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0) scaleY(1) translateZ(0);
+    transform: translateY(0) scaleY(1) translateZ(0);
+    opacity: 1;
+  }
+}
+
 /**=====================================================
                     STECH-BANNER
 =====================================================**/
@@ -3221,11 +3247,12 @@ canvas {
 
 .stechdigital-header {
   position: relative;
+  margin-top: 10rem;
 }
 
 @media screen and (max-width: 61.9375rem) {
   .stechdigital-header {
-    margin-top: 3rem;
+    margin-top: 5rem;
   }
 }
 
@@ -5467,10 +5494,10 @@ canvas {
             GALLERY-BANNER
 =====================================================**/
 .gallerybanner {
-  position: relative;
+  position: absolute;
   top: 0;
-  z-index: 20;
   left: 0;
+  z-index: 2;
   width: 100%;
   height: 100vh;
   background: url(../images/pages/gallery/gallery-banner.png) no-repeat center center/cover;
@@ -5588,6 +5615,7 @@ canvas {
   z-index: 2;
   padding: 5rem 0rem;
   overflow: hidden;
+  margin-top: calc(100vh - 6.25rem);
 }
 
 .stechgallery-content {
