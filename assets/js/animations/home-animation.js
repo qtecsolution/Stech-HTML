@@ -1,6 +1,5 @@
 
 // STECH-DIGITAL ANIMATION START
-
 gsap.from('.stechdigitalribbon', {
     duration: 2,
     ease: 'power2.in',
@@ -27,7 +26,7 @@ gsap.to('.stechdigital-title', {
 gsap.from('.setchdigital-text', {
     duration: 2.5,
     delay: 2.5,
-    y: 100,
+    y: 40,
     ease: 'power2.inOut',
     opacity: 0
 });
@@ -65,7 +64,7 @@ gsap.to('.ourconcern-title', {
 gsap.from('.ourconcern-text', {
     duration: 2.5,
     delay: 2.5,
-    y: 100,
+    y: 40,
     ease: 'power2.inOut',
     opacity: 0
 });
@@ -74,6 +73,7 @@ gsap.to('.ourconcern-text', {
     y: 0
 });
 // OUR-CONCERN ANIMATION END
+
 
 // OUR-SERVICE ANIMATION START
 gsap.from('.serviceribbon', {
@@ -102,7 +102,7 @@ gsap.to('.service-title', {
 gsap.from('.service-text', {
     duration: 2.5,
     delay: 2.5,
-    y: 100,
+    y: 40,
     ease: 'power2.inOut',
     opacity: 0
 });
@@ -111,6 +111,7 @@ gsap.to('.service-text', {
     y: 0
 });
 // OUR-SERVICE ANIMATION END
+
 
 // OUR-CLIENTS ANIMATION START
 gsap.from('.ourclientsribbon', {
@@ -139,7 +140,7 @@ gsap.to('.ourclients-title', {
 gsap.from('.ourclients-text', {
     duration: 2.5,
     delay: 2.5,
-    y: 100,
+    y: 40,
     ease: 'power2.inOut',
     opacity: 0
 });
@@ -148,6 +149,7 @@ gsap.to('.ourclients-text', {
     y: 0
 });
 // OUR-CLIENTS ANIMATION END
+
 
 // COMPANY-VALUES ANIMATION START
 gsap.from('.companyvaluesribbon', {
@@ -176,7 +178,7 @@ gsap.to('.companyvalues-title', {
 gsap.from('.companyvalue-text', {
     duration: 2.5,
     delay: 2.5,
-    y: 100,
+    y: 40,
     ease: 'power2.inOut',
     opacity: 0
 });
@@ -185,6 +187,7 @@ gsap.to('.companyvalue-text', {
     y: 0
 });
 // COMPANY-VALUES ANIMATION END
+
 
 // OUR-STRATIGY ANIMATION START
 gsap.from('.strategiesribbon', {
@@ -213,7 +216,7 @@ gsap.to('.strategies-title', {
 gsap.from('.strategies-text', {
     duration: 2.5,
     delay: 2.5,
-    y: 100,
+    y: 40,
     ease: 'power2.inOut',
     opacity: 0
 });
