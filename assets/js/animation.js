@@ -10,8 +10,7 @@ gsap.from('.stechdigitalribbon', {
     duration: 2,
     ease: 'linear',
     scaleY: 0,
-    opacity: 0,
-    yPercent: -10
+    opacity: 0
 });
 
 gsap.to('.stechdigitalribbon', {
