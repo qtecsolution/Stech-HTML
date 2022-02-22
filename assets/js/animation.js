@@ -7,24 +7,24 @@
 // .to('.stechdigital-title', 2, {x: '0%'})
 
 gsap.from('.stechdigitalribbon', {
-    y: -20,
-    scaleY: 0,
     duration: 2,
-    ease: 'back',
-    stagged: 1
+    ease: 'power2.in',
+    scaleY: 0,
+    opacity: 0,
+    yPercent: -10
 });
 
 gsap.to('.stechdigitalribbon', {
-    y: 0,
     scaleY: 1
 });
 
 gsap.from('.stechdigital-title', {
-    x: '-100%',
-    duration: 3,
-    delay: 2,
+    // x: '-40',
+    xPercent: -05,
+    duration: 2.25,
+    delay: 2.25,
     ease: 'back',
-    stagged: 2
+    opacity: 0
 });
 
 gsap.to('.stechdigital-title', {
