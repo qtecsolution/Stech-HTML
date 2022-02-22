@@ -19,8 +19,7 @@ gsap.to('.stechdigitalribbon', {
 });
 
 gsap.from('.stechdigital-title', {
-    // x: '-40',
-    xPercent: -05,
+    x: '-40',
     duration: 2.25,
     delay: 2.25,
     ease: 'back',
