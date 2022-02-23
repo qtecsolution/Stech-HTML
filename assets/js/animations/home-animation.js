@@ -1,21 +1,50 @@
 
 // STECH-DIGITAL ANIMATION START
-gsap.from('.stechdigitalribbon', {
-    duration: 2,
+gsap.from('#ribbonicon', {
+    stagger: 0.5
+});
+
+gsap.from('#path-1', {
+    duration: 1,
+    delay: 1,
     ease: 'power2.in',
-    scaleY: 0,
+    y: 100,
     opacity: 0
 });
 
-gsap.to('.stechdigitalribbon', {
-    scaleY: 1
+gsap.to('#path-1', {
+    y: 0
+});
+
+gsap.from('#path-2', {
+    duration: 1,
+    delay: 1,
+    ease: 'power2.in',
+    y: 100,
+    opacity: 0
+});
+
+gsap.to('#path-2', {
+    y: 0
+});
+
+gsap.from('#path-3', {
+    duration: 1,
+    delay: 1,
+    ease: 'power2.in',
+    y: -100,
+    opacity: 0
+});
+
+gsap.to('#path-3', {
+    y: 0
 });
 
 gsap.from('.stechdigital-title', {
-    x: '-40',
-    duration: 2.25,
-    delay: 2.25,
-    ease: 'back',
+    duration: 1.5,
+    delay: 1.5,
+    x: -40,
+    ease: 'power2.inOut',
     opacity: 0
 });
 
@@ -24,9 +53,9 @@ gsap.to('.stechdigital-title', {
 });
 
 gsap.from('.setchdigital-text', {
-    duration: 2.5,
-    delay: 2.5,
-    y: 40,
+    duration: 2,
+    delay: 2,
+    y: 20,
     ease: 'power2.inOut',
     opacity: 0
 });
@@ -34,6 +63,7 @@ gsap.from('.setchdigital-text', {
 gsap.to('.setchdigital-text', {
     y: 0
 });
+
 // STECH-DIGITAL ANIMATION END
 
 

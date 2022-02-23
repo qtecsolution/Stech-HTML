@@ -3200,7 +3200,7 @@ canvas {
   left: 0;
   z-index: -1;
   width: 8.9375rem;
-  height: 16rem;
+  height: 16.0625rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3239,7 +3239,6 @@ canvas {
   font-weight: 700;
   line-height: 1.5;
   color: #2D3748;
-  text-align: justify;
 }
 
 @media screen and (max-width: 61.9375rem) {
@@ -3259,6 +3258,7 @@ canvas {
   font-weight: normal;
   line-height: 1.66667;
   color: #718096;
+  text-align: justify;
 }
 
 .stechdigital-body .setchdigital-text .link {

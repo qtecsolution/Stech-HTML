@@ -102,7 +102,7 @@ canvas {
             left: 0;
             z-index: -1;
             width: length(143);
-            height: length(256);
+            height: length(257);
             @include flex-center;
 
             @include breakpoint(tablet991) {
@@ -123,7 +123,6 @@ canvas {
         .stechdigital-title {
             @include font-face($raleway, style('normal'), size(40), weight('bold'), line-height(60, 40));
             color: $gray-800;
-            text-align: justify;
 
             @include breakpoint(tablet991) {
                 @include font-face($raleway, style('normal'), size(28), weight('bold'), line-height(42, 28));
@@ -135,6 +134,7 @@ canvas {
         .setchdigital-text {
             @include font-face($lorenza, style('normal'), size(18), weight('normal'), line-height(30, 18));
             color: $gray-600;
+            text-align: justify;
 
             .link {
                 @include font-face($lorenza, style('normal'), size(18), weight('normal'), line-height(30, 18));
