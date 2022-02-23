@@ -67,21 +67,51 @@ gsap.to('.stechaesthetics-text', {
 // STECH AESTHETICS ANIMATION END
 
 // CHAIRMAN-MESSAGE ANIMATION START
-gsap.from('.chairmanmessageribbon', {
-    duration: 1.25,
+
+gsap.from('#smallribbonicon', {
+    stagger: 0.5
+});
+
+gsap.from('#smallpath-1', {
+    duration: 1,
+    delay: 1,
     ease: 'power2.in',
-    scaleY: 0,
+    y: 100,
     opacity: 0
 });
 
-gsap.to('.chairmanmessageribbon', {
-    scaleY: 1
+gsap.to('#smallpath-1', {
+    y: 0
+});
+
+gsap.from('#smallpath-2', {
+    duration: 1,
+    delay: 1,
+    ease: 'power2.in',
+    y: 100,
+    opacity: 0
+});
+
+gsap.to('#smallpath-2', {
+    y: 0
+});
+
+gsap.from('#smallpath-3', {
+    duration: 1,
+    delay: 1,
+    ease: 'power2.in',
+    y: -100,
+    opacity: 0
+});
+
+gsap.to('#smallpath-3', {
+    y: 0
 });
 
 gsap.from('.chairmanmessage-title', {
     x: '-40',
-    duration: 1.5,
-    delay: 1.5,
+    duration: 2.25,
+    delay: 2.25,
     ease: 'back',
     opacity: 0
 });
@@ -91,8 +121,8 @@ gsap.to('.chairmanmessage-title', {
 });
 
 gsap.from('.chairmanmessage-text', {
-    duration: 1.75,
-    delay: 1.75,
+    duration: 2.5,
+    delay: 2.5,
     y: 40,
     ease: 'power2.inOut',
     opacity: 0

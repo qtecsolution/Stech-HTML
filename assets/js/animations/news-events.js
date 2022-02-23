@@ -143,22 +143,51 @@ gsap.to('.newsevent .read', {
 // NEWS-EVENT ANIMATION END
 
 // EVENT ANIMATION START
-gsap.from('.eventsribbon', {
-    duration: .75,
-    delay: .75,
+
+gsap.from('#smallribbonicon', {
+    stagger: 0.5
+});
+
+gsap.from('#smallpath-1', {
+    duration: 1,
+    delay: 1,
     ease: 'power2.in',
-    scaleY: 0,
+    y: 100,
     opacity: 0
 });
 
-gsap.to('.eventsribbon', {
-    scaleY: 1
+gsap.to('#smallpath-1', {
+    y: 0
+});
+
+gsap.from('#smallpath-2', {
+    duration: 1,
+    delay: 1,
+    ease: 'power2.in',
+    y: 100,
+    opacity: 0
+});
+
+gsap.to('#smallpath-2', {
+    y: 0
+});
+
+gsap.from('#smallpath-3', {
+    duration: 1,
+    delay: 1,
+    ease: 'power2.in',
+    y: -100,
+    opacity: 0
+});
+
+gsap.to('#smallpath-3', {
+    y: 0
 });
 
 gsap.from('.events-title', {
     x: '-40',
-    duration: 1.25,
-    delay: 1.25,
+    duration: 2.25,
+    delay: 2.25,
     ease: 'back',
     opacity: 0
 });
@@ -168,8 +197,8 @@ gsap.to('.events-title', {
 });
 
 gsap.from('.events-text', {
-    duration: 1.5,
-    delay: 1.5,
+    duration: 2.5,
+    delay: 2.5,
     y: 20,
     ease: 'power2.inOut',
     opacity: 0
@@ -180,8 +209,8 @@ gsap.to('.events-text', {
 });
 
 gsap.from('.cardevent', {
-    duration: 1.75,
-    delay: 1.75,
+    duration: 3.25,
+    delay: 3.25,
     scale: 0,
     ease: 'power2.inOut',
     opacity: 0,
@@ -195,22 +224,11 @@ gsap.to('.cardevent', {
 // EVENT ANIMATION END
 
 // NEWS ANIMATION START
-gsap.from('.newsribbon', {
-    duration: .75,
-    delay: .75,
-    ease: 'power2.in',
-    scaleY: 0,
-    opacity: 0
-});
-
-gsap.to('.newsribbon', {
-    scaleY: 1
-});
 
 gsap.from('.news-title', {
     x: '-40',
-    duration: 1.25,
-    delay: 1.25,
+    duration: 2.25,
+    delay: 2.25,
     ease: 'back',
     opacity: 0
 });
@@ -220,8 +238,8 @@ gsap.to('.news-title', {
 });
 
 gsap.from('.news-text', {
-    duration: 1.5,
-    delay: 1.5,
+    duration: 2.5,
+    delay: 2.5,
     y: 20,
     ease: 'power2.inOut',
     opacity: 0
@@ -232,8 +250,8 @@ gsap.to('.news-text', {
 });
 
 gsap.from('.cardnews', {
-    duration: 1.75,
-    delay: 1.75,
+    duration: 3,
+    delay: 3,
     scale: 0,
     ease: 'power2.inOut',
     opacity: 0,
@@ -245,8 +263,8 @@ gsap.to('.cardnews', {
 });
 
 gsap.from('.news .seeall .seelink', {
-    duration: 2.75,
-    delay: 2.75,
+    duration: 3.5,
+    delay: 3.5,
     y: 20,
     ease: 'power2.in',
     opacity: 0
@@ -262,8 +280,8 @@ gsap.to('.news .seeall .seelink', {
 // STECH-SUBSCRIBE START
 
 gsap.from('.stechsubscribe .stechsubscribe-title', {
-    duration: 1.5,
-    delay: 1.5,
+    duration: 3.25,
+    delay: 3.25,
     y: -20,
     ease: 'power2.in',
     opacity: 0
@@ -274,8 +292,8 @@ gsap.to('.stechsubscribe .stechsubscribe-title', {
 });
 
 gsap.from('.stechsubscribe .stechnewsletter', {
-    duration: 1.5,
-    delay: 1.5,
+    duration: 3.5,
+    delay: 3.5,
     y: 20,
     ease: 'power2.in',
     opacity: 0

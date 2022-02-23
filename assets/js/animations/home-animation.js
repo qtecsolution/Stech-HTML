@@ -68,15 +68,45 @@ gsap.to('.setchdigital-text', {
 
 
 // OUR-CONCERN ANIMATION START
-gsap.from('.ourconcernribbon', {
-    duration: 2,
+
+gsap.from('#smallribbonicon', {
+    stagger: 0.5
+});
+
+gsap.from('#smallpath-1', {
+    duration: 1,
+    delay: 1,
     ease: 'power2.in',
-    scaleY: 0,
+    y: 100,
     opacity: 0
 });
 
-gsap.to('.ourconcernribbon', {
-    scaleY: 1
+gsap.to('#smallpath-1', {
+    y: 0
+});
+
+gsap.from('#smallpath-2', {
+    duration: 1,
+    delay: 1,
+    ease: 'power2.in',
+    y: 100,
+    opacity: 0
+});
+
+gsap.to('#smallpath-2', {
+    y: 0
+});
+
+gsap.from('#smallpath-3', {
+    duration: 1,
+    delay: 1,
+    ease: 'power2.in',
+    y: -100,
+    opacity: 0
+});
+
+gsap.to('#smallpath-3', {
+    y: 0
 });
 
 gsap.from('.ourconcern-title', {
@@ -104,8 +134,8 @@ gsap.to('.ourconcern-text', {
 });
 
 gsap.from('.tab-nav li a', {
-    duration: 1.25,
-    delay: 1.25,
+    duration: 2.75,
+    delay: 2.75,
     x: -40,
     ease: 'power2.inOut',
     opacity: 0
@@ -116,8 +146,8 @@ gsap.to('.tab-nav li a', {
 });
 
 gsap.from('.content-holder', {
-    duration: 1.25,
-    delay: 1.25,
+    duration: 3,
+    delay: 3,
     x: 40,
     ease: 'power2.inOut',
     opacity: 0
@@ -128,8 +158,8 @@ gsap.to('.content-holder', {
 });
 
 gsap.from('.concern-thumbnail .info', {
-    duration: 1.75,
-    delay: 1.75,
+    duration: 3.5,
+    delay: 3.5,
     y: 40,
     ease: 'power2.inOut',
     opacity: 0
@@ -142,16 +172,6 @@ gsap.to('.concern-thumbnail .info', {
 
 
 // OUR-SERVICE ANIMATION START
-gsap.from('.serviceribbon', {
-    duration: 2,
-    ease: 'power2.in',
-    scaleY: 0,
-    opacity: 0
-});
-
-gsap.to('.serviceribbon', {
-    scaleY: 1
-});
 
 gsap.from('.service-title', {
     x: '-40',
@@ -214,21 +234,38 @@ gsap.from('.ourclients-text', {
 gsap.to('.ourclients-text', {
     y: 0
 });
+
+gsap.from('.card-client', {
+    duration: 2.5,
+    delay: 2.5,
+    scale: 0,
+    stagger: 0.5,
+    ease: 'power2.inOut',
+    opacity: 0
+});
+
+gsap.to('.card-client', {
+    scale: 1
+});
+
+gsap.from('.companyvalue', {
+    duration: 3,
+    delay: 3,
+    scale: 0,
+    stagger: 0.75,
+    ease: 'power2.inOut',
+    opacity: 0
+});
+
+gsap.to('.companyvalue', {
+    scale: 1
+});
+
+
 // OUR-CLIENTS ANIMATION END
 
 
 // COMPANY-VALUES ANIMATION START
-gsap.from('.companyvaluesribbon', {
-    duration: 2,
-    ease: 'power2.in',
-    scaleY: 0,
-    opacity: 0
-});
-
-gsap.to('.companyvaluesribbon', {
-    scaleY: 1
-});
-
 gsap.from('.companyvalues-title', {
     x: '-40',
     duration: 2.25,
@@ -256,17 +293,6 @@ gsap.to('.companyvalue-text', {
 
 
 // OUR-STRATIGY ANIMATION START
-gsap.from('.strategiesribbon', {
-    duration: 2,
-    ease: 'power2.in',
-    scaleY: 0,
-    opacity: 0
-});
-
-gsap.to('.strategiesribbon', {
-    scaleY: 1
-});
-
 gsap.from('.strategies-title', {
     x: '-40',
     duration: 2.25,
