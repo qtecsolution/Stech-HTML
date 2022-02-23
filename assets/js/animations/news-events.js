@@ -1,0 +1,259 @@
+// STECH AESTHETICS ANIMATION START
+gsap.from('.darkaestheticsribbon', {
+    duration: 0.5,
+    delay: 0.5,
+    ease: 'power2.in',
+    scaleY: 0,
+    opacity: 0
+});
+
+gsap.to('.darkaestheticsribbon', {
+    scaleY: 1
+});
+
+gsap.from('.stechaesthetics-title', {
+    duration: 0.75,
+    delay: 0.75,
+    y: 40,
+    ease: 'power2.inOut',
+    opacity: 0
+});
+
+gsap.to('.stechaesthetics-title', {
+    y: 0
+});
+
+gsap.from('.stechaesthetics-text', {
+    duration: 1,
+    delay: 1,
+    y: 20,
+    ease: 'power2.inOut',
+    opacity: 0
+});
+
+gsap.to('.stechaesthetics-text', {
+    y: 0
+});
+// STECH AESTHETICS ANIMATION END
+
+// NEWS-EVENT ANIMATION START
+
+gsap.from('.newsevent-thumbnail', {
+    duration: 1.25,
+    delay: 1.25,
+    x: -20,
+    ease: 'power2.inOut',
+    opacity: 0
+});
+
+gsap.to('.newsevent-thumbnail', {
+    x: 0
+});
+
+gsap.from('.newsevent-details', {
+    duration: 1.5,
+    delay: 1.5,
+    y: 20,
+    ease: 'power2.inOut',
+    opacity: 0
+});
+
+gsap.to('.newsevent-details', {
+    y: 0
+});
+
+gsap.from('.newsevent-title', {
+    duration: 1.75,
+    delay: 1.75,
+    y: -20,
+    ease: 'power2.inOut',
+    opacity: 0
+});
+
+gsap.to('.newsevent-title', {
+    y: 0
+});
+
+gsap.from('.newsevent-date', {
+    duration: 2,
+    delay: 2,
+    y: -20,
+    ease: 'power2.inOut',
+    opacity: 0
+});
+
+gsap.to('.newsevent-date', {
+    y: 0
+});
+
+gsap.from('.newsevent-text', {
+    duration: 2,
+    delay: 2,
+    y: 20,
+    ease: 'power2.inOut',
+    opacity: 0
+});
+
+gsap.to('.newsevent-text', {
+    y: 0
+});
+
+gsap.from('.newsevent .read', {
+    duration: 2,
+    delay: 2,
+    scale: 0,
+    ease: 'power2.inOut',
+    opacity: 0
+});
+
+gsap.to('.newsevent .read', {
+    scale: 1
+});
+
+// NEWS-EVENT ANIMATION END
+
+// EVENT ANIMATION START
+gsap.from('.eventsribbon', {
+    duration: .75,
+    delay: .75,
+    ease: 'power2.in',
+    scaleY: 0,
+    opacity: 0
+});
+
+gsap.to('.eventsribbon', {
+    scaleY: 1
+});
+
+gsap.from('.events-title', {
+    x: '-40',
+    duration: 1.25,
+    delay: 1.25,
+    ease: 'back',
+    opacity: 0
+});
+
+gsap.to('.events-title', {
+    x: 0
+});
+
+gsap.from('.events-text', {
+    duration: 1.5,
+    delay: 1.5,
+    y: 20,
+    ease: 'power2.inOut',
+    opacity: 0
+});
+
+gsap.to('.events-text', {
+    y: 0
+});
+
+gsap.from('.cardevent', {
+    duration: 1.75,
+    delay: 1.75,
+    scale: 0,
+    ease: 'power2.inOut',
+    opacity: 0,
+    stagger: 0.5
+});
+
+gsap.to('.cardevent', {
+    scale: 1
+});
+
+// EVENT ANIMATION END
+
+// NEWS ANIMATION START
+gsap.from('.newsribbon', {
+    duration: .75,
+    delay: .75,
+    ease: 'power2.in',
+    scaleY: 0,
+    opacity: 0
+});
+
+gsap.to('.newsribbon', {
+    scaleY: 1
+});
+
+gsap.from('.news-title', {
+    x: '-40',
+    duration: 1.25,
+    delay: 1.25,
+    ease: 'back',
+    opacity: 0
+});
+
+gsap.to('.news-title', {
+    x: 0
+});
+
+gsap.from('.news-text', {
+    duration: 1.5,
+    delay: 1.5,
+    y: 20,
+    ease: 'power2.inOut',
+    opacity: 0
+});
+
+gsap.to('.news-text', {
+    y: 0
+});
+
+gsap.from('.cardnews', {
+    duration: 1.75,
+    delay: 1.75,
+    scale: 0,
+    ease: 'power2.inOut',
+    opacity: 0,
+    stagger: 0.5
+});
+
+gsap.to('.cardnews', {
+    scale: 1
+});
+
+gsap.from('.news .seeall .seelink', {
+    duration: 2.75,
+    delay: 2.75,
+    y: 20,
+    ease: 'power2.in',
+    opacity: 0
+});
+
+gsap.to('.news .seeall .seelink', {
+    y: 0
+});
+
+// NEWS ANIMATION END
+
+
+// STECH-SUBSCRIBE START
+
+gsap.from('.stechsubscribe .stechsubscribe-title', {
+    duration: 1.5,
+    delay: 1.5,
+    y: -20,
+    ease: 'power2.in',
+    opacity: 0
+});
+
+gsap.to('.stechsubscribe .stechsubscribe-title', {
+    y: 0
+});
+
+gsap.from('.stechsubscribe .stechnewsletter', {
+    duration: 1.5,
+    delay: 1.5,
+    y: 20,
+    ease: 'power2.in',
+    opacity: 0
+});
+
+gsap.to('.stechsubscribe .stechnewsletter', {
+    y: 0
+});
+
+// STECH-SUBSCRIBE END
+

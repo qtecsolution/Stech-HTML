@@ -72,6 +72,42 @@ gsap.from('.ourconcern-text', {
 gsap.to('.ourconcern-text', {
     y: 0
 });
+
+gsap.from('.tab-nav li a', {
+    duration: 1.25,
+    delay: 1.25,
+    x: -40,
+    ease: 'power2.inOut',
+    opacity: 0
+});
+
+gsap.to('.tab-nav li a', {
+    x: 0
+});
+
+gsap.from('.content-holder', {
+    duration: 1.25,
+    delay: 1.25,
+    x: 40,
+    ease: 'power2.inOut',
+    opacity: 0
+});
+
+gsap.to('.content-holder', {
+    x: 0
+});
+
+gsap.from('.concern-thumbnail .info', {
+    duration: 1.75,
+    delay: 1.75,
+    y: 40,
+    ease: 'power2.inOut',
+    opacity: 0
+});
+
+gsap.to('.concern-thumbnail .info', {
+    y: 0
+});
 // OUR-CONCERN ANIMATION END
 
 
