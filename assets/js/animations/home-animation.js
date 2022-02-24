@@ -171,8 +171,8 @@ gsap.to('.concern-thumbnail .info', {
 
 gsap.from('.service-title', {
     x: '-40',
-    duration: 2.25,
-    delay: 2.25,
+    duration: 1,
+    delay: 4.5,
     ease: 'back',
     opacity: 0
 });
@@ -182,8 +182,8 @@ gsap.to('.service-title', {
 });
 
 gsap.from('.service-text', {
-    duration: 2.5,
-    delay: 2.5,
+    duration: 1,
+    delay: 5,
     y: 40,
     ease: 'power2.inOut',
     opacity: 0
@@ -199,8 +199,8 @@ gsap.to('.service-text', {
 
 gsap.from('.ourclients-title', {
     x: '-40',
-    duration: 2.25,
-    delay: 2.25,
+    duration: 1,
+    delay: 4.5,
     ease: 'back',
     opacity: 0
 });
@@ -210,8 +210,8 @@ gsap.to('.ourclients-title', {
 });
 
 gsap.from('.ourclients-text', {
-    duration: 2.5,
-    delay: 2.5,
+    duration: 5,
+    delay: 5,
     y: 40,
     ease: 'power2.inOut',
     opacity: 0
@@ -254,8 +254,8 @@ gsap.to('.companyvalue', {
 // COMPANY-VALUES ANIMATION START
 gsap.from('.companyvalues-title', {
     x: '-40',
-    duration: 2.25,
-    delay: 2.25,
+    duration: 1,
+    delay: 4.5,
     ease: 'back',
     opacity: 0
 });
@@ -265,8 +265,8 @@ gsap.to('.companyvalues-title', {
 });
 
 gsap.from('.companyvalue-text', {
-    duration: 2.5,
-    delay: 2.5,
+    duration: 5,
+    delay: 5,
     y: 40,
     ease: 'power2.inOut',
     opacity: 0
@@ -281,8 +281,8 @@ gsap.to('.companyvalue-text', {
 // OUR-STRATIGY ANIMATION START
 gsap.from('.strategies-title', {
     x: '-40',
-    duration: 2.25,
-    delay: 2.25,
+    duration: 1,
+    delay: 4.5,
     ease: 'back',
     opacity: 0
 });
@@ -292,8 +292,8 @@ gsap.to('.strategies-title', {
 });
 
 gsap.from('.strategies-text', {
-    duration: 2.5,
-    delay: 2.5,
+    duration: 5,
+    delay: 5,
     y: 40,
     ease: 'power2.inOut',
     opacity: 0
