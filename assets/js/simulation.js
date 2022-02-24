@@ -413,8 +413,8 @@ canvas.addEventListener( 'touchmove', function ( e ) {
         var pointer = pointers[ i ];
 
         pointer.moved = pointer.down;
-        pointer.dx    = (touches[ i ].pageX - pointer.x) * 10.0;
-        pointer.dy    = (touches[ i ].pageY - pointer.y) * 10.0;
+        pointer.dx    = (touches[ i ].pageX - pointer.x) * 5.0;
+        pointer.dy    = (touches[ i ].pageY - pointer.y) * 5.0;
         pointer.x     = touches[ i ].pageX;
         pointer.y     = touches[ i ].pageY;
 

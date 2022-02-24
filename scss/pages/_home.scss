@@ -61,6 +61,7 @@ canvas {
     @include wh100;
     background: url(../images/stech-banner.png) no-repeat center center/cover;
     z-index: 1;
+    display: inline-block;
 }
 
 
@@ -218,7 +219,7 @@ canvas {
                 }
 
                 100% {
-                    transform: translateX(-100%)
+                    transform: translateX(-100%);
                 }
             }
         }
