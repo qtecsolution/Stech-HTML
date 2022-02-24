@@ -185,17 +185,6 @@ gsap.to('.breaf-text', {
 // CHAIRMAN-MESSAGE ANIMATION END
 
 // CORPORATE-DIRECTORS ANIMATION START
-gsap.from('.corporatedirectorsribbon', {
-    duration: 2.25,
-    ease: 'power2.in',
-    scaleY: 0,
-    opacity: 0
-});
-
-gsap.to('.corporatedirectorsribbon', {
-    scaleY: 1
-});
-
 gsap.from('.corporatedirectors-title', {
     x: '-40',
     duration: 2.5,
@@ -236,17 +225,6 @@ gsap.to('.corporatedirector', {
 
 
 // CMISSION-VISION ANIMATION START
-
-gsap.from('.missionvisionribbon', {
-    duration: 3.25,
-    ease: 'power2.in',
-    scaleY: 0,
-    opacity: 0
-});
-
-gsap.to('.missionvisionribbon', {
-    scaleY: 1
-});
 
 gsap.from('.missionvision-title', {
     x: '-40',
