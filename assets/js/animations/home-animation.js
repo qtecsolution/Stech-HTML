@@ -200,16 +200,6 @@ gsap.to('.service-text', {
 
 
 // OUR-CLIENTS ANIMATION START
-gsap.from('.ourclientsribbon', {
-    duration: 2,
-    ease: 'power2.in',
-    scaleY: 0,
-    opacity: 0
-});
-
-gsap.to('.ourclientsribbon', {
-    scaleY: 1
-});
 
 gsap.from('.ourclients-title', {
     x: '-40',
