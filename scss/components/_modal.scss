@@ -5,24 +5,6 @@
         @include radius(0);
         // overflow: hidden;
         border: length(0);
-    }
-
-    &-header {
-        border-bottom: length(0);
-        padding: length(32);
-
-        @include breakpoint(phone575) {
-            padding: length(16);
-        }
-    }
-
-    &-body {
-        position: relative;
-        min-height: length(480);
-
-        @include breakpoint(phone768) {
-            min-height: length(300);
-        }
 
         .btn-close {
             position: absolute;
@@ -57,6 +39,24 @@
                 outline: none;
                 box-shadow: none;
             }
+        }
+    }
+
+    &-header {
+        border-bottom: length(0);
+        padding: length(32);
+
+        @include breakpoint(phone575) {
+            padding: length(16);
+        }
+    }
+
+    &-body {
+        position: relative;
+        min-height: length(480);
+
+        @include breakpoint(phone768) {
+            min-height: length(300);
         }
 
         iframe {

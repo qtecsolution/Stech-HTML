@@ -1,8 +1,5 @@
 
 // STECH-DIGITAL ANIMATION START
-gsap.from('#ribbonicon', {
-    stagger: 0.5
-});
 
 gsap.from('#path-1', {
     duration: 1,
@@ -41,8 +38,8 @@ gsap.to('#path-3', {
 });
 
 gsap.from('.stechdigital-title', {
-    duration: 1.5,
-    delay: 1.5,
+    duration: 1,
+    delay: 2,
     x: -40,
     ease: 'power2.inOut',
     opacity: 0
@@ -53,8 +50,8 @@ gsap.to('.stechdigital-title', {
 });
 
 gsap.from('.setchdigital-text', {
-    duration: 2,
-    delay: 2,
+    duration: 1,
+    delay: 2.5,
     y: 20,
     ease: 'power2.inOut',
     opacity: 0
@@ -69,13 +66,9 @@ gsap.to('.setchdigital-text', {
 
 // OUR-CONCERN ANIMATION START
 
-gsap.from('#smallribbonicon', {
-    stagger: 0.5
-});
-
 gsap.from('#smallpath-1', {
     duration: 1,
-    delay: 1,
+    delay: 3.5,
     ease: 'power2.in',
     y: 100,
     opacity: 0
@@ -87,7 +80,7 @@ gsap.to('#smallpath-1', {
 
 gsap.from('#smallpath-2', {
     duration: 1,
-    delay: 1,
+    delay: 3.5,
     ease: 'power2.in',
     y: 100,
     opacity: 0
@@ -99,7 +92,7 @@ gsap.to('#smallpath-2', {
 
 gsap.from('#smallpath-3', {
     duration: 1,
-    delay: 1,
+    delay: 3.5,
     ease: 'power2.in',
     y: -100,
     opacity: 0
@@ -109,10 +102,12 @@ gsap.to('#smallpath-3', {
     y: 0
 });
 
+
+// OUR-CONCERN ANIMATION START
 gsap.from('.ourconcern-title', {
     x: '-40',
-    duration: 2.25,
-    delay: 2.25,
+    duration: 1,
+    delay: 4.5,
     ease: 'back',
     opacity: 0
 });
@@ -122,8 +117,8 @@ gsap.to('.ourconcern-title', {
 });
 
 gsap.from('.ourconcern-text', {
-    duration: 2.5,
-    delay: 2.5,
+    duration: 1,
+    delay: 5,
     y: 40,
     ease: 'power2.inOut',
     opacity: 0
@@ -134,8 +129,8 @@ gsap.to('.ourconcern-text', {
 });
 
 gsap.from('.tab-nav li a', {
-    duration: 2.75,
-    delay: 2.75,
+    duration: 1,
+    delay: 5.5,
     x: -40,
     ease: 'power2.inOut',
     opacity: 0
@@ -146,8 +141,8 @@ gsap.to('.tab-nav li a', {
 });
 
 gsap.from('.content-holder', {
-    duration: 3,
-    delay: 3,
+    duration: 1,
+    delay: 6,
     x: 40,
     ease: 'power2.inOut',
     opacity: 0
@@ -158,8 +153,8 @@ gsap.to('.content-holder', {
 });
 
 gsap.from('.concern-thumbnail .info', {
-    duration: 3.5,
-    delay: 3.5,
+    duration: 1,
+    delay: 7,
     y: 40,
     ease: 'power2.inOut',
     opacity: 0
@@ -168,6 +163,7 @@ gsap.from('.concern-thumbnail .info', {
 gsap.to('.concern-thumbnail .info', {
     y: 0
 });
+
 // OUR-CONCERN ANIMATION END
 
 
