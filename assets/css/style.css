@@ -1415,6 +1415,31 @@ select {
   text-align: center;
 }
 
+.footer-content .developtext {
+  color: white;
+  font-family: "Lorenza";
+  font-style: normal;
+  font-size: 0.75rem;
+  font-weight: normal;
+  line-height: 1.66667;
+  text-align: center;
+  position: relative;
+  z-index: 100;
+}
+
+.footer-content .developtext .link {
+  color: white;
+  font-family: "Lorenza";
+  font-style: normal;
+  font-size: 0.75rem;
+  font-weight: normal;
+  line-height: 1.66667;
+}
+
+.footer-content .developtext .link:not([disabled]):hover {
+  color: #00FFAD;
+}
+
 @-webkit-keyframes waves {
   0% {
     -webkit-transform: scale(0.2, 0.2);
@@ -3805,7 +3830,7 @@ canvas {
 }
 
 .companyvalues .companyvalus-details .companyvalues-body .companyvalue-body .progress-bar {
-  background: #0019FF;
+  background: #00FFAD;
 }
 
 /**=====================================================

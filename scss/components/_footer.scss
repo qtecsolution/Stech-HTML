@@ -178,5 +178,22 @@
             @include font-face($lorenza, style('normal'), size(12), weight('normal'), line-height(20, 12));
             text-align: center;
         }
+
+        .developtext {
+            color: $white;
+            @include font-face($lorenza, style('normal'), size(12), weight('normal'), line-height(20, 12));
+            text-align: center;
+            position: relative;
+            z-index: 100;
+
+            .link {
+                color: $white;
+                @include font-face($lorenza, style('normal'), size(12), weight('normal'), line-height(20, 12));
+
+                @include hover {
+                    color: $primary;
+                }
+            }
+        }
     }
 }
