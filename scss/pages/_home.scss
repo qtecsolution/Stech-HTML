@@ -427,7 +427,8 @@ canvas {
                 COMPANY-VALUES SECTION START
 =====================================================**/
 .companyvalues {
-    background: $bodyBg;
+    // background: $bodyBg;
+    background: url(../images/pages/home/our-services/services-bg.png) no-repeat center center/cover;
     min-height: 100vh;
     position: relative;
     z-index: 2;
@@ -480,13 +481,13 @@ canvas {
 
                 .companyvalues-title {
                     @include font-face($raleway, style('normal'), size(40), weight('bold'), line-height(60, 40));
-                    color: $gray-800;
+                    color: $white;
                 }
             }
 
             .companyvalue-text {
                 @include font-face($lorenza, style('normal'), size(18), weight('normal'), line-height(30, 18));
-                color: $gray-600;
+                color: $white;
             }
         }
 
@@ -500,12 +501,12 @@ canvas {
 
                     .valuetitle {
                         @include font-face($raleway, style('normal'), size(16), weight('semibold'), line-height(25, 16));
-                        color: $gray-700;
+                        color: $white;
                     }
 
                     .actualvalue {
                         @include font-face($lorenza, style('normal'), size(18), weight('normal'), line-height(30, 18));
-                        color: $gray-700;
+                        color: $white;
                     }
                 }
 

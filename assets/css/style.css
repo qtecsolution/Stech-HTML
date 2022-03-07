@@ -2909,132 +2909,85 @@ select {
           justify-content: center;
   position: fixed;
   width: 100%;
-  min-height: 100vh;
-  overflow: hidden;
+  height: 100vh;
   z-index: 9999;
-  background: url(../images/stech-banner.png) no-repeat center center/cover;
+  background: white;
+  overflow: hidden;
+  z-index: 9999999;
 }
 
-.cssloader {
-  height: 12.5rem;
-  width: 12.5rem;
-  margin: 6.0625rem auto;
+.preloader .logo {
   position: relative;
-  perspective: 243.75rem;
-  -o-perspective: 243.75rem;
-  -ms-perspective: 243.75rem;
-  -webkit-perspective: 243.75rem;
-  -moz-perspective: 243.75rem;
-  transform-style: preserve-3d;
-  -o-transform-style: preserve-3d;
-  -ms-transform-style: preserve-3d;
-  -webkit-transform-style: preserve-3d;
-  -moz-transform-style: preserve-3d;
+  width: 15.625rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 5rem;
 }
 
-.cssload-circle {
-  transform-style: preserve-3d;
-  -o-transform-style: preserve-3d;
-  -ms-transform-style: preserve-3d;
-  -webkit-transform-style: preserve-3d;
-  -moz-transform-style: preserve-3d;
-  opacity: 0;
-  height: 12.5rem;
-  width: 12.5rem;
-  border: solid 0.125rem #00FFAD;
-  border-radius: 9.125rem;
+.preloader .logo img {
+  max-width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.preloader .logo::before, .preloader .logo::after {
+  content: "";
+  display: block;
+  height: 0.9375rem;
+  width: 0.9375rem;
+  background: -webkit-gradient(linear, left top, left bottom, from(#01FFAD), to(#0122FC));
+  background: linear-gradient(180deg, #01FFAD 0%, #0122FC 100%);
   position: absolute;
+  -webkit-animation: load 0.7s infinite alternate ease-in-out;
+          animation: load 0.7s infinite alternate ease-in-out;
+}
+
+.preloader .logo::before {
   top: 0;
-  left: 0;
-  animation: cssload-spin 34.5s ease-in-out alternate infinite;
-  -o-animation: cssload-spin 34.5s ease-in-out alternate infinite;
-  -ms-animation: cssload-spin 34.5s ease-in-out alternate infinite;
-  -webkit-animation: cssload-spin 34.5s ease-in-out alternate infinite;
-  -moz-animation: cssload-spin 34.5s ease-in-out alternate infinite;
 }
 
-.cssload-circle:nth-of-type(1) {
-  animation-delay: 575ms;
-  -o-animation-delay: 575ms;
-  -ms-animation-delay: 575ms;
-  -webkit-animation-delay: 575ms;
-  -moz-animation-delay: 575ms;
+.preloader .logo::after {
+  bottom: 0;
 }
 
-.cssload-circle:nth-of-type(2) {
-  animation-delay: 1150ms;
-  -o-animation-delay: 1150ms;
-  -ms-animation-delay: 1150ms;
-  -webkit-animation-delay: 1150ms;
-  -moz-animation-delay: 1150ms;
-}
-
-.cssload-circle:nth-of-type(3) {
-  animation-delay: 1725ms;
-  -o-animation-delay: 1725ms;
-  -ms-animation-delay: 1725ms;
-  -webkit-animation-delay: 1725ms;
-  -moz-animation-delay: 1725ms;
-}
-
-.cssload-circle:nth-of-type(4) {
-  animation-delay: 2300ms;
-  -o-animation-delay: 2300ms;
-  -ms-animation-delay: 2300ms;
-  -webkit-animation-delay: 2300ms;
-  -moz-animation-delay: 2300ms;
-}
-
-.cssload-circle:nth-of-type(5) {
-  animation-delay: 2875ms;
-  -o-animation-delay: 2875ms;
-  -ms-animation-delay: 2875ms;
-  -webkit-animation-delay: 2875ms;
-  -moz-animation-delay: 2875ms;
-}
-
-@keyframes cssload-spin {
+@-webkit-keyframes load {
   0% {
-    -webkit-transform: rotateY(0deg) rotateX(0deg);
-    transform: rotateY(0deg) rotateX(0deg);
-    opacity: 1;
-  }
-  25% {
-    -webkit-transform: rotateY(180deg) rotateX(360deg);
-    transform: rotateY(180deg) rotateX(360deg);
+    left: 0;
+    height: 1.875rem;
+    width: 0.9375rem;
   }
   50% {
-    -webkit-transform: rotateY(540deg) rotateX(540deg);
-    transform: rotateY(540deg) rotateX(540deg);
-  }
-  75% {
-    -webkit-transform: rotateY(720deg) rotateX(900deg);
-    transform: rotateY(720deg) rotateX(900deg);
+    height: 0.5rem;
+    width: 2.5rem;
   }
   100% {
-    -webkit-transform: rotateY(900deg) rotateX(1080deg);
-    transform: rotateY(900deg) rotateX(1080deg);
-    opacity: 1;
+    left: 14.6875rem;
+    height: 1.875rem;
+    width: 0.9375rem;
   }
 }
 
-@-webkit-keyframes cssload-spin {
+@keyframes load {
   0% {
-    -webkit-transform: rotateY(0deg) rotateX(0deg);
-    opacity: 1;
-  }
-  25% {
-    -webkit-transform: rotateY(180deg) rotateX(360deg);
+    left: 0;
+    height: 1.875rem;
+    width: 0.9375rem;
   }
   50% {
-    -webkit-transform: rotateY(540deg) rotateX(540deg);
-  }
-  75% {
-    -webkit-transform: rotateY(720deg) rotateX(900deg);
+    height: 0.5rem;
+    width: 2.5rem;
   }
   100% {
-    -webkit-transform: rotateY(900deg) rotateX(1080deg);
-    opacity: 1;
+    left: 14.6875rem;
+    height: 1.875rem;
+    width: 0.9375rem;
   }
 }
 
@@ -3749,7 +3702,7 @@ canvas {
                 COMPANY-VALUES SECTION START
 =====================================================**/
 .companyvalues {
-  background: #F7FAFC;
+  background: url(../images/pages/home/our-services/services-bg.png) no-repeat center center/cover;
   min-height: 100vh;
   position: relative;
   z-index: 2;
@@ -3844,7 +3797,7 @@ canvas {
   font-size: 2.5rem;
   font-weight: 700;
   line-height: 1.5;
-  color: #2D3748;
+  color: white;
 }
 
 .companyvalues .companyvalus-details .companyvalues-header .companyvalue-text {
@@ -3853,7 +3806,7 @@ canvas {
   font-size: 1.125rem;
   font-weight: normal;
   line-height: 1.66667;
-  color: #718096;
+  color: white;
 }
 
 .companyvalues .companyvalus-details .companyvalues-body .companyvalue {
@@ -3886,7 +3839,7 @@ canvas {
   font-size: 1rem;
   font-weight: 600;
   line-height: 1.5625;
-  color: #2D3748;
+  color: white;
 }
 
 .companyvalues .companyvalus-details .companyvalues-body .companyvalue-header .actualvalue {
@@ -3895,7 +3848,7 @@ canvas {
   font-size: 1.125rem;
   font-weight: normal;
   line-height: 1.66667;
-  color: #2D3748;
+  color: white;
 }
 
 .companyvalues .companyvalus-details .companyvalues-body .companyvalue-body .progress {
@@ -4085,7 +4038,7 @@ canvas {
   min-height: 100vh;
   position: relative;
   z-index: 2;
-  padding: 5rem 0rem 10rem;
+  padding: 10rem 0rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4096,7 +4049,7 @@ canvas {
 
 @media screen and (max-width: 61.9375rem) {
   .stechaesthetics {
-    padding: 2.5rem 0.5rem 5rem;
+    padding: 5rem 0.5rem;
   }
 }
 
@@ -4212,6 +4165,7 @@ canvas {
   position: relative;
   z-index: 2;
   padding: 10rem 0rem;
+  background: url(../images/pages/home/our-services/services-bg.png) no-repeat center center/cover;
 }
 
 @media screen and (max-width: 61.9375rem) {
@@ -4447,7 +4401,7 @@ canvas {
   font-size: 1.125rem;
   font-weight: normal;
   line-height: 1.66667;
-  color: #718096;
+  color: white;
   text-align: justify;
 }
 
@@ -4506,7 +4460,7 @@ canvas {
   font-size: 2.5rem;
   font-weight: 700;
   line-height: 1.5;
-  color: #2D3748;
+  color: white;
 }
 
 .chairmanmessage-body .chairmanmessage-text {
@@ -4515,7 +4469,7 @@ canvas {
   font-size: 1.125rem;
   font-weight: normal;
   line-height: 1.66667;
-  color: #718096;
+  color: white;
 }
 
 /**=====================================================
@@ -4622,7 +4576,7 @@ canvas {
             MISSION-VISION SECTION START
 =====================================================**/
 .missionvision {
-  background: #F7FAFC;
+  background: white;
   min-height: 100vh;
   position: relative;
   z-index: 2;
@@ -6930,7 +6884,8 @@ canvas {
 }
 
 .contacts .contactform .btn-submit:not([disabled]):hover {
-  background: #5A48FF;
+  background: -webkit-gradient(linear, left top, left bottom, from(#01FFAD), to(#0122FC));
+  background: linear-gradient(180deg, #01FFAD 0%, #0122FC 100%);
 }
 
 /**=====================================================
