@@ -164,10 +164,39 @@
                     }
 
                     &-link {
-                        @include square(length(36));
+                        @include square(length(40));
                         @include flex-center;
                         @include circle;
                         overflow: hidden;
+                        background: $gradient-4;
+                        padding: length(10);
+
+                        svg {
+                            // @include square(length(20));
+                            @include wh100;
+                        }
+
+                        .whiteicon {
+                            display: block;
+                            @include square(length(20));
+                        }
+
+                        .gradienticon {
+                            display: none;
+                            @include square(length(20));
+                        }
+
+                        @include hover {
+                            background: $white;
+
+                            .whiteicon {
+                                display: none;
+                            }
+
+                            .gradienticon {
+                                display: inline-block;
+                            }
+                        }
                     }
                 }
             }
