@@ -1,4 +1,4 @@
-$('select').each(function () {
+$('.changelanguage').each(function () {
     var $this = $(this),
         numberOfOptions = $(this).children('option').length;
 

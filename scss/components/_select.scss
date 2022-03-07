@@ -52,7 +52,6 @@ $select-height: length(40);
 }
 
 .select-options {
-    display: none;
     position: absolute;
     top: 100%;
     right: length(10);
@@ -61,8 +60,10 @@ $select-height: length(40);
     margin: 0;
     padding: 0;
     list-style: none;
-    @include flex-column;
+    flex-direction: column;
     width: length(48);
+    display: none;
+    background: $black;
 
     li {
         margin: 0;
