@@ -1260,8 +1260,7 @@ select {
 }
 
 .footer-content .stecnewsletter .footnewsletter .btn-subscribe:not([disabled]):hover {
-  background: -webkit-gradient(linear, left top, left bottom, from(#01FFAD), to(#0122FC));
-  background: linear-gradient(180deg, #01FFAD 0%, #0122FC 100%);
+  background: linear-gradient(178.21deg, #00FFAD -25.48%, #00E3B7 -6.98%, #009DD0 32.95%, #002DF8 90.89%, #0019FF 100.63%);
 }
 
 .footer-content .aboutinfo {
@@ -1448,8 +1447,7 @@ select {
           justify-content: center;
   border-radius: 100%;
   overflow: hidden;
-  background: -webkit-gradient(linear, left top, left bottom, from(#01FFAD), to(#0122FC));
-  background: linear-gradient(180deg, #01FFAD 0%, #0122FC 100%);
+  background: linear-gradient(178.21deg, #00FFAD -25.48%, #00E3B7 -6.98%, #009DD0 32.95%, #002DF8 90.89%, #0019FF 100.63%);
   padding: 0.625rem;
 }
 
@@ -1653,9 +1651,8 @@ select {
 }
 
 .card-concern:not([disabled]):hover .card-concern-details {
-  background: -webkit-gradient(linear, left top, left bottom, from(#01FFAD), to(#0122FC));
-  background: linear-gradient(180deg, #01FFAD 0%, #0122FC 100%);
-  border-color: linear-gradient(180deg, #01FFAD 0%, #0122FC 100%);
+  background: linear-gradient(178.21deg, #00FFAD -25.48%, #00E3B7 -6.98%, #009DD0 32.95%, #002DF8 90.89%, #0019FF 100.63%);
+  border-color: linear-gradient(178.21deg, #00FFAD -25.48%, #00E3B7 -6.98%, #009DD0 32.95%, #002DF8 90.89%, #0019FF 100.63%);
 }
 
 .card-concern:not([disabled]):hover .card-concern-details .concern-title {
@@ -2974,8 +2971,7 @@ select {
   display: block;
   height: 0.9375rem;
   width: 0.9375rem;
-  background: -webkit-gradient(linear, left top, left bottom, from(#01FFAD), to(#0122FC));
-  background: linear-gradient(180deg, #01FFAD 0%, #0122FC 100%);
+  background: linear-gradient(178.21deg, #00FFAD -25.48%, #00E3B7 -6.98%, #009DD0 32.95%, #002DF8 90.89%, #0019FF 100.63%);
   position: absolute;
   -webkit-animation: load 0.7s infinite alternate ease-in-out;
           animation: load 0.7s infinite alternate ease-in-out;
@@ -4865,6 +4861,40 @@ canvas {
   color: #718096;
 }
 
+.downloadportfolio {
+  width: 100%;
+  background: url(../images/pages/news-events/newsletter-bg.svg) no-repeat center center/cover;
+  position: relative;
+  z-index: 2;
+  padding: 5rem 0rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.downloadportfolio .btn-download {
+  background: #0019FF;
+  color: white;
+  padding: 1rem 2rem;
+  font-family: "Raleway";
+  font-style: normal;
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.downloadportfolio .btn-download:not([disabled]):hover {
+  background: linear-gradient(178.21deg, #00FFAD -25.48%, #00E3B7 -6.98%, #009DD0 32.95%, #002DF8 90.89%, #0019FF 100.63%);
+}
+
 /**=====================================================
             OUT-CONCERN SECTION START
 =====================================================**/
@@ -5072,9 +5102,8 @@ canvas {
 }
 
 .ourconcern-content .mobile-concern .accordion-button:not(.collapsed) .card-concern-details {
-  background: -webkit-gradient(linear, left top, left bottom, from(#01FFAD), to(#0122FC));
-  background: linear-gradient(180deg, #01FFAD 0%, #0122FC 100%);
-  border-color: linear-gradient(180deg, #01FFAD 0%, #0122FC 100%);
+  background: linear-gradient(178.21deg, #00FFAD -25.48%, #00E3B7 -6.98%, #009DD0 32.95%, #002DF8 90.89%, #0019FF 100.63%);
+  border-color: linear-gradient(178.21deg, #00FFAD -25.48%, #00E3B7 -6.98%, #009DD0 32.95%, #002DF8 90.89%, #0019FF 100.63%);
 }
 
 .ourconcern-content .mobile-concern .accordion-button:not(.collapsed) .card-concern-details .concern-title {
@@ -6849,7 +6878,7 @@ canvas {
 }
 
 .stechsubscribe-content .stechnewsletter .btn-subscribe:not([disabled]):hover {
-  background: #5A48FF;
+  background: linear-gradient(178.21deg, #00FFAD -25.48%, #00E3B7 -6.98%, #009DD0 32.95%, #002DF8 90.89%, #0019FF 100.63%);
 }
 
 /**=====================================================
@@ -7012,8 +7041,7 @@ canvas {
 }
 
 .contacts .contactform .btn-submit:not([disabled]):hover {
-  background: -webkit-gradient(linear, left top, left bottom, from(#01FFAD), to(#0122FC));
-  background: linear-gradient(180deg, #01FFAD 0%, #0122FC 100%);
+  background: linear-gradient(178.21deg, #00FFAD -25.48%, #00E3B7 -6.98%, #009DD0 32.95%, #002DF8 90.89%, #0019FF 100.63%);
 }
 
 /**=====================================================
@@ -7162,8 +7190,7 @@ canvas {
           justify-content: center;
   border-radius: 100%;
   overflow: hidden;
-  background: -webkit-gradient(linear, left top, left bottom, from(#01FFAD), to(#0122FC));
-  background: linear-gradient(180deg, #01FFAD 0%, #0122FC 100%);
+  background: linear-gradient(178.21deg, #00FFAD -25.48%, #00E3B7 -6.98%, #009DD0 32.95%, #002DF8 90.89%, #0019FF 100.63%);
   padding: 0.625rem;
 }
 

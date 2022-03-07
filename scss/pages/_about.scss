@@ -455,3 +455,23 @@
         }
     }
 }
+
+.downloadportfolio {
+    @include w100;
+    background: url(../images/pages/news-events/newsletter-bg.svg) no-repeat center center/cover;
+    position: relative;
+    z-index: 2;
+    padding: length(80) length(0);
+    @include flex-center;
+
+    .btn-download {
+        @include setBgColor($blue, $white);
+        padding: length(16) length(32);
+        @include font-face($raleway, style('normal'), size(12), weight('semibold'), line-height(12, 12));
+        @include transitions;
+
+        @include hover {
+            background: $gradient-4;
+        }
+    }
+}
