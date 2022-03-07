@@ -63,8 +63,8 @@
         filter: $shadowBig;
 
         .card-concern-details {
-            background: $concernHoverBg;
-            border-color: $concernHoverBg;
+            background: $gradient-4;
+            border-color: $gradient-4;
 
             .concern-title {
                 color: $white;
@@ -463,6 +463,7 @@
             .cardevent-title {
                 color: $gray-800;
             }
+
             .date {
                 @include font-face($lorenza, style('normal'), size(16), weight('normal'), line-height(26, 16));
                 color: $gray-600;
@@ -523,6 +524,7 @@
                 @include line-clamp;
                 height: length(55);
             }
+
             .date {
                 @include font-face($lorenza, style('normal'), size(16), weight('normal'), line-height(26, 16));
                 color: $gray-600;

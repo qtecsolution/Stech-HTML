@@ -1216,7 +1216,8 @@ select {
 }
 
 .footer-content .stecnewsletter .footnewsletter .btn-subscribe:not([disabled]):hover {
-  background: #5A48FF;
+  background: -webkit-gradient(linear, left top, left bottom, from(#01FFAD), to(#0122FC));
+  background: linear-gradient(180deg, #01FFAD 0%, #0122FC 100%);
 }
 
 .footer-content .aboutinfo {
@@ -1576,8 +1577,9 @@ select {
 }
 
 .card-concern:not([disabled]):hover .card-concern-details {
-  background: #5A48FF;
-  border-color: #5A48FF;
+  background: -webkit-gradient(linear, left top, left bottom, from(#01FFAD), to(#0122FC));
+  background: linear-gradient(180deg, #01FFAD 0%, #0122FC 100%);
+  border-color: linear-gradient(180deg, #01FFAD 0%, #0122FC 100%);
 }
 
 .card-concern:not([disabled]):hover .card-concern-details .concern-title {
