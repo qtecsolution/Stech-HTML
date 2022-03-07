@@ -266,7 +266,8 @@
                 STECH-SUBSCRIBE SECTION START
 =====================================================**/
 .stechsubscribe {
-    background: url(../images/pages/news-events/newsletter-bg.svg) no-repeat;
+    @include w100;
+    background: url(../images/pages/news-events/newsletter-bg.svg) no-repeat center center/cover;
     position: relative;
     z-index: 2;
     padding: length(80) length(0);

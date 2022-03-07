@@ -89,16 +89,16 @@
             }
 
             .about-title {
-                @include font-face($lorenza, style('normal'), size(16), weight('medium'), line-height(26, 16));
+                @include font-face($lorenza, style('normal'), size(20), weight('medium'), line-height(32, 20));
                 color: $white;
             }
 
             .aboutlist {
                 @include list-vertical;
-                gap: length(24);
+                gap: length(8);
 
                 &-link {
-                    @include font-face($lorenza, style('normal'), size(16), weight('normal'), line-height(26, 16));
+                    @include font-face($lorenza, style('normal'), size(14), weight('normal'), line-height(24, 14));
                     color: $white;
                     @include transitions;
 
@@ -118,7 +118,7 @@
             }
 
             .contact-title {
-                @include font-face($lorenza, style('normal'), size(16), weight('medium'), line-height(26, 16));
+                @include font-face($lorenza, style('normal'), size(20), weight('medium'), line-height(32, 20));
                 color: $white;
             }
 
@@ -132,7 +132,7 @@
 
                 .contactlist {
                     @include list-vertical;
-                    gap: length(12);
+                    gap: length(8);
 
                     @include breakpoint(tablet991) {
                         align-items: center;
@@ -141,7 +141,7 @@
                     }
 
                     &-link {
-                        @include font-face($lorenza, style('normal'), size(16), weight('normal'), line-height(26, 16));
+                        @include font-face($lorenza, style('normal'), size(14), weight('normal'), line-height(24, 14));
                         color: $white;
                         @include transitions;
 
@@ -175,20 +175,20 @@
 
         .copyright-text {
             color: $white;
-            @include font-face($lorenza, style('normal'), size(12), weight('normal'), line-height(20, 12));
+            @include font-face($lorenza, style('normal'), size(14), weight('normal'), line-height(20, 14));
             text-align: center;
         }
 
         .developtext {
             color: $white;
-            @include font-face($lorenza, style('normal'), size(12), weight('normal'), line-height(20, 12));
+            @include font-face($lorenza, style('normal'), size(14), weight('normal'), line-height(20, 14));
             text-align: center;
             position: relative;
             z-index: 100;
 
             .link {
                 color: $white;
-                @include font-face($lorenza, style('normal'), size(12), weight('normal'), line-height(20, 12));
+                @include font-face($lorenza, style('normal'), size(14), weight('normal'), line-height(20, 14));
 
                 @include hover {
                     color: $primary;

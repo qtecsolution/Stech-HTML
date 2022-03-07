@@ -72,6 +72,8 @@
                     }
 
                     &-title {
+                        text-align: center;
+
                         @include breakpoint(phone768) {
                             @include font-face($raleway, style('normal'), size(44), weight('medium'), line-height(55, 44));
                         }

@@ -188,8 +188,9 @@
                     height: length(190);
                     padding: length(44) length(24);
                     background: $gradient-1;
-                    @include flex-column;
+                    @include flex-center-column;
                     gap: length(16);
+                    text-align: center;
 
                     @include breakpoint(phone575) {
                         padding: length(24) length(18);
