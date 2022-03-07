@@ -4990,8 +4990,9 @@ canvas {
 }
 
 .ourconcern-content .mobile-concern .accordion-button:not(.collapsed) .card-concern-details {
-  background: #5A48FF;
-  border-color: #5A48FF;
+  background: -webkit-gradient(linear, left top, left bottom, from(#01FFAD), to(#0122FC));
+  background: linear-gradient(180deg, #01FFAD 0%, #0122FC 100%);
+  border-color: linear-gradient(180deg, #01FFAD 0%, #0122FC 100%);
 }
 
 .ourconcern-content .mobile-concern .accordion-button:not(.collapsed) .card-concern-details .concern-title {
