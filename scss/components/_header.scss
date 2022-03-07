@@ -57,6 +57,42 @@
 
                 &-item {
                     @include flex-center-vert;
+                    position: relative;
+
+                    .subdropdown {
+                        position: absolute;
+                        top: 100%;
+                        left: 0;
+                        min-width: length(200);
+                        padding-top: length(40);
+                        display: none;
+                        @extend %animation;
+                        @extend %slideUpIn;
+
+                        .sublist {
+                            background: $white;
+                            @include flex-column;
+                            gap: length(12);
+                            @include wh100;
+                            padding: length(16);
+                            box-shadow: $shadowBig;
+
+                            &-link {
+                                @include font-face($raleway, style('normal'), size(14), weight('semibold'), line-height(18, 14));
+                                color: $gray-800;
+
+                                @include hover {
+                                    color: $blue;
+                                }
+                            }
+                        }
+                    }
+
+                    @include hover {
+                        .subdropdown {
+                            display: block;
+                        }
+                    }
                 }
 
                 &-link {

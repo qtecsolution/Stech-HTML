@@ -11,7 +11,7 @@
     breakpoint usage
 \*------------------------------------*/
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;900&display=swap");
-.header.inverted, .concerndetails-content .gallery-link .caption, .stechgallery-content .video-thumbs .caption, .stechgallery-content .fullscreenvideo-thumbs .caption, .stechgallery-content .gallery-link .caption, .stechgallerybox .gallery-link .caption, .stechgallerybox .video-thumbs .caption {
+.header-content .mainmenu .mainlist-item .subdropdown, .header.inverted, .concerndetails-content .gallery-link .caption, .stechgallery-content .video-thumbs .caption, .stechgallery-content .fullscreenvideo-thumbs .caption, .stechgallery-content .gallery-link .caption, .stechgallerybox .gallery-link .caption, .stechgallerybox .video-thumbs .caption {
   -webkit-animation-duration: 250ms;
   animation-duration: 250ms;
   -webkit-animation-fill-mode: both;
@@ -113,7 +113,7 @@
   }
 }
 
-.concerndetails-content .gallery-link .caption, .stechgallery-content .video-thumbs .caption, .stechgallery-content .fullscreenvideo-thumbs .caption, .stechgallery-content .gallery-link .caption, .stechgallerybox .gallery-link .caption, .stechgallerybox .video-thumbs .caption {
+.header-content .mainmenu .mainlist-item .subdropdown, .concerndetails-content .gallery-link .caption, .stechgallery-content .video-thumbs .caption, .stechgallery-content .fullscreenvideo-thumbs .caption, .stechgallery-content .gallery-link .caption, .stechgallerybox .gallery-link .caption, .stechgallerybox .video-thumbs .caption {
   -webkit-animation-name: slideUpIn;
   animation-name: slideUpIn;
 }
@@ -961,6 +961,50 @@ select {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
+}
+
+.header-content .mainmenu .mainlist-item .subdropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 12.5rem;
+  padding-top: 2.5rem;
+  display: none;
+}
+
+.header-content .mainmenu .mainlist-item .subdropdown .sublist {
+  background: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.75rem;
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  -webkit-box-shadow: drop-shadow(0 0 0.0625rem rgba(12, 26, 75, 0.1)) drop-shadow(0 0.625rem 1rem rgba(20, 37, 63, 0.06));
+          box-shadow: drop-shadow(0 0 0.0625rem rgba(12, 26, 75, 0.1)) drop-shadow(0 0.625rem 1rem rgba(20, 37, 63, 0.06));
+}
+
+.header-content .mainmenu .mainlist-item .subdropdown .sublist-link {
+  font-family: "Raleway";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.28571;
+  color: #2D3748;
+}
+
+.header-content .mainmenu .mainlist-item .subdropdown .sublist-link:not([disabled]):hover {
+  color: #0019FF;
+}
+
+.header-content .mainmenu .mainlist-item:not([disabled]):hover .subdropdown {
+  display: block;
 }
 
 .header-content .mainmenu .mainlist-link {
@@ -4042,6 +4086,12 @@ canvas {
   position: relative;
   z-index: 2;
   padding: 5rem 0rem 10rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 @media screen and (max-width: 61.9375rem) {
@@ -4161,7 +4211,7 @@ canvas {
   min-height: 100vh;
   position: relative;
   z-index: 2;
-  padding: 5rem 0rem 10rem;
+  padding: 10rem 0rem;
 }
 
 @media screen and (max-width: 61.9375rem) {
