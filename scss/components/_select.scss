@@ -1,0 +1,83 @@
+$background: $black;
+$select-color: #fff;
+$select-background: transparent;
+$select-width: length(80);
+$select-height: length(40);
+
+.select {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    color: $select-color;
+    width: $select-width;
+    height: $select-height;
+}
+
+.select-styled {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: $select-background;
+    // padding: length(4) length(15);
+    @include font-face($raleway, style('normal'), size(14), weight('semibold'), line-height(14, 14));
+    @include transition(all 0.2s ease-in);
+    @include flex-center;
+
+    &:after {
+        content: "";
+        width: 0;
+        height: 0;
+        border: length(7) solid transparent;
+        border-color: $select-color transparent transparent transparent;
+        position: absolute;
+        top: length(16);
+        right: length(10);
+    }
+
+    &:hover {
+        background-color: darken($select-background, 2);
+    }
+
+    &:active,
+    &.active {
+        background-color: darken($select-background, 5);
+
+        &:after {
+            top: 9px;
+            border-color: transparent transparent $select-color transparent;
+        }
+    }
+}
+
+.select-options {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: length(10);
+    // left: 0;
+    z-index: 999;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    @include flex-column;
+    width: length(48);
+
+    li {
+        margin: 0;
+        padding: length(8) 0;
+        text-indent: length(14);
+        @include font-face($raleway, style('normal'), size(14), weight('semibold'), line-height(14, 14));
+        @include transition(all 0.15s ease-in);
+
+        &:hover,
+        &.is-selected {
+            color: $white;
+        }
+
+        &[rel="hide"] {
+            display: none;
+        }
+    }
+}
