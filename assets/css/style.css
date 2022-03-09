@@ -3502,6 +3502,7 @@ canvas {
 
 .ourservice-details {
   overflow: hidden;
+  width: 100%;
 }
 
 .ourservice-details .services {

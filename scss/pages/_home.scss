@@ -196,6 +196,7 @@ canvas {
 
     &-details {
         overflow: hidden;
+        @include w100;
 
         .services {
             display: flex;
