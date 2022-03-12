@@ -16,6 +16,8 @@
     &-content {
         @include flex-column;
         gap: length(64);
+        position: relative;
+        z-index: 3;
 
         @include breakpoint(tablet991) {
             gap: length(32);
@@ -61,6 +63,8 @@
             @include font-face($lorenza, style('normal'), size(18), weight('normal'), line-height(30, 18));
             color: $gray-600;
             text-align: justify;
+            position: relative;
+            z-index: 2;
 
             .link {
                 @include font-face($lorenza, style('normal'), size(18), weight('normal'), line-height(30, 18));

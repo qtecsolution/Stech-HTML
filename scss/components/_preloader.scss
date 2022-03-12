@@ -7,36 +7,6 @@
     background: $white;
     overflow: hidden;
     z-index: 9999999;
-
-    .logo {
-        position: relative;
-        width: length(250);
-        @include flex-center;
-        height: length(80);
-
-        img {
-            max-width: 100%;
-            object-fit: contain;
-        }
-
-        &::before,
-        &::after {
-            content: "";
-            display: block;
-            @include square(length(15));
-            background: $gradient-4;
-            position: absolute;
-            animation: load 0.7s infinite alternate ease-in-out;
-        }
-
-        &::before {
-            top: 0;
-        }
-
-        &::after {
-            bottom: 0;
-        }
-    }
 }
 
 @keyframes load {

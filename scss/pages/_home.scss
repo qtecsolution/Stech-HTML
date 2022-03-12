@@ -2,10 +2,11 @@
                     STECH-BANNER
 =====================================================**/
 .stechbanner {
-    background: url(../images/stech-banner.png) no-repeat center center/cover;
+    // background: url(../images/stech-banner.png) no-repeat center center/cover;
     height: 100vh;
     position: relative;
     @include flex-center;
+    // z-index: 100;
 
     @include breakpoint(tablet991) {
         height: calc(100vh - 3.75rem);
@@ -39,11 +40,15 @@
         }
 
         .banner-details {
-            position: relative;
+            // position: absolute;
             z-index: 2;
+            top: 100%;
+            max-width: length(966);
+            // top: 111.8vh;
 
             .banner-title {
                 color: $white;
+                color: red;
                 letter-spacing: length(1.6);
                 text-transform: uppercase;
             }
@@ -59,9 +64,9 @@ canvas {
     top: 0;
     left: 0;
     @include wh100;
-    background: url(../images/stech-banner.png) no-repeat center center/cover;
     z-index: 1;
     display: inline-block;
+    overflow: hidden;
 }
 
 
@@ -71,7 +76,7 @@ canvas {
 .stechdigital {
     background: $white;
     min-height: 100vh;
-    position: relative;
+    // position: relative;
     z-index: 2;
     padding: length(160) length(0);
     @include flex-center-vert;
@@ -99,10 +104,10 @@ canvas {
         }
 
         .ribbon {
-            position: absolute;
-            top: -100%;
-            left: 0;
-            z-index: -1;
+            // position: absolute;
+            // top: -100%;
+            // left: 0;
+            // z-index: -1;
             width: length(143);
             height: length(257);
             @include flex-center;

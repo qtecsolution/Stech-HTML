@@ -271,12 +271,14 @@
 
     img {
         max-width: 100%;
+        filter: grayscale(100%);
         object-fit: contain;
         @include transitiontransform;
     }
 
     @include hover {
         img {
+            filter: grayscale(0);
             @include transform(scale(1.1));
         }
     }
@@ -418,12 +420,14 @@
 
     img {
         max-width: 100%;
+        filter: grayscale(100%);
         object-fit: contain;
         @include transitiontransform;
     }
 
     @include hover {
         img {
+            filter: grayscale(0);
             @include transform(scale(1.1));
         }
     }
