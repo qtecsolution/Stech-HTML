@@ -19,7 +19,7 @@ gsap.to('#scene-2', {
         marker: true,
         toggleActions: 'play none reverse none'
     },
-    y: 70.8 + 'vh',
+    // y: 70.8 + 'vh',
     // rotation: 360,
     duration: 2
 });
