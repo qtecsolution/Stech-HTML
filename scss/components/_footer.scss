@@ -3,6 +3,7 @@
 =====================================================**/
 .footer {
     padding: length(80) length(0);
+    @include w100;
 
     .footerlogo,
     .footnewsletter,
@@ -201,11 +202,19 @@
                 }
             }
         }
+    }
 
+    .footerinfo {
         .copyright-text {
             color: $white;
             @include font-face($lorenza, style('normal'), size(14), weight('normal'), line-height(20, 14));
             text-align: center;
+            pointer-events: none;
+
+            &::selection {
+                background: transparent;
+                color: $white;
+            }
         }
 
         .developtext {
@@ -213,11 +222,29 @@
             @include font-face($lorenza, style('normal'), size(14), weight('normal'), line-height(20, 14));
             text-align: center;
             position: relative;
+            @include flex-center;
+            gap: length(8);
+            // gap: length(12);
             z-index: 100;
+            text-align: center;
+            pointer-events: none;
+
+            &::selection {
+                background: transparent;
+                color: $white;
+            }
 
             .link {
+                display: inline-block;
                 color: $white;
                 @include font-face($lorenza, style('normal'), size(14), weight('normal'), line-height(20, 14));
+                width: auto;
+                pointer-events: painted;
+
+                &::selection {
+                    background: transparent;
+                    color: $white;
+                }
 
                 @include hover {
                     color: $primary;

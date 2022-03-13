@@ -8,7 +8,7 @@
     <!-- FAVICON -->
     <link rel="shortcut icon" href="favicon.svg" type="image/svg">
     <!-- SPLITTING CSS -->
-    <!-- <link rel="stylesheet" href="assets/css/dat.gui.css"> -->
+    <link rel="stylesheet" href="assets/css/dat.gui.css">
     <link rel="stylesheet" href="assets/css/splitting.css">
     <link rel="stylesheet" href="assets/css/splitting-cells.css">
     <!-- BOOTSTRAP CSS -->
@@ -258,11 +258,9 @@
         </div>
     </header>
     <!-- HEADER SECTION END -->
-    
-    <canvas></canvas>
 
     <!-- STECH BANNER SECTION START -->
-    <section class="stechbanner">
+    <section class="stechbanner" id="stechbanner">
         <div class="container">
             <div class="row">
                 <div class="col-12">
@@ -281,6 +279,8 @@
                 </div>
             </div>
         </div>
+    
+        <canvas></canvas>
     </section>
     <!-- STECH BANNER SECTION END -->
 
@@ -2283,13 +2283,15 @@
                 <!-- FOOTER COPYRIGHT INFO START -->
                 <div class="row justify-content-center">
                     <div class="col-12">
-                        <p class="copyright-text">
-                            &copy; 2022 Stech &ndash; All rights reserved.
-                        </p>
+                        <div class="footerinfo">
+                            <p class="copyright-text">
+                                &copy; 2022 Stech &ndash; All rights reserved.
+                            </p>
 
-                        <p class="developtext">
-                            Developed by <a href="http://www.blockchaintech.com.bd/" target="_blank" class="link">BlockChain Technology</a>
-                        </p>
+                            <p class="developtext">
+                                <span>Developed by</span> <a href="http://www.blockchaintech.com.bd/" target="_blank" class="link">BlockChain Technology</a>
+                            </p>
+                        </div>
                     </div>
                 </div>
                 <!-- FOOTER COPYRIGHT INFO END -->
@@ -2349,10 +2351,10 @@
     <!-- CUSTOM-SELECT -->
     <script src="assets/js/select.js"></script>
     <!-- SIMULATION JS -->
-    <!-- <script src="assets/js/simulation.js"></script> -->
     <script src="assets/js/dat.gui.js"></script>
-    <!-- <script type="text/javascript" src="https://paveldogreat.github.io/WebGL-Fluid-Simulation/dat.gui.min.js"></script> -->
-    <script src="assets/js/websimulation.js"></script>
+    <script type="text/javascript" src="https://paveldogreat.github.io/WebGL-Fluid-Simulation/dat.gui.min.js"></script>
+    <script src="https://unpkg.com/webgl-fluid@0.0.4/dist/webgl-fluid.umd.min.js"></script>
+    <script src="assets/js/simulator.js"></script>
     
     <!-- OUR-CONCERN JS -->
     <script src="assets/js/concern.js"></script>
@@ -2366,5 +2368,15 @@
     <script src="assets/js/pageloader.js"></script>
     <!-- ANIMATION JS -->
     <script src="assets/js/animations/home-animation.js"></script>
+    <script src="assets/js/test.js"></script>
+
+    <!-- <script id="fragmentShader" type="shader-code">
+        uniform vec2 resolution;
+        uniform vec2 mousePosition;
+        void main() {
+            vec2 pos = (gl_FragCoord.xy - mousePosition.xy * .5) / resolution.xy;
+            gl_FragColor = vec4(1.0,pos.x,pos.y,1.0);
+        }
+    </script> -->
 </body>
 </html>

@@ -1,25 +1,9 @@
 
-// window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-// ga('create', 'UA-105392568-1', 'auto');
-// ga('send', 'pageview');
-
-// window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-// ga('create', 'UA-105392568-1', 'auto');
-// ga('send', 'pageview');
-
-
-// import WebglFluid from 'webgl-fluid'
-
-// WebglFluid(document.querySelector('canvas'), {
-//   TRANSPARENT: true,
-// })
-
-// WebglFluid(document.querySelector('canvas'), {
-//   BACK_COLOR: { r: 255, g: 255, b: 255 },
-// })
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-105392568-1', 'auto');
+ga('send', 'pageview');
 
 'use strict';
-
 
 // Simulation code
 var canvas = document.getElementsByTagName('canvas')[0];

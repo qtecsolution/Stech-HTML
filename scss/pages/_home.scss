@@ -25,6 +25,7 @@
             z-index: 2;
             width: length(200);
             height: length(400);
+            pointer-events: none;
 
             @include breakpoint(tablet991) {
                 width: length(98);

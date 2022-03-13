@@ -257,17 +257,17 @@
     <canvas></canvas>
 
     <!-- STECH BANNER SECTION START -->
-    <section class="stechbanner">
-        <div class="container position-relative">
+    <section class="stechbanner" id="stechbanner">
+        <div class="container">
             <div class="row">
                 <div class="col-12">
                     <div class="stechbanner-content">
-                        <div class="banner-3d" data-relative-input="true">
-                            <img src="assets/images/logo/hero-logo.png" alt="banner-logo" data-depth='0.1'>
+                        <div class="banner-3d">
+                            <img src="assets/images/logo/hero-logo.png" alt="banner-logo">
                         </div>
 
-                        <div class="banner-details" id="scene-2" data-relative-input="true">
-                            <h1 class="banner-title big-title-1" data-depth='0.05'>
+                        <div class="banner-details" id="scene-2">
+                            <h1 class="banner-title big-title-1">
                                 Stech Digital Design <br>
                                 Boutique with Focus on Aesthetics
                             </h1>
@@ -918,13 +918,15 @@
                 <!-- FOOTER COPYRIGHT INFO START -->
                 <div class="row justify-content-center">
                     <div class="col-12">
-                        <p class="copyright-text">
-                            &copy; 2022 Stech &ndash; All rights reserved.
-                        </p>
+                        <div class="footerinfo">
+                            <p class="copyright-text">
+                                &copy; 2022 Stech &ndash; All rights reserved.
+                            </p>
 
-                        <p class="developtext">
-                            Developed by <a href="http://www.blockchaintech.com.bd/" target="_blank" class="link">BlockChain Technology</a>
-                        </p>
+                            <p class="developtext">
+                                <span>Developed by</span> <a href="http://www.blockchaintech.com.bd/" target="_blank" class="link">BlockChain Technology</a>
+                            </p>
+                        </div>
                     </div>
                 </div>
                 <!-- FOOTER COPYRIGHT INFO END -->
@@ -1035,5 +1037,6 @@
     <script src="assets/js/animations/about-animation.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="assets/js/animations/threedmove.js"></script>
+    <script src="assets/js/test.js"></script>
 </body>
 </html>
