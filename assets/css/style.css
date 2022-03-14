@@ -308,6 +308,16 @@
   }
 }
 
+@media screen and (max-width: 31.25rem) {
+  .big-title-1 {
+    font-family: "Raleway";
+    font-style: normal;
+    font-size: 1.25rem;
+    font-weight: 500;
+    line-height: 1.6;
+  }
+}
+
 h1 {
   font-family: "Raleway";
   font-style: normal;
@@ -1185,6 +1195,7 @@ select {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  pointer-events: none;
 }
 
 .footer-content .stecnewsletter .footerlogo img {
@@ -3277,7 +3288,6 @@ img::selection {
 =====================================================**/
 .stechbanner {
   height: 100vh;
-  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3311,6 +3321,9 @@ img::selection {
           flex-direction: column;
   text-align: center;
   gap: 2.25rem;
+  position: relative;
+  z-index: 1;
+  pointer-events: none;
 }
 
 @media screen and (max-width: 61.9375rem) {
@@ -3352,6 +3365,7 @@ img::selection {
   text-transform: uppercase;
   position: relative;
   z-index: 100;
+  pointer-events: none;
 }
 
 /**=====================================================
@@ -4282,6 +4296,7 @@ img::selection {
   color: #2D3748;
   text-transform: uppercase;
   letter-spacing: 0.1rem;
+  opacity: 0;
 }
 
 .stechaesthetics-header .ribbon {

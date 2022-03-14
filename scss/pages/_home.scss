@@ -3,7 +3,6 @@
 =====================================================**/
 .stechbanner {
     height: 100vh;
-    position: relative;
     @include flex-center;
 
     @include breakpoint(tablet991) {
@@ -14,6 +13,9 @@
         @include flex-center-column;
         text-align: center;
         gap: length(36);
+        position: relative;
+        z-index: 1;
+        pointer-events: none;
 
         @include breakpoint(tablet991) {
             position: relative;
@@ -47,6 +49,7 @@
                 text-transform: uppercase;
                 position: relative;
                 z-index: 100;
+                pointer-events: none;
             }
         }
     }

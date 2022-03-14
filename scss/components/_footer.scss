@@ -39,6 +39,7 @@
                 height: length(56);
                 overflow: hidden;
                 @include flex-center;
+                pointer-events: none;
 
                 img {
                     @include wh100;
