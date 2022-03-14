@@ -420,4 +420,4 @@ canvas.addEventListener( 'touchmove', function ( e ) {
 
     }
 
-}, true );
+}, false );
