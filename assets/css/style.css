@@ -3054,7 +3054,7 @@ canvas {
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 1;
+  z-index: 0;
   display: inline-block;
 }
 
@@ -3213,7 +3213,7 @@ canvas {
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 1;
+  z-index: 0;
   display: inline-block;
 }
 
@@ -4661,6 +4661,16 @@ img::selection {
   font-weight: 700;
   line-height: 1.5;
   color: white;
+}
+
+@media screen and (max-width: 31.25rem) {
+  .chairmanmessage-header .chairmanmessage-title {
+    font-family: "Raleway";
+    font-style: normal;
+    font-size: 1.75rem;
+    font-weight: 700;
+    line-height: 1.28571;
+  }
 }
 
 .chairmanmessage-body .chairmanmessage-text {

@@ -392,7 +392,7 @@ canvas.addEventListener( 'mousemove', function ( e ) {
 
 canvas.addEventListener( 'touchmove', function ( e ) {
 
-    e.preventDefault();
+    // e.preventDefault();
 
     var touches = e.targetTouches;
 
