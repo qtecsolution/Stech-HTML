@@ -76,7 +76,7 @@
                     @include transitions;
 
                     @include hover {
-                        background: $gradient-4;
+                        background: $concernHoverBg;
                     }
                 }
             }

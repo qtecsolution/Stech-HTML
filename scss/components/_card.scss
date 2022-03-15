@@ -63,8 +63,8 @@
         filter: $shadowBig;
 
         .card-concern-details {
-            background: $gradient-4;
-            border-color: $gradient-4;
+            background: $concernHoverBg;
+            border-color: $concernHoverBg;
 
             .concern-title {
                 color: $white;

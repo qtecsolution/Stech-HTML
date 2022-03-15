@@ -133,8 +133,8 @@
                             filter: $shadowBig;
 
                             &-details {
-                                background: $gradient-4;
-                                border-color: $gradient-4;
+                                background: $concernHoverBg;
+                                border-color: $concernHoverBg;
 
                                 .concern-title {
                                     color: $white;
@@ -179,7 +179,9 @@
                             width: calc(100% - 7.875rem);
                             @include h100;
                             @include setBgColor($gradient-1, $gray-50);
-                            @include flex-center-vert;
+                            @include flex-center;
+                            padding: length(16);
+                            text-align: center;
                         }
 
                         .concern-thumbnail {

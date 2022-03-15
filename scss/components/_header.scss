@@ -3,6 +3,7 @@
 **=======================================================**/
 
 .header {
+    background: transparent;
     position: relative;
     height: length(100);
     z-index: 1000;
@@ -47,7 +48,6 @@
 
             .mainlist {
                 @include list-horizontal;
-                gap: length(36);
                 width: calc(100% - 3rem);
                 justify-content: center;
 
@@ -55,16 +55,19 @@
                     gap: length(20);
                 }
 
+                .about-item {
+                    position: relative;
+                }
+
                 &-item {
                     @include flex-center-vert;
-                    position: relative;
+                    padding: length(39) length(18);
 
                     .subdropdown {
                         position: absolute;
                         top: 100%;
                         left: 0;
                         min-width: length(200);
-                        padding-top: length(40);
                         display: none;
                         @extend %animation;
                         @extend %slideUpIn;
@@ -88,9 +91,54 @@
                         }
                     }
 
+                    .subdropdownmenu {
+                        position: absolute;
+                        top: 100%;
+                        left: 0;
+                        min-width: length(200);
+                        padding: length(38) length(0) length(52);
+                        @extend %animation;
+                        @extend %slideUpIn;
+                        background: url(../images/dropdown-bg/dropdown-bg.svg) no-repeat center center/cover;
+                        @include w100;
+                        display: none;
+                        @extend %animation;
+                        @extend %slideUpIn;
+
+                        .subdropdownlist {
+                            @include flex-center;
+                            flex-wrap: wrap;
+                            @include w100;
+                            gap: length(19);
+
+                            a {
+                                width: calc((100% / 4) - 1.1875rem);
+                            }
+                        }
+                    }
+
                     @include hover {
                         .subdropdown {
                             display: block;
+                        }
+                        
+                        .subdropdownmenu {
+                            display: block;
+                        }
+
+                        .mainlist-link {
+                            .char {
+                                &::before {
+                                    transition-delay: calc(0.05s + (0.01s * (var(--char-index))));
+                                    transform: translateY(0%);
+                                    color: $white;
+                                }
+
+                                &::after {
+                                    transition-delay: calc(0.01s * (var(--char-index)));
+                                    transform: translateY(-100%);
+                                }
+                            }
                         }
                     }
                 }
@@ -99,7 +147,6 @@
                     @include font-face($raleway, style('normal'), size(14), weight('semibold'), line-height(18, 14));
                     color: rgba($white, 0.6);
                     overflow: hidden;
-
 
                     .char {
                         overflow: hidden;
@@ -120,18 +167,7 @@
                     }
 
                     &:hover:not(.active) {
-                        .char {
-                            &::before {
-                                transition-delay: calc(0.05s + (0.01s * (var(--char-index))));
-                                transform: translateY(0%);
-                                color: $white;
-                            }
-
-                            &::after {
-                                transition-delay: calc(0.01s * (var(--char-index)));
-                                transform: translateY(-100%);
-                            }
-                        }
+                        
                     }
 
                     &.active {
