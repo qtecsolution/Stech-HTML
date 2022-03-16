@@ -25,8 +25,8 @@
         .banner-3d {
             position: relative;
             z-index: 2;
-            width: length(200);
-            height: length(400);
+            width: length(150);
+            height: length(300);
             pointer-events: none;
 
             @include breakpoint(tablet991) {
