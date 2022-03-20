@@ -1,24 +1,24 @@
 gsap.registerPlugin(ScrollTrigger);
 
-let tl = gsap.timeline({
-    scrollTrigger: {
-        trigger: "#selection",
-        markers: true,
-        scrub: true,
-        pin: true,
-        ease: 'none'
-    }
-});
+// let tl = gsap.timeline({
+//     scrollTrigger: {
+//         trigger: "#selection",
+//         markers: true,
+//         scrub: true,
+//         pin: true,
+//         ease: 'none'
+//     }
+// });
 
-tl.from("#selection", {
-    y: 0,
-    duration: 3
-});
+// tl.from("#selection", {
+//     y: 0,
+//     duration: 3
+// });
 
-tl.to("#selection", {
-    y: 850,
-    duration: 3
-});
+// tl.to("#selection", {
+//     y: 850,
+//     duration: 3
+// });
 
 
 
