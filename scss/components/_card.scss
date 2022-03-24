@@ -80,24 +80,25 @@
     background: $white;
     @include flex-center-column;
     gap: length(8);
-    width: calc((100% / 5) - 1.5rem);
+    // width: calc((100% / 5) - 1.5rem);
+    min-width: length(312);
     padding: length(60) length(48);
     overflow: hidden;
     position: relative;
     height: 100%;
 
     @include breakpoint(desktop1400) {
-        width: calc((100% / 4) - 1.5rem);
+        width: length(312);
         padding: length(48) length(32);
     }
 
     @include breakpoint(desktop1199) {
-        width: calc((100% / 3) - 1.5rem);
+        width: length(312);
         padding: length(32);
     }
 
     @include breakpoint(tablet991) {
-        width: calc((100% / 2) - 1.5rem);
+        width: length(312);
     }
 
     @include breakpoint(phone575) {

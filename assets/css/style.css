@@ -1787,7 +1787,7 @@ select {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 0.5rem;
-  width: calc((100% / 5) - 1.5rem);
+  min-width: 19.5rem;
   padding: 3.75rem 3rem;
   overflow: hidden;
   position: relative;
@@ -1796,21 +1796,21 @@ select {
 
 @media screen and (max-width: 87.4375rem) {
   .card-service {
-    width: calc((100% / 4) - 1.5rem);
+    width: 19.5rem;
     padding: 3rem 2rem;
   }
 }
 
 @media screen and (max-width: 74.9375rem) {
   .card-service {
-    width: calc((100% / 3) - 1.5rem);
+    width: 19.5rem;
     padding: 2rem;
   }
 }
 
 @media screen and (max-width: 61.9375rem) {
   .card-service {
-    width: calc((100% / 2) - 1.5rem);
+    width: 19.5rem;
   }
 }
 
@@ -3124,6 +3124,10 @@ img::selection {
   background: transparent;
 }
 
+.dg.ac {
+  display: none;
+}
+
 .nav-tabs {
   border-bottom: 0;
   gap: 1.1875rem 1.5rem;
@@ -3281,6 +3285,10 @@ img::-moz-selection {
 
 img::selection {
   background: transparent;
+}
+
+.dg.ac {
+  display: none;
 }
 
 .wrapper {
