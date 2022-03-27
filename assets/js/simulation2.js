@@ -835,7 +835,7 @@
  });
  
  canvas.addEventListener('touchmove', function (e) {
-     e.preventDefault();
+    //  e.preventDefault();
      var touches = e.targetTouches;
      for (var i = 0; i < touches.length; i++) {
          var pointer = pointers[i];
@@ -852,32 +852,32 @@
      pointers[0].color = generateColor();
  });
  
- canvas.addEventListener('touchstart', function (e) {
-     e.preventDefault();
-     var touches = e.targetTouches;
-     for (var i = 0; i < touches.length; i++) {
-         if (i >= pointers.length)
-             { pointers.push(new pointerPrototype()); }
+//  canvas.addEventListener('touchstart', function (e) {
+//      e.preventDefault();
+//      var touches = e.targetTouches;
+//      for (var i = 0; i < touches.length; i++) {
+//          if (i >= pointers.length)
+//              { pointers.push(new pointerPrototype()); }
  
-         pointers[i].id = touches[i].identifier;
-         pointers[i].down = true;
-         pointers[i].x = touches[i].pageX;
-         pointers[i].y = touches[i].pageY;
-         pointers[i].color = generateColor();
-     }
- });
+//          pointers[i].id = touches[i].identifier;
+//          pointers[i].down = true;
+//          pointers[i].x = touches[i].pageX;
+//          pointers[i].y = touches[i].pageY;
+//          pointers[i].color = generateColor();
+//      }
+//  });
  
  window.addEventListener('mouseup', function () {
      pointers[0].down = false;
  });
  
- window.addEventListener('touchend', function (e) {
-     var touches = e.changedTouches;
-     for (var i = 0; i < touches.length; i++)
-         { for (var j = 0; j < pointers.length; j++)
-             { if (touches[i].identifier == pointers[j].id)
-                 { pointers[j].down = false; } } }
- });
+//  window.addEventListener('touchend', function (e) {
+//      var touches = e.changedTouches;
+//      for (var i = 0; i < touches.length; i++)
+//          { for (var j = 0; j < pointers.length; j++)
+//              { if (touches[i].identifier == pointers[j].id)
+//                  { pointers[j].down = false; } } }
+//  });
  
  window.addEventListener('keydown', function (e) {
      if (e.code === 'KeyP')
