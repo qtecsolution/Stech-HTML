@@ -751,6 +751,11 @@ select {
   cursor: pointer;
 }
 
+canvas {
+  overflow-x: hidden;
+  overflow-y: scroll !important;
+}
+
 .flex {
   display: -webkit-box;
   display: -ms-flexbox;
