@@ -297,6 +297,10 @@
             height: length(46);
             @include flex-center-vert;
 
+            @include breakpoint(phone500) {
+                @include w100;
+            }
+
             .inputfield {
                 @include setBgColor(transparent, $gray-800);
                 @include font-face($lorenza, style('normal'), size(13), weight('normal'), line-height(13, 13));

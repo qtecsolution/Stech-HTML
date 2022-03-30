@@ -7462,6 +7462,12 @@ img::selection {
           align-items: center;
 }
 
+@media screen and (max-width: 31.25rem) {
+  .stechsubscribe-content .stechnewsletter {
+    width: 100%;
+  }
+}
+
 .stechsubscribe-content .stechnewsletter .inputfield {
   background: transparent;
   color: #2D3748;
