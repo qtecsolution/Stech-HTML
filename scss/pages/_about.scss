@@ -29,9 +29,18 @@
         @include flex-center-column;
         gap: length(24);
         text-align: center;
+        height: length(200);
 
         @include breakpoint(tablet991) {
             margin-top: length(48);
+        }
+
+        @include breakpoint(phone575) {
+            margin-top: length(56);
+        }
+
+        @include breakpoint(phone480) {
+            margin-top: length(0);
         }
 
         .stechaesthetics-title {
@@ -55,10 +64,30 @@
                 @include wh100;
                 object-fit: contain;
             }
+
+            svg {
+                @include wh100;
+            }
         }
     }
 
     &-body {
+        @include breakpoint(tab991) {
+            padding-top: length(64);
+        }
+
+        @include breakpoint(phone768) {
+            padding-top: length(80);
+        }
+
+        @include breakpoint(phone575) {
+            padding-top: length(80);
+        }
+
+        @include breakpoint(phone480) {
+            padding-top: length(32);
+        }
+
         .stechaesthetics-text {
             @include font-face($lorenza, style('normal'), size(18), weight('normal'), line-height(30, 18));
             color: $gray-600;

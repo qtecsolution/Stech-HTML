@@ -9,10 +9,17 @@
 /* CARD-CONCERN START */
 .card-concern {
     @include flex-center-vert;
-    background: $white;
     width: length(312);
     height: length(90);
     cursor: pointer;
+
+    @include breakpoint(desktop1200) {
+        background: $white;
+    }
+
+    @include breakpoint(desktop1199) {
+        width: auto;
+    }
 
     @include breakpoint(phone768) {
         @include w100;
@@ -24,10 +31,19 @@
         width: length(130);
         @include h100;
         padding: length(10) length(34);
+        background: $white;
 
         @include breakpoint(laptop1100) {
             width: length(96);
             padding: length(10) length(16);
+        }
+
+        @include breakpoint(tablet991) {
+            width: length(130);
+        }
+
+        @include breakpoint(phone768) {
+            width: length(96);
         }
 
         img {
@@ -46,10 +62,23 @@
         @include h100;
         background: $white;
 
+        @include breakpoint(desktop1199) {
+            display: none;
+        }
+
         @include breakpoint(laptop1100) {
             width: calc(100% - 6rem);
             text-align: left;
             justify-content: flex-start;
+        }
+
+        @include breakpoint(tablet991) {
+            display: flex;
+            width: calc(100% - 8.125rem);
+        }
+
+        @include breakpoint(phone768) {
+            width: calc(100% - 6rem);
         }
 
         .concern-title {

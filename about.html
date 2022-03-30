@@ -16,34 +16,6 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
     <!-- STECH STYLE -->
     <link rel="stylesheet" href="assets/css/style.css">
-    <style>
-        .container01 {
-            background: black;
-        }
-
-        .bd {
-            position: absolute;
-            top: 0;
-            left: 0;
-            background: transparent;
-            z-index: 1;
-        }
-
-        .head {
-            position: absolute;
-            top: 100%;
-            left: 65%;
-            color: white;
-            transform: translate(-50%, -50%);
-        }
-
-        .sign {
-            position: absolute;
-            top: -150px;
-            opacity: 0;
-            visibility: hidden;
-        }
-    </style>
 </head>
 
 <body class="m-0 p-0">
@@ -552,7 +524,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="stechbanner-content">
-                        <div class="banner-3d" id="scene" data-relative-input="true" style="top: -200px;">
+                        <div class="banner-3d" id="scene" data-relative-input="true">
                             <img src="assets/images/logo/hero-logo.png" data-depth="0.2" alt="banner-logo">
                         </div>
 
@@ -567,10 +539,6 @@
                             </h1>
                         </div>
                     </div>
-                    <!-- <div class="sc2">
-
-                        
-                    </div> -->
                 </div>
             </div>
         </div>
@@ -584,7 +552,7 @@
                 <div class="col-lg-9 mx-lg-auto col-12">
                     <div class="stechaesthetics-content">
                         <!-- STECH DIGITAL HEADER START -->
-                        <div class="stechaesthetics-header" style="height: 200px;">
+                        <div class="stechaesthetics-header">
                             <div class="ribbon sign">
                                 <svg id="ribbonicon" width="112" height="200" viewBox="0 0 112 200" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -1166,7 +1134,7 @@
                 <!-- FOOTER INFO START -->
                 <div class="row g-4">
                     <!-- STECH NEWSLETTER START -->
-                    <div class="col-lg-4 col-12">
+                    <div class="col-lg-6 col-12">
                         <div class="stecnewsletter">
                             <div class="footerlogo">
                                 <img src="assets/images/logo/logo-white.svg" alt="logo-white">
@@ -1181,7 +1149,7 @@
                     <!-- STECH NEWSLETTER END -->
 
                     <!-- FOOTER ABOUT INFO START -->
-                    <div class="col-lg-4 col-12">
+                    <div class="col-lg-3 col-12">
                         <div class="aboutinfo" id="scene-2" data-relative-input="true">
                             <h6 class="about-title">About</h6>
 
@@ -1209,7 +1177,7 @@
                     <!-- FOOTER ABOUT INFO END -->
 
                     <!-- FOOTER CONTACT-SOCIAL INFO START -->
-                    <div class="col-lg-4 col-12">
+                    <div class="col-lg-3 col-12">
                         <div class="contactinfo">
                             <h6 class="contact-title">Contact</h6>
 
@@ -1510,19 +1478,17 @@
                 trigger: ".stechbanner",
                 pin: ".bd",
                 start: "top top",
-                end: "bottom 24%",
+                end: "bottom 20%",
                 scrub: true,
                 invalidateOnRefresh: true,
             },
             defaults: { duration: 1, ease: 'none' }
 
         })
-            .to(".stechbanner-content", { 'z-index': 3, duration: 0.1 }, '-=0.1')
-            .to(".head", {
-                scale: 0.8,
-            })
-            .to(".head", { color: "black", duration: 0.0 }, '-=0.36')
-            .to(".sign", { autoAlpha: 1, opacity: 1, duration: 0.2 }, '-=0.4')
+        .to(".stechbanner-content", { 'z-index': 3, duration: 0.1 }, '-=0.1')
+        .to(".head", { scale: 0.8, })
+        .to(".head", { color: "black", duration: 0.0 }, '-=0.36')
+        .to(".sign", { autoAlpha: 1, opacity: 1, duration: 0.2 }, '-=0.4')
     </script>
 </body>
 

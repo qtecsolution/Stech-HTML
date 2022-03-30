@@ -57,7 +57,7 @@
                     height: length(342);
                     @include flex-center-vert;
 
-                    @include breakpoint(laptop1100) {
+                    @include breakpoint(desktop1199) {
                         left: 0;
                     }
 
@@ -259,6 +259,10 @@
 
 .tab-nav li {
     width: calc(50% - 1.5rem);
+
+    @include breakpoint(desktop1199) {
+        width: auto;
+    }
 }
 
 .tab-nav li.active .content-holder {

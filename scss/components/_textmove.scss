@@ -1,0 +1,81 @@
+.container01 {
+    background: black;
+}
+
+.bd {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: transparent;
+    z-index: 1;
+}
+
+.head {
+    position: absolute;
+    top: 110%;
+    left: 65%;
+    color: white;
+    transform: translate(-50%, -60%);
+
+    @include breakpoint(desktop1400) {
+        left: 58%;
+    }
+
+    @include breakpoint(desktop1199) {
+        left: 50%;
+    }
+
+    @include breakpoint(tablet991) {
+        top: 100%;
+    }
+
+    @include breakpoint(phone768) {
+        top: 100%;
+    }
+
+    @include breakpoint(phone600) {
+        top: 90%;
+    }
+
+    @include breakpoint(phone575) {
+        top: 150%;
+        left: 54%;
+    }
+
+    @include breakpoint(phone500) {
+        top: 250%;
+    }
+
+    @include breakpoint(phone480) {
+        top: 280%;
+        left: 50%;
+    }
+
+    @include breakpoint(phone414) {
+        top: 200%;
+    }
+
+    @include breakpoint(mobile400) {
+        top: 270%;
+    }
+
+    @include breakpoint(phone359) {
+        top: 280%;
+    }
+
+}
+
+.sign {
+    position: absolute;
+    top: length(-150);
+    opacity: 0;
+    visibility: hidden;
+
+    @include breakpoint(tablet991) {
+        top: length(-100);
+    }
+
+    @include breakpoint(phone575) {
+        top: length(-48);
+    }
+}
