@@ -44,6 +44,10 @@
                 top: length(-140);
             }
 
+            @include breakpoint(mobile400) {
+                top: length(-100);
+            }
+
             img {
                 @include wh100;
                 object-fit: contain;

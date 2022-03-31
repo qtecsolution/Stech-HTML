@@ -29,6 +29,10 @@
         top: 100%;
     }
 
+    @include breakpoint(phone800) {
+        top: 90%;
+    }
+
     @include breakpoint(phone768) {
         top: 100%;
     }
@@ -52,11 +56,19 @@
     }
 
     @include breakpoint(phone414) {
-        top: 200%;
+        top: 160%;
     }
 
     @include breakpoint(mobile400) {
-        top: 250%;
+        top: 200%;
+    }
+
+    @include breakpoint(phone375) {
+        top: 200%;
+    }
+
+    @include breakpoint(phone370) {
+        top: 240%;
     }
 
     @include breakpoint(phone359) {

@@ -3442,6 +3442,12 @@ img::selection {
   }
 }
 
+@media screen and (max-width: 50rem) {
+  .head {
+    top: 90%;
+  }
+}
+
 @media screen and (max-width: 48rem) {
   .head {
     top: 100%;
@@ -3476,13 +3482,25 @@ img::selection {
 
 @media screen and (max-width: 25.875rem) {
   .head {
-    top: 200%;
+    top: 160%;
   }
 }
 
 @media screen and (max-width: 25rem) {
   .head {
-    top: 250%;
+    top: 200%;
+  }
+}
+
+@media screen and (max-width: 23.4375rem) {
+  .head {
+    top: 200%;
+  }
+}
+
+@media screen and (max-width: 23.125rem) {
+  .head {
+    top: 240%;
   }
 }
 
@@ -3639,6 +3657,12 @@ img::selection {
 @media screen and (max-width: 25.875rem) {
   .stechbanner-content .banner-3d {
     top: -8.75rem;
+  }
+}
+
+@media screen and (max-width: 25rem) {
+  .stechbanner-content .banner-3d {
+    top: -6.25rem;
   }
 }
 
@@ -5477,6 +5501,13 @@ img::selection {
   gap: 1.5rem;
 }
 
+@media screen and (max-width: 35.9375rem) {
+  .downloadportfolio {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+}
+
 .downloadportfolio .downloadportfolio-title {
   font-family: "Raleway";
   font-style: normal;
@@ -5493,6 +5524,7 @@ img::selection {
     font-size: 1.75rem;
     font-weight: 600;
     line-height: 1.35714;
+    text-align: center;
   }
 }
 

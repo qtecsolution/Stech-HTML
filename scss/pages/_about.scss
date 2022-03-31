@@ -502,12 +502,18 @@
     @include flex-center-column;
     gap: length(24);
 
+    @include breakpoint(phone575) {
+        padding-left: length(20);
+        padding-right: length(20);
+    }
+
     .downloadportfolio-title {
         @include font-face($raleway, style('normal'), size(36), weight('bold'), line-height(49, 36));
         color: $black;
 
         @include breakpoint(phone575) {
             @include font-face($raleway, style('normal'), size(28), weight('semibold'), line-height(38, 28));
+            text-align: center;
         }
     }
 
