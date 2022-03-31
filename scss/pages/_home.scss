@@ -30,6 +30,13 @@
             pointer-events: none;
             top: length(-200);
 
+            @include breakpoint(desktop1366) {
+                width: length(120);
+                height: length(220);
+                top: length(-140);
+                margin-bottom: length(24);
+            }
+
             @include breakpoint(tablet991) {
                 width: length(98);
                 height: length(200);

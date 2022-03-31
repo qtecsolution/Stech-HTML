@@ -3640,6 +3640,15 @@ img::selection {
   top: -12.5rem;
 }
 
+@media screen and (max-width: 85.375rem) {
+  .stechbanner-content .banner-3d {
+    width: 7.5rem;
+    height: 13.75rem;
+    top: -8.75rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
 @media screen and (max-width: 61.9375rem) {
   .stechbanner-content .banner-3d {
     width: 6.125rem;
