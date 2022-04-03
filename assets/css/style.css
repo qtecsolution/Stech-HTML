@@ -3417,97 +3417,11 @@ img::selection {
 
 .head {
   position: absolute;
-  top: 110%;
-  left: 65%;
+  top: 50%;
+  left: 50%;
   color: white;
-  -webkit-transform: translate(-50%, -60%);
-          transform: translate(-50%, -60%);
-}
-
-@media screen and (max-width: 87.4375rem) {
-  .head {
-    left: 58%;
-  }
-}
-
-@media screen and (max-width: 74.9375rem) {
-  .head {
-    left: 50%;
-  }
-}
-
-@media screen and (max-width: 61.9375rem) {
-  .head {
-    top: 100%;
-  }
-}
-
-@media screen and (max-width: 50rem) {
-  .head {
-    top: 90%;
-  }
-}
-
-@media screen and (max-width: 48rem) {
-  .head {
-    top: 100%;
-  }
-}
-
-@media screen and (max-width: 37.5rem) {
-  .head {
-    top: 90%;
-  }
-}
-
-@media screen and (max-width: 35.9375rem) {
-  .head {
-    top: 150%;
-    left: 54%;
-  }
-}
-
-@media screen and (max-width: 31.25rem) {
-  .head {
-    top: 250%;
-  }
-}
-
-@media screen and (max-width: 30rem) {
-  .head {
-    top: 280%;
-    left: 50%;
-  }
-}
-
-@media screen and (max-width: 25.875rem) {
-  .head {
-    top: 160%;
-  }
-}
-
-@media screen and (max-width: 25rem) {
-  .head {
-    top: 200%;
-  }
-}
-
-@media screen and (max-width: 23.4375rem) {
-  .head {
-    top: 200%;
-  }
-}
-
-@media screen and (max-width: 23.125rem) {
-  .head {
-    top: 240%;
-  }
-}
-
-@media screen and (max-width: 22.4375rem) {
-  .head {
-    top: 280%;
-  }
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 .sign {
