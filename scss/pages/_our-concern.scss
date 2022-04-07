@@ -8,6 +8,10 @@
     z-index: 2;
     padding: length(80) length(0);
 
+    @include breakpoint(phone768) {
+        padding: length(40) length(0);
+    }
+
     &-content {
         @include flex-column;
         gap: length(44);

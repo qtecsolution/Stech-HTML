@@ -287,6 +287,10 @@
             overflow: hidden;
             @include w100;
 
+            span {
+                @include w100;
+            }
+
             img {
                 @include wh100;
                 object-fit: cover;

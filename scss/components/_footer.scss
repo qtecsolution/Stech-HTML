@@ -88,6 +88,7 @@
 
             @include breakpoint(tablet991) {
                 align-items: center;
+                text-align: center;
             }
 
             .about-title {
@@ -117,6 +118,7 @@
 
             @include breakpoint(tablet991) {
                 align-items: center;
+                text-align: center;
             }
 
             .contact-title {
@@ -130,6 +132,7 @@
 
                 @include breakpoint(tablet991) {
                     align-items: center;
+                    text-align: center;
                 }
 
                 .contactlist {

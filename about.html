@@ -527,10 +527,10 @@
                         <div class="banner-3d" id="scene" data-relative-input="true">
                             <img src="assets/images/logo/hero-logo.png" data-depth="0.2" alt="banner-logo">
                         </div>
-                        
+
                         <div class="banner-details bd" id="trigger1">
                             <h1 class="head banner-title big-title-1">
-                               Stech Digital Design
+                                Stech Digital Design
                             </h1>
                         </div>
                     </div>
@@ -1430,7 +1430,10 @@
     <!-- SIMULATION JS -->
     <script src="https://github.com/PavelDoGreat/WebGL-Fluid-Simulation/blob/master/dat.gui.min.js"></script>
     <script>
-        window.ga = window.ga || function () { (ga.q = ga.q || []).push(arguments) }; ga.l = +new Date;
+        window.ga = window.ga || function () {
+            (ga.q = ga.q || []).push(arguments)
+        };
+        ga.l = +new Date;
         ga('create', 'UA-105392568-1', 'auto');
         ga('send', 'pageview');
     </script>
@@ -1465,25 +1468,41 @@
     <script src="assets/js/moving.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TimelineLite.min.js"></script>
     <script>
-
-        gsap.set('.container', { autoAlpha: 1 });
+        gsap.set('.container', {
+            autoAlpha: 1
+        });
 
         let logoAction = gsap.timeline({
-            scrollTrigger: {
-                trigger: ".stechbanner",
-                pin: ".bd",
-                start: "center center",
-                end: "bottom 21%",
-                scrub: true,
-                invalidateOnRefresh: true,
-            },
-            defaults: { duration: 1, ease: 'none' }
+                scrollTrigger: {
+                    trigger: ".stechbanner",
+                    pin: ".bd",
+                    start: "center center",
+                    end: "bottom 21%",
+                    scrub: true,
+                    invalidateOnRefresh: true,
+                },
+                defaults: {
+                    duration: 1,
+                    ease: 'none'
+                }
 
-        })
-        .to(".stechbanner-content", { 'z-index': 3, duration: 0.1 }, '-=0.1')
-        .to(".head", { scale: 0.8, })
-        .to(".head", { color: "black", duration: 0.0 }, '-=0.36')
-        .to(".sign", { autoAlpha: 1, opacity: 1, duration: 0.2 }, '-=0.4')
+            })
+            .to(".stechbanner-content", {
+                'z-index': 3,
+                duration: 0.1
+            }, '-=0.1')
+            .to(".head", {
+                scale: 0.8,
+            })
+            .to(".head", {
+                color: "black",
+                duration: 0.0
+            }, '-=0.36')
+            .to(".sign", {
+                autoAlpha: 1,
+                opacity: 1,
+                duration: 0.2
+            }, '-=0.4')
     </script>
 </body>
 

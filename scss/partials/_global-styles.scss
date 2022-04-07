@@ -133,7 +133,7 @@ body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-    overflow-y: scroll !important;
+    overflow-y: auto !important;
     position: relative;
 }
 
@@ -201,4 +201,8 @@ select {
 canvas {
     overflow-x: hidden;
     overflow-y: scroll !important;
+}
+
+p {
+    text-align: justify;
 }

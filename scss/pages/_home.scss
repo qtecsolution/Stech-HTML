@@ -28,6 +28,7 @@
             width: length(150);
             height: length(300);
             pointer-events: none;
+            @include flex-center;
             top: length(-200);
 
             @include breakpoint(desktop1366) {
@@ -92,6 +93,10 @@
 
     @include breakpoint(tablet991) {
         padding: length(80) length(16);
+    }
+
+    @include breakpoint(phone768) {
+        padding: length(40) length(16);
     }
 
     &-content {
@@ -256,7 +261,7 @@
             padding: length(20);
 
             @include breakpoint(tab991) {
-                animation: marquee 10s linear infinite;
+                animation: marquee 20s linear infinite;
                 flex-wrap: nowrap;
                 padding: length(0);
 

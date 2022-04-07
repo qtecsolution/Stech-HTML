@@ -684,7 +684,7 @@ body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-  overflow-y: scroll !important;
+  overflow-y: auto !important;
   position: relative;
 }
 
@@ -754,6 +754,10 @@ select {
 canvas {
   overflow-x: hidden;
   overflow-y: scroll !important;
+}
+
+p {
+  text-align: justify;
 }
 
 .flex {
@@ -1350,6 +1354,7 @@ canvas {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    text-align: center;
   }
 }
 
@@ -1407,6 +1412,7 @@ canvas {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    text-align: center;
   }
 }
 
@@ -1435,6 +1441,7 @@ canvas {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    text-align: center;
   }
 }
 
@@ -3417,11 +3424,8 @@ img::selection {
 
 .head {
   position: absolute;
-  top: 50%;
-  left: 50%;
+  left: 20%;
   color: white;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
 }
 
 .sign {
@@ -3551,6 +3555,15 @@ img::selection {
   width: 9.375rem;
   height: 18.75rem;
   pointer-events: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   top: -12.5rem;
 }
 
@@ -3632,6 +3645,12 @@ img::selection {
 @media screen and (max-width: 61.9375rem) {
   .stechdigital {
     padding: 5rem 1rem;
+  }
+}
+
+@media screen and (max-width: 48rem) {
+  .stechdigital {
+    padding: 2.5rem 1rem;
   }
 }
 
@@ -3915,8 +3934,8 @@ img::selection {
 
 @media screen and (min-width: 61.9375rem) {
   .ourservice-details .services {
-    -webkit-animation: marquee 10s linear infinite;
-            animation: marquee 10s linear infinite;
+    -webkit-animation: marquee 20s linear infinite;
+            animation: marquee 20s linear infinite;
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
     padding: 0rem;
@@ -5479,6 +5498,12 @@ img::selection {
   padding: 5rem 0rem;
 }
 
+@media screen and (max-width: 48rem) {
+  .ourconcern {
+    padding: 2.5rem 0rem;
+  }
+}
+
 .ourconcern-content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -6666,6 +6691,10 @@ img::selection {
 .stechgallery-content .gallery-link {
   position: relative;
   overflow: hidden;
+  width: 100%;
+}
+
+.stechgallery-content .gallery-link span {
   width: 100%;
 }
 
