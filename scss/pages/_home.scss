@@ -432,11 +432,15 @@
 =====================================================**/
 .ourclients {
     background: $white;
-    min-height: 100vh;
     position: relative;
     z-index: 2;
     padding: length(80) length(0);
     @include flex-center-vert;
+
+    @include breakpoint(tab991) {
+        min-height: 100vh;
+    }
+
 
     &-content {
         @include flex-column;

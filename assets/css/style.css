@@ -4160,7 +4160,6 @@ img::selection {
 =====================================================**/
 .ourclients {
   background: white;
-  min-height: 100vh;
   position: relative;
   z-index: 2;
   padding: 5rem 0rem;
@@ -4170,6 +4169,12 @@ img::selection {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+@media screen and (min-width: 61.9375rem) {
+  .ourclients {
+    min-height: 100vh;
+  }
 }
 
 .ourclients-content {
