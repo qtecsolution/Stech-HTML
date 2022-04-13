@@ -407,8 +407,12 @@
 
         .mission-thumbnail {
             @include w100;
-            height: length(426);
+            height: auto;
             overflow: hidden;
+
+            @include breakpoint(mobile575) {
+                height: length(426);
+            }
 
             img {
                 @include wh100;

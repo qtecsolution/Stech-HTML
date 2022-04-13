@@ -3573,6 +3573,40 @@ img::selection {
      object-fit: cover;
 }
 
+.stechbanner-content .logo-3D {
+  top: -15.625rem;
+}
+
+@media screen and (max-width: 85.375rem) {
+  .stechbanner-content .logo-3D {
+    top: -8.75rem;
+  }
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .stechbanner-content .logo-3D {
+    top: -9.375rem;
+  }
+}
+
+@media screen and (max-width: 30rem) {
+  .stechbanner-content .logo-3D {
+    top: -12.5rem;
+  }
+}
+
+@media screen and (max-width: 25.875rem) {
+  .stechbanner-content .logo-3D {
+    top: -8.75rem;
+  }
+}
+
+@media screen and (max-width: 25rem) {
+  .stechbanner-content .logo-3D {
+    top: -6.25rem;
+  }
+}
+
 .stechbanner-content .banner-details {
   max-width: 60.375rem;
 }
@@ -5266,8 +5300,14 @@ img::selection {
 
 .missionvision-content .mission-thumbnail {
   width: 100%;
-  height: 26.625rem;
+  height: auto;
   overflow: hidden;
+}
+
+@media screen and (min-width: 35.9375rem) {
+  .missionvision-content .mission-thumbnail {
+    height: 26.625rem;
+  }
 }
 
 .missionvision-content .mission-thumbnail img {
