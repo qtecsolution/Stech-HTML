@@ -3591,7 +3591,6 @@ img::selection {
 =====================================================**/
 .stechdigital {
   background: white;
-  min-height: 100vh;
   position: relative;
   z-index: 2;
   padding: 10rem 0rem;
@@ -3604,6 +3603,12 @@ img::selection {
   -webkit-transform: none !important;
           transform: none !important;
   height: 100% !important;
+}
+
+@media screen and (min-width: 61.9375rem) {
+  .stechdigital {
+    min-height: 100vh;
+  }
 }
 
 @media screen and (max-width: 61.9375rem) {

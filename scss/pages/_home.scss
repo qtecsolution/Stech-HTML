@@ -84,13 +84,16 @@
 =====================================================**/
 .stechdigital {
     background: $white;
-    min-height: 100vh;
     position: relative;
     z-index: 2;
     padding: length(160) length(0);
     @include flex-center-vert;
     transform: none !important;
     height: 100% !important;
+
+    @include breakpoint(tab991) {
+        min-height: 100vh;
+    }
 
     @include breakpoint(tablet991) {
         padding: length(80) length(16);
