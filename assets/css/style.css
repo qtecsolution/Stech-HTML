@@ -3552,7 +3552,7 @@ img::selection {
 .stechbanner-content .banner-3d {
   position: relative;
   z-index: 2;
-  width: 9.375rem;
+  width: 60%;
   height: 18.75rem;
   pointer-events: none;
   display: -webkit-box;
@@ -3564,49 +3564,13 @@ img::selection {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  top: -12.5rem;
-}
-
-@media screen and (max-width: 85.375rem) {
-  .stechbanner-content .banner-3d {
-    width: 7.5rem;
-    height: 13.75rem;
-    top: -8.75rem;
-    margin-bottom: 1.5rem;
-  }
-}
-
-@media screen and (max-width: 61.9375rem) {
-  .stechbanner-content .banner-3d {
-    width: 6.125rem;
-    height: 12.5rem;
-    top: -9.375rem;
-  }
-}
-
-@media screen and (max-width: 30rem) {
-  .stechbanner-content .banner-3d {
-    top: -12.5rem;
-  }
-}
-
-@media screen and (max-width: 25.875rem) {
-  .stechbanner-content .banner-3d {
-    top: -8.75rem;
-  }
-}
-
-@media screen and (max-width: 25rem) {
-  .stechbanner-content .banner-3d {
-    top: -6.25rem;
-  }
 }
 
 .stechbanner-content .banner-3d img {
   width: 100%;
   height: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .stechbanner-content .banner-details {

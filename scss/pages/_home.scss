@@ -25,40 +25,41 @@
         .banner-3d {
             position: relative;
             z-index: 2;
-            width: length(150);
+            // width: length(150);
+            width: 60%;
             height: length(300);
             pointer-events: none;
             @include flex-center;
-            top: length(-200);
+            // top: length(-200);
 
-            @include breakpoint(desktop1366) {
-                width: length(120);
-                height: length(220);
-                top: length(-140);
-                margin-bottom: length(24);
-            }
+            // @include breakpoint(desktop1366) {
+            //     width: length(120);
+            //     height: length(220);
+            //     top: length(-140);
+            //     margin-bottom: length(24);
+            // }
 
-            @include breakpoint(tablet991) {
-                width: length(98);
-                height: length(200);
-                top: length(-150);
-            }
+            // @include breakpoint(tablet991) {
+            //     width: length(98);
+            //     height: length(200);
+            //     top: length(-150);
+            // }
 
-            @include breakpoint(phone480) {
-                top: length(-200);
-            }
+            // @include breakpoint(phone480) {
+            //     top: length(-200);
+            // }
 
-            @include breakpoint(phone414) {
-                top: length(-140);
-            }
+            // @include breakpoint(phone414) {
+            //     top: length(-140);
+            // }
 
-            @include breakpoint(mobile400) {
-                top: length(-100);
-            }
+            // @include breakpoint(mobile400) {
+            //     top: length(-100);
+            // }
 
             img {
                 @include wh100;
-                object-fit: contain;
+                object-fit: cover;
             }
         }
 
