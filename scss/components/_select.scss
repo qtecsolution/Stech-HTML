@@ -72,6 +72,10 @@ $select-height: length(40);
         @include font-face($raleway, style('normal'), size(14), weight('semibold'), line-height(14, 14));
         @include transition(all 0.15s ease-in);
 
+        &:hover {
+            background: $concernHoverBg;
+        }
+
         &:hover,
         &.is-selected {
             color: $white;

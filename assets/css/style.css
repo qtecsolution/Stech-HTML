@@ -3311,6 +3311,10 @@ img::selection {
   transition: all 0.15s ease-in;
 }
 
+.select-options li:hover {
+  background: #5A48FF;
+}
+
 .select-options li:hover, .select-options li.is-selected {
   color: white;
 }
