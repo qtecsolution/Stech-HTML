@@ -84,7 +84,7 @@
         .concern-title {
             @include font-face($raleway, style('normal'), size(16), weight('medium'), line-height(26, 16));
             color: $gray-600;
-            font-feature-settings: 'salt'on;
+            font-feature-settings: 'salt';
         }
     }
 

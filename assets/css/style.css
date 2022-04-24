@@ -1810,8 +1810,8 @@ p {
   font-weight: 500;
   line-height: 1.625;
   color: #718096;
-  -webkit-font-feature-settings: 'salt'on;
-          font-feature-settings: 'salt'on;
+  -webkit-font-feature-settings: 'salt';
+          font-feature-settings: 'salt';
 }
 
 .card-concern:not([disabled]):hover {
@@ -3941,8 +3941,8 @@ img::selection {
 
 @media screen and (min-width: 61.9375rem) {
   .ourservice-details .services {
-    -webkit-animation: marquee 20s linear infinite;
-            animation: marquee 20s linear infinite;
+    -webkit-animation: marquee 30s linear infinite;
+            animation: marquee 30s linear infinite;
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
     padding: 0rem;

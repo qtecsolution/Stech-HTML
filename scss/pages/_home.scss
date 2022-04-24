@@ -263,7 +263,7 @@
             padding: length(20);
 
             @include breakpoint(tab991) {
-                animation: marquee 20s linear infinite;
+                animation: marquee 30s linear infinite;
                 flex-wrap: nowrap;
                 padding: length(0);
 
