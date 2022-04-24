@@ -158,7 +158,7 @@
 
                 .sociallist {
                     @include list-horizontal;
-                    gap: length(40);
+                    gap: length(32);
 
                     @include breakpoint(tablet991) {
                         align-items: center;
@@ -169,7 +169,7 @@
                     }
 
                     &-link {
-                        @include square(length(40));
+                        @include square(length(36));
                         @include flex-center;
                         @include circle;
                         overflow: hidden;
@@ -177,18 +177,17 @@
                         padding: length(10);
 
                         svg {
-                            // @include square(length(20));
                             @include wh100;
                         }
 
                         .whiteicon {
                             display: block;
-                            @include square(length(20));
+                            @include square(length(18));
                         }
 
                         .gradienticon {
                             display: none;
-                            @include square(length(20));
+                            @include square(length(18));
                         }
 
                         @include hover {
