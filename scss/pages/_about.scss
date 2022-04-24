@@ -5,11 +5,11 @@
     background: $white;
     position: relative;
     z-index: 2;
-    padding: length(160) length(0);
+    padding: length(160) length(0) length(0);
     @include flex-center-vert;
 
     @include breakpoint(tab991) {
-        min-height: 100vh;
+        // min-height: 100vh;
     }
 
     @include breakpoint(tablet991) {
@@ -112,6 +112,7 @@
 .lightourconcern {
     background: $white;
 }
+
 
 /**=====================================================
             CHAIRMAN-MESSAGE SECTION START
