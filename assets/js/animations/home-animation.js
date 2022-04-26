@@ -7,43 +7,61 @@
 
 
 
-
+gsap.registerPlugin(ScrollTrigger);
 
 // STECH-DIGITAL ANIMATION START
 
 gsap.from('#path-1', {
     duration: 1,
-    delay: 1,
+    // delay: 1,
     ease: 'power2.in',
     y: 100,
     opacity: 0
 });
 
 gsap.to('#path-1', {
+    // scrollTrigger: { 
+    //     trigger : '#path-2',
+    //     start: "top 80%",
+    //     end:"top 60%",
+    // },
+    scrollTrigger: '#path-2',
     y: 0
 });
 
 gsap.from('#path-2', {
     duration: 1,
-    delay: 1,
+    // delay: 1,
     ease: 'power2.in',
     y: 100,
     opacity: 0
 });
 
 gsap.to('#path-2', {
+    // scrollTrigger: { 
+    //     trigger : '#path-2',
+    //     start: "top 80%",
+    //     end:"top 60%",
+    // },
+    scrollTrigger: '#path-2',
     y: 0
 });
 
 gsap.from('#path-3', {
     duration: 1,
-    delay: 1,
+    // delay: 1,
     ease: 'power2.in',
     y: -100,
     opacity: 0
 });
 
 gsap.to('#path-3', {
+    // scrollTrigger: { 
+    //     trigger : '#path-2',
+    //     start: "top 80%",
+    //     end:"top 60%",
+    // },
+    scrollTrigger: '#path-2',
     y: 0
 });
 
@@ -56,6 +74,14 @@ gsap.from('.stechdigital-title', {
 });
 
 gsap.to('.stechdigital-title', {
+    // scrollTrigger: { 
+    //     trigger : '.stechdigital-title',
+    //     toggleActions: "play none none none",
+    //     start: "top 80%",
+    //     end:"top 60%",
+    //     scrub: true,
+    // },
+    scrollTrigger: '.stechdigital-title',
     x: 0
 });
 
@@ -68,6 +94,13 @@ gsap.from('.setchdigital-text', {
 });
 
 gsap.to('.setchdigital-text', {
+    scrollTrigger: { 
+        trigger : '.stechdigital-text',
+        toggleActions: "play none none none",
+        start: "top 80%",
+        end:"top 60%",
+        scrub: true,
+    },
     y: 0
 });
 
@@ -85,6 +118,13 @@ gsap.from('#smallpath-1', {
 });
 
 gsap.to('#smallpath-1', {
+    scrollTrigger: { 
+        trigger : '#smallpath-1',
+        toggleActions: "play none none none",
+        start: "top 80%",
+        end:"top 60%",
+        scrub: true,
+    },
     y: 0
 });
 
@@ -97,6 +137,13 @@ gsap.from('#smallpath-2', {
 });
 
 gsap.to('#smallpath-2', {
+    scrollTrigger: { 
+        trigger : '#smallpath-2',
+        toggleActions: "play none none none",
+        start: "top 80%",
+        end:"top 60%",
+        scrub: true,
+    },
     y: 0
 });
 
@@ -109,6 +156,13 @@ gsap.from('#smallpath-3', {
 });
 
 gsap.to('#smallpath-3', {
+    scrollTrigger: { 
+        trigger : '#smallpath-3',
+        toggleActions: "play none none none",
+        start: "top 80%",
+        end:"top 60%",
+        scrub: true,
+    },
     y: 0
 });
 
@@ -121,6 +175,13 @@ gsap.from('.ourconcern-title', {
 });
 
 gsap.to('.ourconcern-title', {
+    scrollTrigger: { 
+        trigger : '.ourconcern-title',
+        toggleActions: "play none none none",
+        start: "top 80%",
+        end:"top 60%",
+        scrub: true,
+    },
     x: 0
 });
 
@@ -133,6 +194,13 @@ gsap.from('.ourconcern-text', {
 });
 
 gsap.to('.ourconcern-text', {
+    scrollTrigger: { 
+        trigger : '.ourconcern-text',
+        toggleActions: "play none none none",
+        start: "top 80%",
+        end:"top 60%",
+        scrub: true,
+    },
     y: 0
 });
 
@@ -186,6 +254,13 @@ gsap.from('.service-title', {
 });
 
 gsap.to('.service-title', {
+    scrollTrigger: { 
+        trigger : '#smallpath-1',
+        toggleActions: "play none none none",
+        start: "top 80%",
+        end:"top 60%",
+        scrub: true,
+    },
     x: 0
 });
 
